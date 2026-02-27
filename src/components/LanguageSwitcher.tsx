@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { Locale } from "next-intl";
 import clsx from "clsx";
+import { Earth } from "lucide-react";
 
 type Props = {
   defaultLocale: Locale;
@@ -34,14 +35,16 @@ export default function LanguageSwitcher({ defaultLocale }: Props) {
       onClick={handleToggle}
       disabled={isPending}
       className={clsx(
-        "px-4 py-2 rounded border",
-        isPending ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
-        defaultLocale === "fa"
-          ? "bg-blue-600 text-white"
-          : "bg-gray-200 text-black",
+        "flex items-center gap-x-0.75 rounded px-2 py-3",
+        isPending ? "cursor-not-allowed opacity-50" : "cursor-pointer",
       )}
     >
-      {defaultLocale !== "fa" ? "فارسی" : "English"}
+      <span>
+        <Earth size={24} />
+      </span>
+      <span className="pb-0.5 text-xl">
+        {defaultLocale !== "fa" ? "fa" : "en"}
+      </span>
     </button>
   );
 }
