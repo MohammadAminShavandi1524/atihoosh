@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,7 +38,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata(
   props: Omit<LayoutProps<"/[locale]">, "children">,
-) {
+): Promise<Metadata> {
   const { locale } = await props.params;
 
   const t = await getTranslations({

@@ -1,11 +1,16 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Services from "@/components/landing/Services";
+import StickyTitle from "@/components/landing/StickyTitle";
+import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { use } from "react";
 
 export default function IndexPage({ params }: PageProps<"/[locale]">) {
   const { locale } = use(params);
+  console.log("🚀 ~ IndexPage ~ locale:", locale);
 
   // Enable static rendering
   setRequestLocale(locale as Locale);
@@ -13,9 +18,12 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
   const t = useTranslations("IndexPage");
 
   return (
-    <div style={{ fontFamily: "var(--font-inter)" }} className="">
+    <div style={{ fontFamily: "var(--font-inter)" }}>
       {/* hero section */}
-      <div className="relative flex h-110 w-full overflow-hidden pt-[115px]">
+      <div
+        dir="ltr"
+        className="relative flex h-112 w-full overflow-hidden pt-[120px]"
+      >
         {/* background image */}
         <div className="absolute inset-0 scale-105 bg-[url('/herosection.png')] bg-cover bg-center bg-no-repeat" />
 
@@ -38,7 +46,7 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
           {/* title */}
           <div className="mb-12 text-[24px]">Shaping tomorrow, today</div>
           {/* description */}
-          <div className="text-lg mb-20 text-justify">
+          <div className="mb-20 text-justify text-lg">
             In a world of constant change, reinvention is acontinuous
             strategy.That’s why we work withorganizations to rewrite the rules
             of growth,innovation and resilience.
@@ -52,6 +60,54 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
           </button>
         </div>
       </div>
+
+      {/* services */}
+      <Services />
+      {/* style={{ fontFamily: "var(--font-inter)" }} */}
+      {/* style={{ fontFamily: "var(--font-playfair)" }} */}
+      {/* style={{ fontFamily: "var(--font-space)" }} */}
+
+      {/* Entrust Your Project To Us */}
+      <div className="mt-50 flex w-full flex-col items-center">
+        {/* title */}
+        <div
+          style={{ fontFamily: "var(--font-space)" }}
+          className="mb-12 text-[120px] font-semibold"
+        >
+          <span>Entrust Your </span>
+          <span className="text-[#219ebc]">Project </span>
+          <span>To Us</span>
+        </div>
+        {/* description */}
+        <div
+          style={{ fontFamily: "var(--font-playfair)" }}
+          className="mb-15 flex flex-col items-center text-[40px]"
+        >
+          <span>software design is not just about coding ,</span>
+          <span>we are with the project at all stages</span>
+        </div>
+        {/* button */}
+        <button className="group flex cursor-pointer items-center gap-x-5">
+          <span className="text-[28px] font-medium">Get Started</span>
+
+          <span className="relative flex h-8 w-8 items-center justify-center overflow-hidden bg-[#219ebc] transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-x-1.5">
+            {/* Hover Layer */}
+            <span className="absolute inset-0 origin-left scale-x-0 bg-[#197c95] transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-x-100" />
+
+            {/* Icon */}
+            <span className="relative z-10">
+              <ChevronRight size={28} />
+            </span>
+          </span>
+        </button>
+      </div>
+
+      {/* read more carousel  */}
+      <div className="mt-50 h-125 w-full border-y-2 border-y-blue-400"></div>
+
+      {/* How We Run Software Project  stiky title !!*/}
+
+      <StickyTitle />
     </div>
   );
 }
