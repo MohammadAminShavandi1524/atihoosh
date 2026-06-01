@@ -264,7 +264,7 @@ const Services = ({}: ServicesProps) => {
                 duration: 0.6,
                 ease: [0.19, 1, 0.22, 1],
               }}
-              className="absolute -right-60 -bottom-60 h-282 w-282 rounded-full bg-gradient-to-tl from-[#31343e] via-[#1b212d] to-[#0f121b]"
+              className="absolute -right-60 -bottom-60 h-282 w-282 rounded-full bg-linear-to-tl from-[#31343e] via-[#1b212d] to-[#0f121b]"
             />
 
             <div className="relative z-10 flex h-full flex-col p-7">

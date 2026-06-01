@@ -161,6 +161,36 @@
     margin-left: auto;
     padding-right: 24px;
     padding-left: 24px;
-   
+  }
+
+  /** footer link */
+
+  .footer-link {
+    position: relative;
+    width: fit-content;
+    transition: color 300ms;
+  }
+
+  .footer-link:hover {
+    color: #a2a2a0; 
+  }
+
+  .footer-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 300ms;
+  }
+
+  .footer-link:hover::after {
+    transform: scaleX(1);
   }
 }

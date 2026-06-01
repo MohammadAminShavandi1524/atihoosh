@@ -25,7 +25,7 @@ function ProcessCard({
         className,
       )}
     >
-      <TechnicalBackground  />
+      <TechnicalBackground />
 
       {/* Title */}
       <motion.h3
