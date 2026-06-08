@@ -3,16 +3,30 @@
 import { useRef } from "react";
 import FooterContent from "./FooterContent";
 import AnimatedTextColumn from "./AnimatedTextColumn";
+import { useLocale } from "next-intl";
+import { cn } from "@/lib/utils";
 
 export default function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);
+  const locale = useLocale();
+  const isRtl = locale === "fa";
 
   return (
-    <div ref={footerRef} className="w90 grid grid-cols-2 pt-30 relative">
+    <div
+      ref={footerRef}
+      className={cn("w90 relative grid grid-cols-2 pt-30", isRtl && "rtl")}
+      dir={isRtl ? "rtl" : "ltr"}
+    >
       <FooterContent />
-    
-      <div className="flex  items-end justify-start -rotate-90 absolute top-36 -right-0   ">
-        <div className="flex h-fit  flex-col gap-2 text-[196px] leading-[170px] font-bold">
+
+      {/* EVOLVE ANIMATION (UNCHANGED STRUCTURE) */}
+      <div
+        className={cn(
+          "absolute top-36 flex items-end justify-start",
+          isRtl ? "-left-0 -rotate-90" : "-right-0 -rotate-90",
+        )}
+      >
+        <div className="flex h-fit flex-col gap-2 text-[196px] leading-[170px] font-bold">
           <AnimatedTextColumn
             footerRef={footerRef}
             height={50}
@@ -21,58 +35,104 @@ export default function Footer() {
             O_ClassName="opacity-0"
             L_ClassName=""
             Lv_ClassName="opacity-0"
-            Le_ClassName="opacity-0"
+            Le_ClassName=""
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
+
           <AnimatedTextColumn
             footerRef={footerRef}
             height={50}
             V_ClassName="opacity-0"
             Le_ClassName="opacity-0"
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
+
           <AnimatedTextColumn
             footerRef={footerRef}
             height={50}
             O_ClassName="opacity-0"
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
+
           <AnimatedTextColumn
             footerRef={footerRef}
             height={78}
             V_ClassName="opacity-0"
             Le_ClassName="opacity-0"
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
-          {/* center */}
-          <AnimatedTextColumn footerRef={footerRef} height={158} />
-          {/*  */}
+
           <AnimatedTextColumn
-            topOffset="-translate-y-[calc(0.1em+79px)]"
+            footerRef={footerRef}
+            height={158}
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
+          />
+
+          <AnimatedTextColumn
             footerRef={footerRef}
             height={78}
-            offset={78 + 40}
             O_ClassName="opacity-0"
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
+
           <AnimatedTextColumn
-            topOffset="-translate-y-[calc(0.1em+129px)]"
             footerRef={footerRef}
             height={50}
-            offset={129 + 40}
             Lv_ClassName="opacity-0"
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
+
           <AnimatedTextColumn
-            topOffset="-translate-y-[calc(0.1em+129px)]"
             footerRef={footerRef}
             height={50}
-            offset={129 + 40}
             E_ClassName="opacity-0"
             L_ClassName="opacity-0"
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
+
           <AnimatedTextColumn
-            topOffset="-translate-y-[calc(0.1em+129px)]"
             footerRef={footerRef}
             height={50}
-            offset={129 + 40}
             V_ClassName="opacity-0"
             O_ClassName="opacity-0"
             Le_ClassName="opacity-0"
+            bias={locale === "en" ? "right" : "left"}
+            offset={locale === "en" ? 40 : 80}
+            topOffset={
+              locale === "fa" ? "translate-y-[0.1em]" : "-translate-y-[0.1em]"
+            }
           />
         </div>
       </div>

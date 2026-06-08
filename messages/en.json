@@ -88,5 +88,18 @@
       "description": "Our team brings together expertise in software engineering, design, and AI to create scalable digital solutions.",
       "button": "Join us"
     }
+  },
+  "Footer": {
+    "title": "Engineered To Evolve",
+    "links": {
+      "whatWeDo": "What we do",
+      "aboutUs": "About us",
+      "blog": "Blog",
+      "projectStart": "Project start",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "sitemap": "Sitemap"
+    },
+    "copyright": "© 2026 ATI HOOSH BONYAN"
   }
 }
