@@ -1,4 +1,5 @@
 import "../globals.css";
+import "../../Webfonts/fontiran.css";
 
 import { notFound } from "next/navigation";
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
@@ -69,6 +70,8 @@ export default async function LocaleLayout({
           inter.variable,
           playfair.variable,
           space.variable,
+          "bg-black text-white",
+          locale === "fa" ? "font-IRANYekanX" : inter.className,
           "bg-black text-white",
         )}
       >

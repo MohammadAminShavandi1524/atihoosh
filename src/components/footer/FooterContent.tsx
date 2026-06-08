@@ -1,15 +1,20 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import Link from "next/link";
 
 interface FooterContentProps {}
 
 const FooterContent = ({}: FooterContentProps) => {
+
+   const locale = useLocale();
+
+
   return (
     <div className="flex flex-col">
       {/* header */}
       <div
-        style={{ fontFamily: "var(--font-space)" }}
+        style={locale === "en" ? { fontFamily: "var(--font-space)" } : {}}
         className="mb-40 text-[48px] font-medium"
       >
         Engineered To Evolve

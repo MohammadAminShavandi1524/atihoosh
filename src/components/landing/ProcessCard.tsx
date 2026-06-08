@@ -1,7 +1,10 @@
+"use client"
 import { ChevronRight } from "lucide-react";
+
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import TechnicalBackground from "./TechnicalBackground";
+import { useLocale } from "next-intl";
 
 type ProcessCardProps = {
   title: string;
@@ -16,6 +19,10 @@ function ProcessCard({
   className,
   accentColor,
 }: ProcessCardProps) {
+
+  const locale = useLocale()
+
+
   return (
     <motion.div
       initial="initial"
@@ -44,7 +51,7 @@ function ProcessCard({
           ease: [0.22, 1, 0.36, 1],
         }}
         className="absolute bottom-14 left-14 z-10 text-3xl"
-        style={{ fontFamily: "var(--font-playfair)" }}
+          style={locale === "en" ? { fontFamily: "var(--font-playfair)" } : {}}
       >
         {title}
       </motion.h3>

@@ -11,10 +11,12 @@ interface HeaderProps {
 }
 
 const Header = ({ locale }: HeaderProps) => {
+  const t = useTranslations("Header.Navigation");
+
   return (
     <div>
       <div
-        style={{ fontFamily: "var(--font-inter)" }}
+        style={locale === "en" ? { fontFamily: "var(--font-inter)" } : {}}
         className="w90 flex items-center justify-between py-4"
       >
         {/* logo */}
@@ -25,21 +27,21 @@ const Header = ({ locale }: HeaderProps) => {
         {/* nav */}
         <nav>
           <ul className="flex items-center gap-x-9 ps-12 text-lg">
-            <Link href={`/${locale}`}>
-              <li>What we do</li>
-            </Link>
+            <li>
+              <Link href={`/${locale}`}>{t("whatWeDo")}</Link>
+            </li>
 
-            <Link href={`/${locale}`}>
-              <li>About us</li>
-            </Link>
+            <li>
+              <Link href={`/${locale}`}>{t("aboutUs")}</Link>
+            </li>
 
-            <Link href={`/${locale}`}>
-              <li>Blog</li>
-            </Link>
+            <li>
+              <Link href={`/${locale}`}>{t("blog")}</Link>
+            </li>
 
-            <Link href={`/${locale}`}>
-              <li>Project start</li>
-            </Link>
+            <li>
+              <Link href={`/${locale}`}>{t("projectStart")}</Link>
+            </li>
           </ul>
         </nav>
 
