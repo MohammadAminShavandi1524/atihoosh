@@ -7,9 +7,15 @@ interface ExpSectionProps {
   number: string;
   label: string;
   topLineClassName?: string;
+  
 }
 
-const ExpSection = ({ label, number, topLineClassName }: ExpSectionProps) => {
+const ExpSection = ({
+  label,
+  number,
+  topLineClassName,
+  
+}: ExpSectionProps) => {
   const locale = useLocale();
   return (
     <div className="flex flex-col">
@@ -21,11 +27,17 @@ const ExpSection = ({ label, number, topLineClassName }: ExpSectionProps) => {
         )}
       ></span>
       {/* number */}
-      <span className="mt-1  text-[48px] 2xl:text-[56px]">{number}</span>
+      <span
+      
+        dir="ltr"
+        className="w-fit mt-1 text-[48px] 2xl:text-[56px]"
+      >
+        {number}
+      </span>
       {/* label */}
       <span
         style={locale === "en" ? { fontFamily: "var(--font-playfair)" } : {}}
-        className="ms-0.75 text-lg 2xl:text-xl text-white/70"
+        className="ms-0.75 text-lg text-white/70 2xl:text-xl"
       >
         {label}
       </span>

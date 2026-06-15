@@ -14,7 +14,7 @@ const TimeLine = ({ description, title, year }: TimeLineProps) => {
   return (
     <div className="relative flex flex-col ps-10">
       {/* dot */}
-      <div className="bg-custom-primary absolute top-[-8px] left-[-6px] size-3 rounded-full" />
+      <div className="bg-custom-primary absolute top-[-8px] size-3 rounded-full ltr:left-[-6px] rtl:right-[-6px]" />
 
       {/* year */}
       <div className="text-custom-primary text-lg">{year}</div>
@@ -22,7 +22,7 @@ const TimeLine = ({ description, title, year }: TimeLineProps) => {
       {/* title */}
       <div
         style={locale === "en" ? { fontFamily: "var(--font-playfair)" } : {}}
-        className="text-xl"
+        className="mb-1 text-xl"
       >
         {title}
       </div>
@@ -34,3 +34,25 @@ const TimeLine = ({ description, title, year }: TimeLineProps) => {
 };
 
 export default TimeLine;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

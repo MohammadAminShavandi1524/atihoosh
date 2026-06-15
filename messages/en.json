@@ -63,6 +63,12 @@
       "button": "Get Started"
     },
 
+    "OurCustomersSection": {
+      "badge": "Our customers",
+      "title": "Brands That Trusted Us",
+      "description": "We're proud to have been alongside these companies"
+    },
+
     "ProcessSection": {
       "title": "How We Run Software Projects",
       "button": "learn more",
@@ -89,6 +95,73 @@
       "button": "Join us"
     }
   },
+
+  "AboutPage": {
+    "HeroSection": {
+      "titlePart1": "We are",
+      "titlePart2": "Ati Hoosh",
+      "titlePart3": "",
+      "description": "A team of designers and developers who use AI to create better digital experiences."
+    },
+    "StatsSection": {
+      "successfulProjects": "Successful Projects",
+      "teamMembers": "Team Members",
+      "yearsOfExperience": "Years of Experience",
+      "support": "Support"
+    },
+    "StorySection": {
+      "badge": "Our Story",
+      "title": "Where did we start?",
+      "description": "Ati Housh started with a simple idea: creating digital products that are truly designed for people. We believe technology should serve humans.",
+      "timeline": {
+        "founded": {
+          "title": "Company founded",
+          "description": "Started with 3 people and a small office"
+        },
+        "firstProduct": {
+          "title": "First major product",
+          "description": "Launching the AI platform"
+        },
+        "teamGrowth": {
+          "title": "Team growth",
+          "description": "Expanding to 8 expert members"
+        }
+      }
+    },
+    "BannerSection": {
+      "title": "Making reinvention real for our clients",
+      "description": "Reinvention Services brings together the full breadth of Accenture, enabling us to solve your most complex problems and deliver reinvention at greater scale and impact."
+    },
+    "ValuesSection": {
+      "badge": "Our values",
+      "title": "What makes us different",
+      "items": {
+        "innovation": {
+          "title": "Innovation",
+          "description": "We're always looking for creative and different solutions"
+        },
+        "teamwork": {
+          "title": "Teamwork",
+          "description": "We consider the customer's success as our own success"
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "We never compromise on quality at any stage"
+        }
+      }
+    },
+    "TeamSection": {
+      "badge": "our team",
+      "title": "The people behind the project",
+      "members": {
+        "default": {
+          "name": "Masoud VZ",
+          "role": "Project Manager"
+        }
+      }
+    }
+  },
+
   "Footer": {
     "title": "Engineered To Evolve",
     "links": {

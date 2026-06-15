@@ -10,7 +10,7 @@ interface OurValuesBoxProps {
 
 const OurValuesBox = ({ description, Logo, title }: OurValuesBoxProps) => {
   return (
-    <div className="flex flex-col rounded-xl bg-[#101010] p-5.5">
+    <div className="flex w-full flex-col rounded-xl bg-[#101010] p-5.5">
       {/* logo */}
       <div className="mb-2">
         <Logo className="text-custom-primary size-6" />

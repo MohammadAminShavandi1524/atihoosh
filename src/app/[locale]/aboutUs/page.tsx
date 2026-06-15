@@ -6,28 +6,30 @@ import OurTeamBox from "@/components/aboutUs/OurTeamBox";
 import OurValuesBox from "@/components/aboutUs/OurValuesBox";
 import TimeLine from "@/components/aboutUs/TimeLine";
 import { BadgeCheck, Lightbulb, Users } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 interface pageProps {}
 
 const page = ({}: pageProps) => {
+  const t = useTranslations("AboutPage");
+  const values = t.raw("ValuesSection.items");
+  const member = t.raw("TeamSection.members.default");
   const locale = useLocale();
 
   return (
     <div className="">
       <section className="flex flex-col">
         {/* hero section */}
-
         <div className="w90 mt-[175px] mb-[75px] flex flex-col gap-y-[50px] text-center">
           <div className="text-[90px] font-medium">
-            <span>We are</span>
-            <span className="text-[#1e9dbd]"> Ati Hoosh</span>
+            <span>{t("HeroSection.titlePart1") + " "}</span>
+            <span className="text-[#1e9dbd]">
+              {t("HeroSection.titlePart2") + " "}
+            </span>
+            <span>{t("HeroSection.titlePart3")} </span>
           </div>
-          <div className="text-2xl">
-            A team of designers and developers who use AI to create better
-            digital experiences.
-          </div>
+          <div className="text-2xl">{t("HeroSection.description")}</div>
         </div>
 
         {/* experience */}
@@ -36,46 +38,57 @@ const page = ({}: pageProps) => {
             {/* experience section */}
             <ExpSection
               number="+50"
-              label="Successful project"
+              label={t("StatsSection.successfulProjects")}
               topLineClassName="ms-1.5"
             />
-            <ExpSection number="8" label="Team member" />
+
+            <ExpSection number="8" label={t("StatsSection.teamMembers")} />
+
             <ExpSection
               number="+3"
-              label="Years of experience"
+              label={t("StatsSection.yearsOfExperience")}
               topLineClassName="ms-1.5"
             />
-            <ExpSection number="24/7" label="Support" />
+
+            <ExpSection number="24/7" label={t("StatsSection.support")} />
           </div>
         </div>
+
         {/* our story */}
         <div className="w90 my-15 grid h-100 grid-cols-2 px-30 2xl:px-40">
+          {/* left side */}
           <div className="flex flex-col pe-20 2xl:pe-25">
-            <div className="text-custom-primary text-2xl">Our Story</div>
-            <div className="mt-10 mb-12 text-5xl">Where did we start?</div>
+            <div className="text-custom-primary text-2xl">
+              {t("StorySection.badge")}
+            </div>
+
+            <div className="mt-10 mb-12 text-5xl">
+              {t("StorySection.title")}
+            </div>
+
             <div className="text-justify text-xl font-light text-[#8e8e8e]">
-              Ati Housh started with a simple idea: creating digital products
-              that are truly designed for people. We believe technology should
-              serve humans.
+              {t("StorySection.description")}
             </div>
           </div>
-          {/*  */}
+
+          {/* right side timeline */}
           <div className="border-s-custom-primary flex flex-col gap-y-8 border-s pt-7">
-            {/* timeLine */}
             <TimeLine
               year={2022}
-              title="Company founded"
-              description="Started with 3 people and a small office"
+              title={t("StorySection.timeline.founded.title")}
+              description={t("StorySection.timeline.founded.description")}
             />
+
             <TimeLine
               year={2024}
-              title="First major product"
-              description="Launching the AI platform"
+              title={t("StorySection.timeline.firstProduct.title")}
+              description={t("StorySection.timeline.firstProduct.description")}
             />
+
             <TimeLine
               year={2024}
-              title="Team growth"
-              description="Expanding to 8 expert members"
+              title={t("StorySection.timeline.teamGrowth.title")}
+              description={t("StorySection.timeline.teamGrowth.description")}
             />
           </div>
         </div>
@@ -88,17 +101,17 @@ const page = ({}: pageProps) => {
           <div className="absolute top-0 h-120 w-full">
             <Image alt="AUbanner" src={"/AUbanner.png"} fill />
           </div>
+
+          {/* content */}
           <div className="z-10 mx-auto flex h-full flex-col items-center justify-center gap-y-8 2xl:w-[60%]">
             {/* title */}
-            <div className="text-[40px]">
-              Making reinvention real for our clients
+            <div className="text-center text-[40px]">
+              {t("BannerSection.title")}
             </div>
 
             {/* description */}
             <div className="mx-auto text-center text-lg 2xl:w-[54%]">
-              Reinvention Services brings together the full breadth of
-              Accenture, enabling us to solve your most complex problems and
-              deliver reinvention at greater scale and impact.
+              {t("BannerSection.description")}
             </div>
           </div>
         </div>
@@ -107,70 +120,53 @@ const page = ({}: pageProps) => {
       <section className="flex flex-col">
         {/* Our values */}
         <div className="w90 flex flex-col 2xl:px-30">
-          <div className="text-custom-primary mb-6 text-2xl">Our values</div>
-          <div className="mb-10 text-[48px]">What makes us different</div>
+          <div className="text-custom-primary mb-6 text-2xl">
+            {t("ValuesSection.badge")}
+          </div>
+
+          <div className="mb-10 text-[48px]">{t("ValuesSection.title")}</div>
+
           <div className="flex items-center justify-between gap-x-18">
             <OurValuesBox
-              title="Innovation"
-              description="We're always looking for creative and different solutions"
+              title={values.innovation.title}
+              description={values.innovation.description}
               Logo={Lightbulb}
             />
 
             <OurValuesBox
-              title="Teamwork"
-              description="We consider the customer's success as our own success"
+              title={values.teamwork.title}
+              description={values.teamwork.description}
               Logo={Users}
             />
 
             <OurValuesBox
-              title="Quality"
-              description="We never compromise on quality at any stage"
+              title={values.quality.title}
+              description={values.quality.description}
               Logo={BadgeCheck}
             />
           </div>
         </div>
-        {/* our team */}
 
-        <div className="mb-10 mt-20 border-y-1 border-y-[#32323261] py-25">
+        {/* our team */}
+        <div className="mt-20 mb-10 border-y-1 border-y-[#32323261] py-25">
           <div className="w90 flex flex-col 2xl:px-30">
-            <div className="text-custom-primary text-[22px]">our team</div>
-            <div className="mb-[72px] text-[44px]">
-              The people behind the project
+            <div className="text-custom-primary text-[22px]">
+              {t("TeamSection.badge")}
             </div>
+
+            <div className="mb-[72px] text-[44px]">
+              {t("TeamSection.title")}
+            </div>
+
             {/* our team boxes */}
             <div className="grid grid-cols-4 gap-x-7 gap-y-14">
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
-              <OurTeamBox
-                EmployeeName="Masoud VZ"
-                EmployeeStatus="Product Manager"
-              />
+              {Array.from({ length: 8 }).map((_, i) => (
+                <OurTeamBox
+                  key={i}
+                  EmployeeName={member.name}
+                  EmployeeStatus={member.role}
+                />
+              ))}
             </div>
           </div>
         </div>
