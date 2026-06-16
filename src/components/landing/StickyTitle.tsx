@@ -36,12 +36,8 @@ export default function ProcessSection() {
     <section className="relative min-h-[300vh]">
       {/* Sticky Layer */}
       <div className="sticky top-0 h-screen overflow-hidden">
-        <div
-          style={locale === "en" ? { fontFamily: "var(--font-space)" } : {}}
-          className="absolute top-1/2 left-1/2 w-[90%] -translate-x-1/2 -translate-y-1/2 text-center text-[120px]/[120px] font-semibold"
-        >
+        <div className="absolute top-1/2 left-1/2 w-[90%] -translate-x-1/2 -translate-y-1/2 text-center text-[120px]/[120px] font-semibold">
           {t("title")}
-         
         </div>
       </div>
 
@@ -52,21 +48,21 @@ export default function ProcessSection() {
             <ProcessCard
               title={cards[0].title}
               description={cards[0].description}
-              className="mr-auto bg-[#0041f0]"
+              className="mr-auto bg-[#4c76fb]"
               accentColor="#60A5FA"
             />
 
             <ProcessCard
               title={cards[1].title}
               description={cards[1].description}
-              className="ml-auto bg-[#901a30]"
+              className="ml-auto bg-[#fc3522]"
               accentColor="#FB7185"
             />
 
             <ProcessCard
               title={cards[2].title}
               description={cards[2].description}
-              className="mr-auto ml-60 bg-[#460073]"
+              className="mr-auto bg-[#a367ec]"
               accentColor="#C084FC"
             />
           </div>

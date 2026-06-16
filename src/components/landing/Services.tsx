@@ -21,9 +21,9 @@ const Services = () => {
   const locale = useLocale();
   const _services = [
     {
-      key: "aiAgent",
-      title: t("aiAgent.title"),
-      subTitle: t("aiAgent.subTitle"),
+      key: "networkSupport",
+      title: t("networkSupport.title"),
+      subTitle: t("networkSupport.subTitle"),
       src: "/1.png",
       color: "black",
     },
@@ -109,7 +109,7 @@ const Services = () => {
             {/* Title */}
             <motion.h3
               className={cn(
-                "mb-8 min-h-16 text-2xl font-bold",
+                "mb-6 min-h-16 text-[24px] font-bold",
                 service.color === "black" ? "text-black" : "text-white",
               )}
             >
@@ -135,9 +135,9 @@ const Services = () => {
                 },
               }}
               className={cn(
-                "mt-5 max-w-md text-lg ",
+                "mt-5 max-w-md text-lg text-justify",
                 service.color === "black" ? "text-black" : "text-white",
-                locale
+                locale,
               )}
             >
               {service.subTitle}

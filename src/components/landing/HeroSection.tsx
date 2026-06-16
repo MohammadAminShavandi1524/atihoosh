@@ -22,7 +22,7 @@ const HeroSection = ({}: HeroSectionProps) => {
       <div className="absolute inset-0 bg-black/70" />
       {/* محتوا */}
       <div
-        style={{ fontFamily: "var(--font-inter)" }}
+        // style={{ fontFamily: "var(--font-inter)" }}
         // style={{ fontFamily: "var(--font-playfair)" }}
         // style={{ fontFamily: "var(--font-space)" }}
         className="relative flex w-6/10 flex-col ps-[12%] pe-[16%] text-[80px]/[85px] font-bold"

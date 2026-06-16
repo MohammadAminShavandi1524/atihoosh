@@ -50,7 +50,7 @@ function ProcessCard({
           ease: [0.22, 1, 0.36, 1],
         }}
         className="absolute bottom-14 z-10 text-3xl ltr:left-14 rtl:right-14"
-        style={locale === "en" ? { fontFamily: "var(--font-playfair)" } : {}}
+       
       >
         {title}
       </motion.h3>

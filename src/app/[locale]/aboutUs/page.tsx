@@ -29,7 +29,7 @@ const page = ({}: pageProps) => {
             </span>
             <span>{t("HeroSection.titlePart3")} </span>
           </div>
-          <div className="text-2xl">{t("HeroSection.description")}</div>
+          <div className="text-[28px] font-medium">{t("HeroSection.description")}</div>
         </div>
 
         {/* experience */}
