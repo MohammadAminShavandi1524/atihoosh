@@ -3,9 +3,10 @@
 import { useTransition } from "react";
 import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { Locale } from "next-intl";
+import { Locale, useLocale } from "next-intl";
 import clsx from "clsx";
 import { Earth } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 type Props = {
   defaultLocale: Locale;
@@ -16,7 +17,8 @@ export default function LanguageSwitcher({ defaultLocale }: Props) {
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
   const params = useParams();
-
+  const locale = useLocale();
+console.log(locale)
   // زبان مقابل رو پیدا می‌کنیم
   const nextLocale = defaultLocale === "fa" ? "en" : "fa";
 
@@ -42,7 +44,7 @@ export default function LanguageSwitcher({ defaultLocale }: Props) {
       <span>
         <Earth size={24} />
       </span>
-      <span className="pb-0.5 text-xl">
+      <span className={cn(locale === "fa" && "pt-[3px] ", "pb-0.5 text-xl")}>
         {defaultLocale !== "fa" ? "fa" : "en"}
       </span>
     </button>

@@ -56,7 +56,7 @@ const Header = ({ locale }: HeaderProps) => {
           <LanguageSwitcher defaultLocale={locale} />
           {/* theme button */}
           <button className="cursor-pointer px-2 py-3">
-            <Sun strokeWidth="3px" color="#ffde21" />
+            <Sun strokeWidth="3px" color="#ffffff" />
           </button>
         </div>
       </div>
