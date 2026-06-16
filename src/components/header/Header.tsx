@@ -16,11 +16,11 @@ const Header = ({ locale }: HeaderProps) => {
   return (
     <div>
       <div
-        style={locale === "en" ? { fontFamily: "var(--font-inter)" } : {}}
+        style={locale === "en" ? { fontFamily: "var(--font-noto-serif)" } : {}}
         className="w90 flex items-center justify-between py-4"
       >
         {/* logo */}
-        <Link href={`/${locale}`}>
+        <Link className="bg-[#00304a33] pl-3.75 pr-4.25 pb-3 pt-2.5 rounded-lg border border-custom-primary" href={`/${locale}`}>
           <Image src="/logo.png" alt="logo" width={56} height={56} />
         </Link>
 

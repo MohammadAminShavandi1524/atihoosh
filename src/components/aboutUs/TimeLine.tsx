@@ -21,7 +21,7 @@ const TimeLine = ({ description, title, year }: TimeLineProps) => {
 
       {/* title */}
       <div
-        style={locale === "en" ? { fontFamily: "var(--font-playfair)" } : {}}
+        
         className="mb-1 text-xl"
       >
         {title}

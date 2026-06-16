@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Instagram, Linkedin, Mail, Send } from "lucide-react";
 
 export default function FooterContent() {
   const locale = useLocale();
@@ -44,7 +45,20 @@ export default function FooterContent() {
         </div>
       </div>
 
-      <div className="mt-20 text-lg">{t("copyright")}</div>
+      {/* socials */}
+      <div className="flex items-center gap-x-3 mb-10 mt-20">
+        <Mail className="cursor-pointer size-6 text-custom-primary" />
+        <Send className="cursor-pointer  size-6 text-custom-primary" />
+        <Instagram className="cursor-pointer  size-6 text-custom-primary" />
+        <Linkedin className="cursor-pointer  size-6 text-custom-primary ps-0.5" />
+      </div>
+
+
+      <div className=" text-lg">{t("copyright")}</div>
+
+
+
+
     </div>
   );
 }

@@ -36,7 +36,7 @@ const ExpSection = ({
       </span>
       {/* label */}
       <span
-        style={locale === "en" ? { fontFamily: "var(--font-playfair)" } : {}}
+        
         className="ms-0.75 text-lg text-white/70 2xl:text-xl"
       >
         {label}

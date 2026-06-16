@@ -29,14 +29,14 @@
     "ServicesSection": {
       "expandButton": "Expand",
 
-      "aiAgent": {
-        "title": "Building an Artificial Intelligence Agent",
-        "subTitle": "Custom AI agents designed to automate workflows, assist users, and enhance business productivity through intelligent interactions."
+      "networkSupport": {
+      "title": "Network & System Support",
+      "subTitle": "Professional network and system support services designed to ensure secure, stable, and high-performance IT infrastructure, helping your business run smoothly with minimal downtime and maximum efficiency."
       },
 
       "websiteDesign": {
         "title": "Website Design",
-        "subTitle": "Modern, responsive websites crafted to deliver exceptional user experiences and strengthen your digital presence."
+        "subTitle": "We turn ideas into digital solutions. We build custom websites and software with focus on performance and design. Tailored to your business needs."
       },
 
       "applicationDesign": {
@@ -45,8 +45,8 @@
       },
 
       "logoMotion": {
-        "title": "Logo And Motion Logo",
-        "subTitle": "Distinctive brand identities and animated logos that help businesses stand out and leave a lasting impression."
+        "title": "Logo And Logo Motion",
+        "subTitle": "First impressions last forever. We create creative logo motion and bring your brand identity to life through motion, storytelling, and design. Our content helps your brand stand out and stay memorable in the minds of your audience."
       }
     },
 

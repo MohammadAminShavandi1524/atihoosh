@@ -37,7 +37,7 @@ export default function ProcessSection() {
       {/* Sticky Layer */}
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
-          style={locale === "en" ? { fontFamily: "var(--font-space)" } : {}}
+         
           className="absolute top-1/2 left-1/2 w-[90%] -translate-x-1/2 -translate-y-1/2 text-center text-[120px]/[120px] font-semibold"
         >
           {t("title")}

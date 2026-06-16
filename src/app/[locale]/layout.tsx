@@ -5,7 +5,12 @@ import { notFound } from "next/navigation";
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { Inter, Playfair_Display, Space_Grotesk } from "next/font/google";
+import {
+  Inter,
+  Playfair_Display,
+  Space_Grotesk,
+  Noto_Serif,
+} from "next/font/google";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
@@ -30,6 +35,13 @@ const space = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-space",
+  display: "swap",
+});
+
+const notoSerif = Noto_Serif({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-noto-serif",
   display: "swap",
 });
 
@@ -70,8 +82,9 @@ export default async function LocaleLayout({
           inter.variable,
           playfair.variable,
           space.variable,
+          notoSerif.variable,
           "bg-black text-white",
-          locale === "fa" ? "font-IRANYekanX" : inter.className,
+          locale === "fa" ? "font-IRANYekanX" : notoSerif.className,
           "bg-black text-white",
         )}
       >
