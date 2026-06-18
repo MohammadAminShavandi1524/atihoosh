@@ -27,7 +27,7 @@ function ProcessCard({
       initial="initial"
       whileHover="hover"
       className={cn(
-        "group relative h-[420px] w-[650px] overflow-hidden rounded-3xl bg-[#0041f0] p-14",
+        "group relative h-[480px] w-[49%] overflow-hidden rounded-3xl bg-[#0041f0] p-14",
         className,
       )}
     >
