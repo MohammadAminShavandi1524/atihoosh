@@ -1,44 +1,67 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import WWOCard from "./WWOCard";
 
 interface OurServicesProps {}
 
 const OurServices = ({}: OurServicesProps) => {
+  const t = useTranslations("whatWeDo.services");
+
   return (
     <div className="w90 mt-20 flex flex-col px-40">
       {/* title */}
-      <div className="text-custom-primary mb-10 text-xl">Our Services</div>
+      <div className="text-custom-primary mb-10 text-xl">
+        {t("sectionTitle")}
+      </div>
+
       {/* description */}
-      <div className="mb-12 text-[45px]">What We Offer</div>
+      <div className="mb-12 text-[45px]">{t("sectionHeading")}</div>
+
       {/* what we offer boxes */}
       <div className="grid grid-cols-2 gap-14 2xl:gap-20">
         <WWOCard
           indexNumber="01"
-          title="Web Application Development"
-          description="We build fast, scalable, and modern web applications from scratch — tailored to your business logic and goals."
-          tags={["Frontend", "Backend", "Full Stack"]}
+          title={t("cards.web.title")}
+          description={t("cards.web.description")}
+          tags={[
+            t("cards.web.tags.frontend"),
+            t("cards.web.tags.backend"),
+            t("cards.web.tags.fullStack"),
+          ]}
         />
+
         <WWOCard
           indexNumber="02"
-          title="Mobile App Development"
-          description="Native and cross-platform mobile apps that deliver smooth experiences on both iOS
-          and Android."
-          tags={["iOS", "Android", "Cross-platform"]}
+          title={t("cards.mobile.title")}
+          description={t("cards.mobile.description")}
+          tags={[
+            t("cards.mobile.tags.ios"),
+            t("cards.mobile.tags.android"),
+            t("cards.mobile.tags.crossPlatform"),
+          ]}
         />
+
         <WWOCard
           indexNumber="03"
-          title="AI Integration"
-          description="We integrate intelligent AI features into your existing software — chatbots, 
-          automation,data analysis and more."
-          tags={["Machine Learning", "Automation", "Chatbot"]}
+          title={t("cards.ai.title")}
+          description={t("cards.ai.description")}
+          tags={[
+            t("cards.ai.tags.machineLearning"),
+            t("cards.ai.tags.automation"),
+            t("cards.ai.tags.chatbot"),
+          ]}
         />
+
         <WWOCard
           indexNumber="04"
-          title="Software Consulting"
-          description="Not sure where to start? We help you plan, architect, and choose the right tech
-          stack for your project."
-          tags={["Strategy", "Architecture", "Tech Stack"]}
+          title={t("cards.consulting.title")}
+          description={t("cards.consulting.description")}
+          tags={[
+            t("cards.consulting.tags.strategy"),
+            t("cards.consulting.tags.architecture"),
+            t("cards.consulting.tags.techStack"),
+          ]}
         />
       </div>
     </div>

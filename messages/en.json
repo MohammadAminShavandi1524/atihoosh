@@ -30,8 +30,8 @@
       "expandButton": "Expand",
 
       "networkSupport": {
-      "title": "Network & System Support",
-      "subTitle": "Professional network and system support services designed to ensure secure, stable, and high-performance IT infrastructure, helping your business run smoothly with minimal downtime and maximum efficiency."
+        "title": "Network & System Support",
+        "subTitle": "Professional network and system support services designed to ensure secure, stable, and high-performance IT infrastructure, helping your business run smoothly with minimal downtime and maximum efficiency."
       },
 
       "websiteDesign": {
@@ -93,6 +93,90 @@
       "title": "The People Behind Exceptional Digital Products",
       "description": "Our team brings together expertise in software engineering, design, and AI to create scalable digital solutions.",
       "button": "Join us"
+    }
+  },
+
+  "whatWeDo": {
+    "hero": {
+      "titlePart1": "We Build",
+      "titleHighlight": "Software",
+      "titlePart2": "That Works",
+      "description": "From idea to deployment — we design and develop software solutions tailored to your business needs."
+    },
+    "services": {
+      "sectionTitle": "Our Services",
+      "sectionHeading": "What We Offer",
+      "learnMore": "Learn more",
+      "cards": {
+        "web": {
+          "title": "Web Application Development",
+          "description": "We build fast, scalable, and modern web applications from scratch — tailored to your business logic and goals.",
+          "tags": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "fullStack": "Full Stack"
+          }
+        },
+        "mobile": {
+          "title": "Mobile App Development",
+          "description": "Native and cross-platform mobile apps that deliver smooth experiences on both iOS and Android.",
+          "tags": {
+            "ios": "iOS",
+            "android": "Android",
+            "crossPlatform": "Cross-platform"
+          }
+        },
+        "ai": {
+          "title": "AI Integration",
+          "description": "We integrate intelligent AI features into your existing software — chatbots, automation, data analysis and more.",
+          "tags": {
+            "machineLearning": "Machine Learning",
+            "automation": "Automation",
+            "chatbot": "Chatbot"
+          }
+        },
+        "consulting": {
+          "title": "Software Consulting",
+          "description": "Not sure where to start? We help you plan, architect, and choose the right tech stack for your project.",
+          "tags": {
+            "strategy": "Strategy",
+            "architecture": "Architecture",
+            "techStack": "Tech Stack"
+          }
+        }
+      }
+    },
+    "howWeWork": {
+      "sectionTitle": "How We Work",
+      "sectionHeading": "Our Process",
+      "steps": {
+        "discovery": {
+          "title": "Discovery",
+          "description": "We listen to your idea and understand your goals."
+        },
+        "design": {
+          "title": "Design",
+          "description": "Wireframes, prototypes and UI design."
+        },
+        "development": {
+          "title": "Development",
+          "description": "Clean code, agile sprints and regular updates."
+        },
+        "launch": {
+          "title": "Launch",
+          "description": "Deploy, test and support after delivery."
+        }
+      }
+    },
+    "technology": {
+      "title": "Technology",
+      "subtitle": "Tools We Use"
+    },
+    "readyToBuild": {
+      "title": "Ready to Build Something?",
+      "description": "Tell us about your project and we'll get back to you within 24 hours.",
+      "primaryButton": "Start a Project",
+      "secondaryButton": "See Our Work"
     }
   },
 

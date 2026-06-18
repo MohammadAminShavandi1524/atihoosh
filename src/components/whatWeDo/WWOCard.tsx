@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 interface WWOCardProps {
   indexNumber: string;
   title: string;
@@ -8,6 +10,7 @@ interface WWOCardProps {
 }
 
 const WWOCard = ({ description, indexNumber, tags, title }: WWOCardProps) => {
+  const t = useTranslations("whatWeDo.services");
   return (
     <div className="flex w-full flex-col overflow-hidden rounded-xl">
       <div className="h-60 w-full bg-[#0B313B]"></div>
@@ -32,9 +35,9 @@ const WWOCard = ({ description, indexNumber, tags, title }: WWOCardProps) => {
             );
           })}
         </div>
-        {/* Learn more  */}
-        <div className="text-custom-primary cursor-pointer text-base">
-          Learn more
+        {/* Learn more */}
+        <div className="text-custom-primary cursor-pointer text-base mt-2">
+          {t("learnMore")}
         </div>
       </div>
     </div>

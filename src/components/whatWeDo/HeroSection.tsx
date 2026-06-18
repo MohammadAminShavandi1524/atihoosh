@@ -1,22 +1,26 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 interface HeroSectionProps {}
 
 const HeroSection = ({}: HeroSectionProps) => {
+  const t = useTranslations("whatWeDo.hero");
+
   return (
-    <div className="flex flex-col items-center  pt-20 pb-20 border-y-1 border-y-[#131313] mb-12">
+    <div className="mb-12 flex flex-col items-center border-y border-y-[#131313] pt-20 pb-20">
       {/* title */}
-      <div className="text-[85px] text-center mb-12">
+      <div className="mb-12 text-center text-[85px]">
         <div>
-          <span>We Build </span>
-          <span className="text-custom-primary">Software</span>
+          <span>{t("titlePart1")} </span>
+          <span className="text-custom-primary">{t("titleHighlight")}</span>
         </div>
-        <div>That Works</div>
+        <div>{t("titlePart2")}</div>
       </div>
+
       {/* description */}
-      <div className="text-2xl/[40px] mx-auto w-5/10 text-center">
-        From idea to deployment — we design and develop software solutions
-        tailored to your business needs.
+      <div className="mx-auto w-5/10 text-center text-2xl/[40px]">
+        {t("description")}
       </div>
     </div>
   );
