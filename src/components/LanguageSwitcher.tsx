@@ -18,7 +18,7 @@ export default function LanguageSwitcher({ defaultLocale }: Props) {
   const pathname = usePathname();
   const params = useParams();
   const locale = useLocale();
-console.log(locale)
+
   // زبان مقابل رو پیدا می‌کنیم
   const nextLocale = defaultLocale === "fa" ? "en" : "fa";
 

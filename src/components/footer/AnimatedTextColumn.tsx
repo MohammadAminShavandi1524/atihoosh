@@ -126,10 +126,27 @@ export default function AnimatedTextColumn({
       cancelAnimationFrame(frame);
       footer?.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [footerRef, speed, offset, breakpoint, scrollRatio, bias, deadZoneStart, deadZoneEnd, isRtl]);
+  }, [
+    footerRef,
+    speed,
+    offset,
+    breakpoint,
+    scrollRatio,
+    bias,
+    deadZoneStart,
+    deadZoneEnd,
+    isRtl,
+  ]);
 
   return (
-    <div ref={scrollRef} style={{ height }} className="overflow-hidden select-none">
+    <div
+      ref={scrollRef}
+      style={{
+        height,
+        ...(locale === "en" ? { fontFamily: "var(--font-inter)" } : {}),
+      }}
+      className="overflow-hidden select-none"
+    >
       <div className="flex flex-col">
         <span className={topOffset}>
           <span className={cn(E_ClassName)}>E</span>

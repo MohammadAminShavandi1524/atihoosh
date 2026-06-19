@@ -10,15 +10,9 @@ type ProcessCardProps = {
   title: string;
   description: string;
   className?: string;
-  accentColor: string;
 };
 
-function ProcessCard({
-  title,
-  description,
-  className,
-  accentColor,
-}: ProcessCardProps) {
+function ProcessCard({ title, description, className }: ProcessCardProps) {
   const locale = useLocale();
   const t = useTranslations("HomePage.ProcessSection");
 
@@ -27,8 +21,9 @@ function ProcessCard({
       initial="initial"
       whileHover="hover"
       className={cn(
-        "group relative h-[480px] w-[49%] overflow-hidden rounded-3xl bg-[#0041f0] p-14",
+        "group  relative h-[480px] w-[49%] overflow-hidden rounded-3xl bg-[#0041f0] p-14",
         className,
+        "text-white"
       )}
     >
       <TechnicalBackground />
@@ -50,7 +45,6 @@ function ProcessCard({
           ease: [0.22, 1, 0.36, 1],
         }}
         className="absolute bottom-14 z-10 text-3xl ltr:left-14 rtl:right-14"
-       
       >
         {title}
       </motion.h3>

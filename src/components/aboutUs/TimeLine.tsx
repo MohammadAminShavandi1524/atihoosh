@@ -11,15 +11,14 @@ interface TimeLineProps {
 
 const TimeLine = ({ description, title, year }: TimeLineProps) => {
   const locale = useLocale();
-  console.log(String(year));
 
   return (
     <div className="relative flex flex-col ps-10">
       {/* dot */}
-      <div className="bg-custom-primary absolute top-[-8px] size-3 rounded-full ltr:left-[-6px] rtl:right-[-6px]" />
+      <div className="bg-primary absolute top-[-8px] size-3 rounded-full ltr:left-[-6px] rtl:right-[-6px]" />
 
       {/* year */}
-      <div className="text-custom-primary text-lg">
+      <div className="text-primary text-lg">
         {locale === "en" ? year : englishToPersianNumber(String(year))}
       </div>
 
@@ -27,7 +26,7 @@ const TimeLine = ({ description, title, year }: TimeLineProps) => {
       <div className="mb-1 text-xl">{title}</div>
 
       {/* description */}
-      <div className="font-extralight text-[#474747]">{description}</div>
+      <div className="font-extralight text-muted">{description}</div>
     </div>
   );
 };

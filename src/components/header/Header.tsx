@@ -1,20 +1,18 @@
+"use locale";
+
 import { Search, Sun } from "lucide-react";
 import LanguageSwitcher from "../LanguageSwitcher";
-import { use } from "react";
-import { setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 import Nav from "./Nav";
+import { ThemeButton } from "../theme/ThemeButton";
 
-interface HeaderProps {
-  locale: "en" | "fa";
-}
+interface HeaderProps {}
 
-const Header = ({ locale }: HeaderProps) => {
-  const t = useTranslations("Header.Navigation");
-
+const Header = ({}: HeaderProps) => {
+  const locale = useLocale();
   return (
     <div>
       <div
@@ -23,7 +21,7 @@ const Header = ({ locale }: HeaderProps) => {
       >
         {/* logo */}
         <Link
-          className="border-custom-primary rounded-lg border bg-[#00304a33] pt-2.5 pr-4.25 pb-3 pl-3.75"
+          className="border-primary bg-tertiary rounded-lg border pt-2.5 pr-4.25 pb-3 pl-3.75"
           href={`/${locale}`}
         >
           <Image src="/logo.png" alt="logo" width={56} height={56} />
@@ -42,9 +40,7 @@ const Header = ({ locale }: HeaderProps) => {
           {/* language switcher */}
           <LanguageSwitcher defaultLocale={locale} />
           {/* theme button */}
-          <button className="cursor-pointer px-2 py-3">
-            <Sun strokeWidth="3px" color="#ffffff" />
-          </button>
+          <ThemeButton />
         </div>
       </div>
     </div>

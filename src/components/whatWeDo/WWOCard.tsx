@@ -13,22 +13,22 @@ const WWOCard = ({ description, indexNumber, tags, title }: WWOCardProps) => {
   const t = useTranslations("whatWeDo.services");
   return (
     <div className="flex w-full flex-col overflow-hidden rounded-xl">
-      <div className="h-60 w-full bg-[#0B313B]"></div>
+      <div className="bg-secondary h-60 w-full"></div>
       {/* content */}
-      <div className="flex min-h-[210px] flex-col gap-y-3 bg-[#101010] px-6 py-6">
+      <div className="bg-secondary-bg flex min-h-52.5 flex-col gap-y-3 px-6 py-6">
         {/* index */}
-        <div className="text-custom-primary text-sm">{indexNumber}</div>
+        <div className="text-primary text-sm">{indexNumber}</div>
         {/* title */}
         <div className="text-lg">{title}</div>
         {/* description */}
-        <div className="text-base text-[#ffffff73]">{description}</div>
+        <div className="text-base text-muted">{description}</div>
         {/* tags */}
         <div className="flex items-center gap-x-3">
           {tags.map((tag, index) => {
             return (
               <div
                 key={index}
-                className="border-custom-primary text-custom-primary rounded-lg border bg-[#0B313B] px-2.5 py-1.25 text-base"
+                className="border-primary text-primary rounded-lg border bg-secondary px-2.5 py-1.25 text-base"
               >
                 {tag}
               </div>
@@ -36,7 +36,7 @@ const WWOCard = ({ description, indexNumber, tags, title }: WWOCardProps) => {
           })}
         </div>
         {/* Learn more */}
-        <div className="text-custom-primary cursor-pointer text-base mt-2">
+        <div className="text-primary mt-2 cursor-pointer text-base">
           {t("learnMore")}
         </div>
       </div>

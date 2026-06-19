@@ -9,12 +9,10 @@ const HowWeWork = ({}: HowWeWorkProps) => {
   const t = useTranslations("whatWeDo.howWeWork");
 
   return (
-    <div className="mt-20 border-y border-y-[#131313] px-40 pt-15 pb-25">
+    <div className="mt-20 border-y border-y-border px-40 pt-15 pb-25">
       <div className="w90 flex flex-col">
         {/* title */}
-        <div className="text-custom-primary mb-10 text-xl">
-          {t("sectionTitle")}
-        </div>
+        <div className="text-primary mb-10 text-xl">{t("sectionTitle")}</div>
 
         {/* description */}
         <div className="mb-16 text-[45px]">{t("sectionHeading")}</div>
@@ -22,7 +20,7 @@ const HowWeWork = ({}: HowWeWorkProps) => {
         {/* steps */}
         <div className="relative flex items-center justify-between gap-x-10">
           {/* line */}
-          <div className="bg-custom-primary absolute top-6 left-1/2 h-px ltr:w-[77.5%] ltr:-translate-x-1/2 rtl:w-[74%] rtl:-translate-x-[52%]" />
+          <div className="bg-primary absolute top-6 left-1/2 h-px ltr:w-[77.5%] ltr:-translate-x-1/2 rtl:w-[74%] rtl:-translate-x-[52%]" />
 
           <HWWStep
             title={t("steps.discovery.title")}

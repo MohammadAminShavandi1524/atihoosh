@@ -13,7 +13,7 @@ const HeroSection = ({}: HeroSectionProps) => {
   return (
     <div
       dir="ltr"
-      className="relative flex h-112 w-full overflow-hidden pt-[120px]"
+      className="relative flex h-112 w-full overflow-hidden pt-[120px] text-white"
     >
       {/* background image */}
       <div className="absolute inset-0 scale-105 bg-[url('/herosection.png')] bg-cover bg-center bg-no-repeat" />
@@ -30,7 +30,7 @@ const HeroSection = ({}: HeroSectionProps) => {
         <div className="self-start">ATI HOOSH</div>
         <div className="flex self-end">
           <span>B</span>
-          <span className="text-[#1e9dbd]">O</span>
+          <span className="text-primary">O</span>
           <span>NYAN</span>
         </div>
       </div>
@@ -46,7 +46,7 @@ const HeroSection = ({}: HeroSectionProps) => {
         {/* button */}
         <button className="flex cursor-pointer items-center gap-x-2.5">
           <span className="text-lg">{t("buttonText")}</span>
-          <span className="flex size-5 items-center justify-center bg-[#1e9dbd]">
+          <span className="flex size-5 items-center justify-center bg-primary">
             <ChevronRight
               className={cn(locale === "fa" && "rotate-180")}
               size={18}
@@ -59,3 +59,15 @@ const HeroSection = ({}: HeroSectionProps) => {
 };
 
 export default HeroSection;
+
+
+
+
+
+
+
+
+
+
+
+

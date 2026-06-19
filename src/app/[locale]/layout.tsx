@@ -16,6 +16,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme/Providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -76,24 +77,33 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} dir={locale === "en" ? "ltr" : "rtl"}>
+    <html
+      lang={locale}
+      dir={locale === "en" ? "ltr" : "rtl"}
+      suppressHydrationWarning
+    >
       <body
         className={cn(
           inter.variable,
           playfair.variable,
           space.variable,
           notoSerif.variable,
-          "bg-black text-white",
+
           locale === "fa" ? "font-IRANYekanX" : notoSerif.className,
-          "bg-black text-white",
         )}
       >
         <NextIntlClientProvider>
-          <Header locale={locale} />
+          <ThemeProvider
+            
+          >
+            <div className="text-foreground bg-background">
+              <Header />
 
-          {children}
+              {children}
 
-          <Footer />
+              <Footer />
+            </div>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

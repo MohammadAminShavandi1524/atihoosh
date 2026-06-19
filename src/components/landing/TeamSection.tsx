@@ -67,11 +67,11 @@ export default function TeamSection() {
             x: textX,
           }}
           className={cn(
-            "absolute top-[22vh] w-[26vw] text-white",
+            "absolute top-[22vh] w-[26vw]",
             isRtl ? "left-[6vw] text-right" : "right-[6vw] text-left",
           )}
         >
-          <span className="mb-8 block text-lg font-medium tracking-[0.15em] text-white/70 uppercase">
+          <span className="mb-8 block text-lg font-medium tracking-[0.15em] text-foreground/70  uppercase">
             {t("badge")}
           </span>
 
@@ -79,7 +79,7 @@ export default function TeamSection() {
             {t("title")}
           </h2>
 
-          <p className="font-playfair mb-9 text-[28px] text-white/90">
+          <p className="font-playfair mb-9 text-[28px] text-foreground/90">
             {t("description")}
           </p>
 

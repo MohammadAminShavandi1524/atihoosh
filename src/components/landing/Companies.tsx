@@ -6,7 +6,7 @@ interface CompaniesProps {}
 
 const Companies = ({}: CompaniesProps) => {
   return (
-    <div className="flex items-center px-22 py-12 gap-x-8 text-[#757575] bg-black">
+    <div className="flex items-center px-22 py-12 gap-x-8 text-muted bg-background">
       <span className="text-xl">company 1</span>
       <Building2 className="size-6"/>
     </div>

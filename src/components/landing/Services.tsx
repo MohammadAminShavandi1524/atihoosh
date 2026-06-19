@@ -14,39 +14,45 @@ type Service = {
   subTitle: string;
   src: string;
   color: ServiceColor;
+  bgColor: string;
 };
 
 const Services = () => {
   const t = useTranslations("HomePage.ServicesSection");
   const locale = useLocale();
-  const _services = [
+
+  const _services: Service[] = [
     {
-      key: "networkSupport",
-      title: t("networkSupport.title"),
-      subTitle: t("networkSupport.subTitle"),
-      src: "/1.png",
+      key: "1",
+      title: t("1.title"),
+      subTitle: t("1.subTitle"),
+      src: "/services/1.jpg",
       color: "black",
+      bgColor: "#010716",
     },
     {
-      key: "websiteDesign",
-      title: t("websiteDesign.title"),
-      subTitle: t("websiteDesign.subTitle"),
-      src: "/2.png",
+      key: "2",
+      title: t("2.title"),
+      subTitle: t("2.subTitle"),
+      src: "/services/2.jpg",
       color: "white",
+      bgColor: "#131331",
     },
     {
-      key: "applicationDesign",
-      title: t("applicationDesign.title"),
-      subTitle: t("applicationDesign.subTitle"),
-      src: "/3.png",
+      key: "3",
+      title: t("3.title"),
+      subTitle: t("3.subTitle"),
+      src: "/services/3.png",
       color: "black",
+      bgColor: "#00031f",
     },
     {
-      key: "logoMotion",
-      title: t("logoMotion.title"),
-      subTitle: t("logoMotion.subTitle"),
-      src: "/4.png",
+      key: "4",
+      title: t("4.title"),
+      subTitle: t("4.subTitle"),
+      src: "/services/4.png",
       color: "white",
+      bgColor: "#05002a",
     },
   ];
 
@@ -99,10 +105,8 @@ const Services = () => {
             }}
             className={cn(
               "absolute -right-60 -bottom-60 h-282 w-282 rounded-full",
-              service.color === "white"
-                ? "bg-linear-to-tl from-[#31343e] via-[#1b212d] to-[#0f121b]"
-                : "bg-[#d8e1e6]",
             )}
+            style={{ backgroundColor: service.bgColor }}
           />
 
           <div className="relative z-10 flex h-full flex-col p-7">
@@ -110,7 +114,7 @@ const Services = () => {
             <motion.h3
               className={cn(
                 "mb-6 min-h-16 text-[24px] font-bold",
-                service.color === "black" ? "text-black" : "text-white",
+                "text-white",
               )}
             >
               {service.title}
@@ -134,11 +138,7 @@ const Services = () => {
                   },
                 },
               }}
-              className={cn(
-                "mt-5 max-w-md text-lg text-justify",
-                service.color === "black" ? "text-black" : "text-white",
-                locale,
-              )}
+              className={cn("mt-5 max-w-md text-justify text-lg", "text-white")}
             >
               {service.subTitle}
             </motion.p>
@@ -155,7 +155,7 @@ const Services = () => {
               }}
               className={cn(
                 "mt-auto flex cursor-pointer items-center",
-                service.color === "black" ? "text-black" : "text-white",
+                "text-white",
                 locale === "en"
                   ? "gap-x-1.5 self-end text-[22px]"
                   : "gap-x-4 self-end text-lg",

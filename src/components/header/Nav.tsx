@@ -11,15 +11,15 @@ const Nav = ({}: NavProps) => {
   const t = useTranslations("Header.Navigation");
   const locale = useLocale();
   const pathname = usePathname();
-  console.log("🚀 ~ Nav ~ pathname:", pathname);
+
   return (
     <nav>
       <ul className="flex items-center gap-x-9 ps-12 text-lg">
         <li>
           <Link
             className={cn(
-              "hover:text-custom-primary transition-all",
-              pathname === `/${locale}/whatWeDo` && "text-custom-primary",
+              "hover:text-primary transition-all",
+              pathname === `/${locale}/whatWeDo` && "text-primary",
             )}
             href={`/${locale}/whatWeDo`}
           >
@@ -30,8 +30,8 @@ const Nav = ({}: NavProps) => {
         <li>
           <Link
             className={cn(
-              "hover:text-custom-primary transition-all",
-              pathname === `/${locale}/aboutUs` && "text-custom-primary",
+              "hover:text-primary transition-all",
+              pathname === `/${locale}/aboutUs` && "text-primary",
             )}
             href={`/${locale}/aboutUs`}
           >
@@ -41,7 +41,7 @@ const Nav = ({}: NavProps) => {
 
         <li>
           <Link
-            className="hover:text-custom-primary transition-all"
+            className="hover:text-primary transition-all"
             href={`/${locale}`}
           >
             {t("blog")}
@@ -50,7 +50,7 @@ const Nav = ({}: NavProps) => {
 
         <li>
           <Link
-            className="hover:text-custom-primary transition-all"
+            className="hover:text-primary transition-all"
             href={`/${locale}`}
           >
             {t("projectStart")}

@@ -21,19 +21,23 @@ const page = ({}: pageProps) => {
     <div className="">
       <section className="flex flex-col">
         {/* hero section */}
-        <div className="w90 mt-[175px] mb-[75px] flex flex-col gap-y-[50px] text-center">
-          <div className="text-[90px] font-medium">
-            <span>{t("HeroSection.titlePart1") + " "}</span>
-            <span className="text-[#1e9dbd]">
-              {t("HeroSection.titlePart2") + " "}
-            </span>
-            <span>{t("HeroSection.titlePart3")} </span>
+        <div className="border-t-border pt-18.75 mb-18.75 border-t">
+          <div className="w90 flex flex-col gap-y-12.5 text-center">
+            <div className="text-[90px] font-medium">
+              <span>{t("HeroSection.titlePart1") + " "}</span>
+              <span className="text-primary">
+                {t("HeroSection.titlePart2") + " "}
+              </span>
+              <span>{t("HeroSection.titlePart3")} </span>
+            </div>
+            <div className="text-[28px] font-medium">
+              {t("HeroSection.description")}
+            </div>
           </div>
-          <div className="text-[28px] font-medium">{t("HeroSection.description")}</div>
         </div>
 
         {/* experience */}
-        <div className="my-10 border-y-1 border-y-[#32323261] py-25">
+        <div className="border-y-border my-10 border-y py-25">
           <div className="w90 flex items-center justify-between px-30 2xl:px-40">
             {/* experience section */}
             <ExpSection
@@ -58,7 +62,7 @@ const page = ({}: pageProps) => {
         <div className="w90 my-15 grid h-100 grid-cols-2 px-30 2xl:px-40">
           {/* left side */}
           <div className="flex flex-col pe-20 2xl:pe-25">
-            <div className="text-custom-primary text-2xl">
+            <div className="text-primary text-2xl">
               {t("StorySection.badge")}
             </div>
 
@@ -66,13 +70,13 @@ const page = ({}: pageProps) => {
               {t("StorySection.title")}
             </div>
 
-            <div className="text-justify text-xl font-light text-[#8e8e8e]">
+            <div className="text-muted text-justify text-xl font-light">
               {t("StorySection.description")}
             </div>
           </div>
 
           {/* right side timeline */}
-          <div className="border-s-custom-primary flex flex-col gap-y-8 border-s pt-7">
+          <div className="border-s-primary flex flex-col gap-y-8 border-s pt-7">
             <TimeLine
               year={2022}
               title={t("StorySection.timeline.founded.title")}
@@ -103,7 +107,7 @@ const page = ({}: pageProps) => {
           </div>
 
           {/* content */}
-          <div className="z-10 mx-auto flex h-full flex-col items-center justify-center gap-y-8 2xl:w-[60%]">
+          <div className="z-10 mx-auto flex h-full flex-col items-center justify-center gap-y-8 text-white 2xl:w-[60%]">
             {/* title */}
             <div className="text-center text-[40px]">
               {t("BannerSection.title")}
@@ -119,38 +123,41 @@ const page = ({}: pageProps) => {
 
       <section className="flex flex-col">
         {/* Our values */}
-        <div className="w90 flex flex-col 2xl:px-30">
-          <div className="text-custom-primary mb-6 text-2xl">
-            {t("ValuesSection.badge")}
-          </div>
+        <div className="border-b-border mb-20 border-b pb-20">
+          <div className="w90 flex flex-col 2xl:px-30">
+            <div className="text-primary mb-6 text-2xl">
+              {t("ValuesSection.badge")}
+            </div>
 
-          <div className="mb-10 text-[48px]">{t("ValuesSection.title")}</div>
+            <div className="mb-10 text-[48px]">{t("ValuesSection.title")}</div>
 
-          <div className="flex items-center justify-between gap-x-18">
-            <OurValuesBox
-              title={values.innovation.title}
-              description={values.innovation.description}
-              Logo={Lightbulb}
-            />
+            <div className="flex items-center justify-between gap-x-18">
+              <OurValuesBox
+                title={values.innovation.title}
+                description={values.innovation.description}
+                Logo={Lightbulb}
+              />
 
-            <OurValuesBox
-              title={values.teamwork.title}
-              description={values.teamwork.description}
-              Logo={Users}
-            />
+              <OurValuesBox
+                title={values.teamwork.title}
+                description={values.teamwork.description}
+                Logo={Users}
+              />
 
-            <OurValuesBox
-              title={values.quality.title}
-              description={values.quality.description}
-              Logo={BadgeCheck}
-            />
+              <OurValuesBox
+                title={values.quality.title}
+                description={values.quality.description}
+                Logo={BadgeCheck}
+              />
+            </div>
           </div>
         </div>
 
         {/* our team */}
-        <div className="mt-20 mb-10 border-y-1 border-y-[#32323261] py-25">
+
+        {/* <div className="mt-20 mb-10 border-y-1 border-y-[#32323261] py-25">
           <div className="w90 flex flex-col 2xl:px-30">
-            <div className="text-custom-primary text-[22px]">
+            <div className="text-primary text-[22px]">
               {t("TeamSection.badge")}
             </div>
 
@@ -158,7 +165,7 @@ const page = ({}: pageProps) => {
               {t("TeamSection.title")}
             </div>
 
-            {/* our team boxes */}
+           
             <div className="grid grid-cols-4 gap-x-7 gap-y-14">
               {Array.from({ length: 8 }).map((_, i) => (
                 <OurTeamBox
@@ -169,7 +176,7 @@ const page = ({}: pageProps) => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );

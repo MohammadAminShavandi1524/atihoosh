@@ -13,7 +13,7 @@ export default function ProcessSection() {
       key: "structuredExecution",
       title: t("cards.structuredExecution.title"),
       description: t("cards.structuredExecution.description"),
-      className: "mr-auto bg-[#0041f0]",
+      className: "mr-auto bg-card",
       accentColor: "#60A5FA",
     },
     {
@@ -48,22 +48,19 @@ export default function ProcessSection() {
             <ProcessCard
               title={cards[0].title}
               description={cards[0].description}
-              className="me-auto bg-[#4c76fb]"
-              accentColor="#60A5FA"
+              className="bg-card text-card-foreground me-auto"
             />
 
             <ProcessCard
               title={cards[1].title}
               description={cards[1].description}
-              className="ms-auto bg-[#fc3522]"
-              accentColor="#FB7185"
+              className="bg-card-secondary text-card-secondary-foreground ms-auto"
             />
 
             <ProcessCard
               title={cards[2].title}
               description={cards[2].description}
-              className="me-auto bg-[#a367ec]"
-              accentColor="#C084FC"
+              className="bg-card-tertiary text-card-tertiary-foreground me-auto"
             />
           </div>
         </div>

@@ -19,7 +19,6 @@ export default function Footer() {
     >
       <FooterContent />
 
-      {/* EVOLVE ANIMATION (UNCHANGED STRUCTURE) */}
       <div
         className={cn(
           "absolute top-36 flex items-end justify-start",

@@ -23,7 +23,7 @@ const Technology = ({}: TechnologyProps) => {
   return (
     <div className="w90 mt-20 mb-30 flex flex-col px-40">
       {/* title */}
-      <div className="text-custom-primary mb-10 text-xl">
+      <div className="text-primary mb-10 text-xl">
         {t("services.sectionTitle")}
       </div>
 
@@ -35,7 +35,7 @@ const Technology = ({}: TechnologyProps) => {
         {tags.map((tag, index) => (
           <div
             key={index}
-            className="flex items-center gap-x-3 rounded-lg border border-[#ffffff14] bg-[#101010] px-4 py-2"
+            className="border-foreground/20 bg-secondary-bg flex items-center gap-x-3 rounded-lg border px-4 py-2"
           >
             <Image alt={tag.label} src={tag.imageSrc} width={20} height={20} />
             <div>{tag.label}</div>

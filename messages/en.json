@@ -29,22 +29,22 @@
     "ServicesSection": {
       "expandButton": "Expand",
 
-      "networkSupport": {
-        "title": "Network & System Support",
-        "subTitle": "Professional network and system support services designed to ensure secure, stable, and high-performance IT infrastructure, helping your business run smoothly with minimal downtime and maximum efficiency."
+      "1": {
+        "title": "Design and production of monitoring and automation systems",
+        "subTitle": "Automation and monitoring systems enable continuous monitoring of processes and automated execution of tasks. These solutions increase the speed of work, reduce human errors, and help improve overall system performance."
       },
 
-      "websiteDesign": {
-        "title": "Website Design",
-        "subTitle": "We turn ideas into digital solutions. We build custom websites and software with focus on performance and design. Tailored to your business needs."
+      "2": {
+        "title": "Website and software design and production",
+        "subTitle": "We turn your ideas into digital solutions. We offer practical solutions tailored to your business needs through website design and dedicated software. Our focus is on beauty, efficiency, and creating a professional presence in the digital world. Making self-funding supply chains real"
       },
 
-      "applicationDesign": {
-        "title": "Application Design",
-        "subTitle": "Intuitive web and mobile application designs focused on usability, performance, and seamless user engagement."
+      "3": {
+        "title": "Network and system support",
+        "subTitle": "Stable infrastructure is the beating heart of everyone and successful work. By providing specialized network services and support, we guarantee the security and stability of your systems. From start-up to maintenance and troubleshooting, we are with you so that you can focus on growing your business by reducing downtime."
       },
 
-      "logoMotion": {
+      "4": {
         "title": "Logo And Logo Motion",
         "subTitle": "First impressions last forever. We create creative logo motion and bring your brand identity to life through motion, storytelling, and design. Our content helps your brand stand out and stay memorable in the minds of your audience."
       }

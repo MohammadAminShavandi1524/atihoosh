@@ -8,12 +8,12 @@ const HeroSection = ({}: HeroSectionProps) => {
   const t = useTranslations("whatWeDo.hero");
 
   return (
-    <div className="mb-12 flex flex-col items-center border-y border-y-[#131313] pt-20 pb-20">
+    <div className="mb-12 flex flex-col items-center border-y border-y-border pt-20 pb-20">
       {/* title */}
       <div className="mb-12 text-center text-[85px]">
         <div>
           <span>{t("titlePart1")} </span>
-          <span className="text-custom-primary">{t("titleHighlight")}</span>
+          <span className="text-primary">{t("titleHighlight")}</span>
         </div>
         <div>{t("titlePart2")}</div>
       </div>

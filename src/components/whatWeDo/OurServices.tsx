@@ -11,9 +11,7 @@ const OurServices = ({}: OurServicesProps) => {
   return (
     <div className="w90 mt-20 flex flex-col px-40">
       {/* title */}
-      <div className="text-custom-primary mb-10 text-xl">
-        {t("sectionTitle")}
-      </div>
+      <div className="text-primary mb-10 text-xl">{t("sectionTitle")}</div>
 
       {/* description */}
       <div className="mb-12 text-[45px]">{t("sectionHeading")}</div>

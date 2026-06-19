@@ -37,7 +37,7 @@ const OurTeamBox = ({
         {/* EmployeeName */}
         <div className="text-[22px]">{EmployeeName}</div>
         {/* EmployeeStatus */}
-        <div className="text-custom-primary mb-3 text-lg">{EmployeeStatus}</div>
+        <div className="text-primary mb-3 text-lg">{EmployeeStatus}</div>
         {/* socials */}
         <div className="flex items-center gap-x-3">
           <Instagram className="size-4 text-[#757575]" />

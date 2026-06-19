@@ -11,9 +11,9 @@ const OurCustomers = ({}: OurCustomersProps) => {
   const t = useTranslations("HomePage.OurCustomersSection");
 
   return (
-    <div className="mt-20 border-t border-t-[#32323261] pt-15">
+    <div className="mt-20 border-t border-t-border pt-15">
       <div className="w90 flex flex-col items-center 2xl:px-30">
-        <div className="text-custom-primary mb-6 text-center text-[22px]">
+        <div className="text-primary mb-6 text-center text-[22px]">
           {t("badge")}
         </div>
 
@@ -49,7 +49,7 @@ const OurCustomers = ({}: OurCustomersProps) => {
         </div>
 
         {/* companies */}
-        <div className="grid grid-cols-3 gap-px bg-[#757575]">
+        <div className="grid grid-cols-3 gap-px bg-border">
           <Companies />
           <Companies />
           <Companies />

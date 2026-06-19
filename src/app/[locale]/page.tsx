@@ -19,9 +19,9 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
   // Enable static rendering
   setRequestLocale(locale as Locale);
 
-  const t = useTranslations("IndexPage");
-  const isFa = locale === "fa";
-  console.log(isFa);
+ 
+  
+ 
 
   return (
     <div>
@@ -51,3 +51,6 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
     </div>
   );
 }
+
+
+

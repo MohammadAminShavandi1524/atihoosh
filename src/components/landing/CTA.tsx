@@ -13,10 +13,10 @@ const CTA = ({}: CTAProps) => {
     <div className="mt-50 flex w-full flex-col items-center">
       {/* title */}
       <div className="font-space mb-12 text-[120px] font-semibold">
-        <span className={cn(locale === "fa" && "text-[#219ebc]")}>
+        <span className={cn(locale === "fa" && "text-primary")}>
           {t("title.part1")}
         </span>
-        <span className={cn(locale === "en" && "text-[#219ebc]")}>
+        <span className={cn(locale === "en" && "text-primary")}>
           {t("title.part2")}
         </span>
         <span>{t("title.part3")}</span>

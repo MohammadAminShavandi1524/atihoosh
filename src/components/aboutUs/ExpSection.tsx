@@ -32,8 +32,7 @@ const ExpSection = ({ label, number, topLineClassName }: ExpSectionProps) => {
         transition={{ delay: 0.2, duration: 0.7 }}
         className={cn(
           topLineClassName,
-          "h-1.25 w-8.25 ltr:origin-left rtl:origin-right bg-[#1e9dbd] 2xl:w-12.25",
-          
+          "bg-primary h-1.25 w-8.25 2xl:w-12.25 ltr:origin-left rtl:origin-right",
         )}
       />
 
@@ -55,7 +54,7 @@ const ExpSection = ({ label, number, topLineClassName }: ExpSectionProps) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.45, duration: 0.8 }}
-        className="ms-0.75 text-lg text-white/70 2xl:text-xl"
+        className="ms-0.75 text-lg text-foreground/70 2xl:text-xl"
       >
         {label}
       </motion.span>
