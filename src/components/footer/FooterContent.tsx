@@ -46,11 +46,35 @@ export default function FooterContent() {
       </div>
 
       {/* socials */}
+      {/* socials */}
       <div className="mt-20 mb-10 flex items-center gap-x-3">
-        <Mail className="text-primary size-6 cursor-pointer" />
-        <Send className="text-primary size-6 cursor-pointer" />
-        <Instagram className="text-primary size-6 cursor-pointer" />
-        <Linkedin className="text-primary size-6 cursor-pointer ps-0.5" />
+        <Link href="mailto:Atihooshbonyanco@gmail.com">
+          <Mail className="text-primary size-6 cursor-pointer" />
+        </Link>
+
+        <Link
+          href="https://t.me/Atihooshbonyan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Send className="text-primary size-6 cursor-pointer" />
+        </Link>
+
+        <Link
+          href="https://www.instagram.com/atihooshbonyan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram className="text-primary size-6 cursor-pointer" />
+        </Link>
+
+        <Link
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin className="text-primary size-6 cursor-pointer ps-0.5" />
+        </Link>
       </div>
 
       <div className="text-lg">{t("copyright")}</div>
