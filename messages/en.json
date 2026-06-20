@@ -10,8 +10,10 @@
 
   "Header": {
     "Navigation": {
+      "home": "Home",
       "whatWeDo": "What we do",
       "aboutUs": "About us",
+      "contactUs": "Contact us",
       "blog": "Blog",
       "projectStart": "Project start"
     }

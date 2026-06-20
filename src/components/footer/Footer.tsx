@@ -5,11 +5,18 @@ import FooterContent from "./FooterContent";
 import AnimatedTextColumn from "./AnimatedTextColumn";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);
   const locale = useLocale();
   const isRtl = locale === "fa";
+
+  
+  const pathname = usePathname();
+  
+  if (pathname === `/${locale}/project-start`)
+    return <div className="hidden"></div>;
 
   return (
     <div
@@ -22,10 +29,10 @@ export default function Footer() {
       <div
         className={cn(
           "absolute top-36 flex items-end justify-start",
-          isRtl ? "-left-0 -rotate-90" : "-right-0 -rotate-90",
+          isRtl ? "left-0 -rotate-90" : "right-0 -rotate-90",
         )}
       >
-        <div className="flex h-fit flex-col gap-2 text-[196px] leading-[170px] font-bold">
+        <div className="flex h-fit flex-col gap-2 text-[196px] leading-42.5 font-bold">
           <AnimatedTextColumn
             footerRef={footerRef}
             height={50}

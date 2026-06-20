@@ -95,7 +95,7 @@
   --radius: 0.625rem;
 
   /* background */
-  --background: #ffffff;
+  --background: #fcfeff;
   --secondary-bg: #f5f5f5;
   --foreground: #0a0a0a;
 
@@ -109,9 +109,10 @@
   --muted-foreground: #737373;
 
   /* cards */
-  --card: #0041f0;
-  --card-secondary: #901a30;
-  --card-tertiary: #460073;
+
+  --card: #2f6bff;
+  --card-secondary: #c9364f;
+  --card-tertiary: #6a2bbf;
 
   --card-foreground: #60a5fa;
   --card-secondary-foreground: #fb7185;

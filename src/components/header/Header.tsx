@@ -1,4 +1,4 @@
-"use locale";
+"use client";
 
 import { Search, Sun } from "lucide-react";
 import LanguageSwitcher from "../LanguageSwitcher";
@@ -8,11 +8,18 @@ import Link from "next/link";
 
 import Nav from "./Nav";
 import { ThemeButton } from "../theme/ThemeButton";
+import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 interface HeaderProps {}
 
 const Header = ({}: HeaderProps) => {
   const locale = useLocale();
+
+  const pathname = usePathname();
+  if (pathname === `/${locale}/project-start`)
+    return <div className="hidden"></div>;
+
   return (
     <div>
       <div
@@ -20,12 +27,7 @@ const Header = ({}: HeaderProps) => {
         className="w90 flex items-center justify-between py-4"
       >
         {/* logo */}
-        <Link
-          className="border-primary bg-tertiary rounded-lg border pt-2.5 pr-4.25 pb-3 pl-3.75"
-          href={`/${locale}`}
-        >
-          <Image src="/logo.png" alt="logo" width={56} height={56} />
-        </Link>
+        <Logo />
 
         {/* nav */}
         <Nav />

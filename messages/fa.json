@@ -7,10 +7,13 @@
   "LocaleLayout": {
     "title": "آتی هوش بنیان"
   },
+
   "Header": {
     "Navigation": {
+      "home": "خانه",
       "whatWeDo": "خدمات ما",
       "aboutUs": "درباره ما",
+      "contactUs": "تماس با ما",
       "blog": "وبلاگ",
       "projectStart": "شروع پروژه"
     }
