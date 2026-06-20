@@ -31,7 +31,7 @@ const StepDots = ({ step, setStep }: StepsDotsProps) => {
         step={step}
         setStep={setStep}
         stepNumber={1}
-        label="Your infirmation"
+        label="Your information"
       />
 
       {/* step 2*/}

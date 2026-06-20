@@ -9,7 +9,7 @@ import { useState } from "react";
 interface pageProps {}
 
 const page = ({}: pageProps) => {
-  const [step, setStep] = useState<number>(1);
+  const [step, setStep] = useState<number>(3);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -39,6 +39,8 @@ const page = ({}: pageProps) => {
           />
         </div>
       )}
+
+      
 
       <Header />
       <PSBody step={step} setStep={setStep} />
