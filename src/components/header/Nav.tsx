@@ -66,8 +66,11 @@ const Nav = ({}: NavProps) => {
         {/* blog */}
         <li>
           <Link
-            className="hover:text-primary transition-all"
-            href={`/${locale}`}
+            className={cn(
+              "hover:text-primary transition-all",
+              pathname === `/${locale}/blogs` && "text-primary",
+            )}
+            href={`/${locale}/blogs`}
           >
             {t("blog")}
           </Link>

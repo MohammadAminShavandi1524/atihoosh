@@ -9,7 +9,7 @@ import { useState } from "react";
 interface pageProps {}
 
 const page = ({}: pageProps) => {
-  const [step, setStep] = useState<number>(3);
+  const [step, setStep] = useState<number>(1);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
