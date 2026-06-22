@@ -39,8 +39,8 @@ export default function FooterContent() {
           <Link className="footer-link" href="">
             {t("links.privacy")}
           </Link>
-          <Link className="footer-link" href="">
-            {t("links.sitemap")}
+          <Link className="footer-link" href={`/${locale}/talent`}>
+            {t("links.talent")}
           </Link>
         </div>
       </div>
@@ -68,11 +68,7 @@ export default function FooterContent() {
           <Instagram className="text-primary size-6 cursor-pointer" />
         </Link>
 
-        <Link
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="" target="_blank" rel="noopener noreferrer">
           <Linkedin className="text-primary size-6 cursor-pointer ps-0.5" />
         </Link>
       </div>
