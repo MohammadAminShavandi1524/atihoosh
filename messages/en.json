@@ -248,6 +248,48 @@
     }
   },
 
+  "ContactUs": {
+    "HeroSection": {
+      "titlePart1": "Let's talk about",
+      "titlePart2": "your",
+      "titlePart3": "next project",
+      "description": "Have a question, a project in mind, or just want to get in touch? Send us a message and our team will get back to you as soon as possible."
+    },
+    "SendMessageForm": {
+      "badge": "Send a message",
+      "title": "Get in touch",
+      "description": "Fill out the form below and we'll respond within one business day.",
+
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Ali Karimi",
+
+      "phone": "Phone number",
+      "phonePlaceholder": "+98 912 000 0000",
+
+      "email": "Email",
+      "emailPlaceholder": "example@email.com",
+
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project or question...",
+
+      "button": "Send message",
+
+      "privacy": "We respect your privacy. Your details are never shared with third parties."
+    },
+    "ContactInfo": {
+      "badge": "Contact Info",
+      "title": "Reach us directly",
+
+      "addressLabel": "Address",
+      "addressValue": "No. 12, Ati Hoosh Building, Valiasr",
+
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+
+      "followTitle": "Follow us"
+    }
+  },
+
   "Blogs": {
     "HeroSection": {
       "titlePart1": "Ideas about",

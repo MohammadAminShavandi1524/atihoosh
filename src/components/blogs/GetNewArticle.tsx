@@ -1,6 +1,9 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 interface GetNewArticleProps {}
 
@@ -8,6 +11,15 @@ const GetNewArticle = ({}: GetNewArticleProps) => {
   const t = useTranslations("Blogs.GetNewArticle");
   const locale = useLocale();
   const isRTL = locale === "fa";
+
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   return (
     <div className="w90 my-40 px-50">
       <div
@@ -30,7 +42,12 @@ const GetNewArticle = ({}: GetNewArticleProps) => {
             {t("inputPlaceholder")}
           </button>
 
-          <button className="bg-primary cursor-pointer rounded-lg px-5 py-2.5">
+          <button
+            className={cn(
+              "bg-primary cursor-pointer rounded-lg px-5 py-2.5 text-white",
+             
+            )}
+          >
             {t("button")}
           </button>
         </div>
