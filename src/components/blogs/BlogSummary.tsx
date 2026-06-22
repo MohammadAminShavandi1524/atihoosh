@@ -32,8 +32,8 @@ const BlogSummary = ({
       </div>
 
       {/* top side */}
-      <div className="flex h-[260px] w-full items-center justify-center">
-        <Image src={imageSrc} alt="" width={80} height={80} />
+      <div className="relative h-[330px] w-full overflow-hidden">
+        <Image src={imageSrc} alt="" fill className="object-cover" />
       </div>
       {/* content */}
       <div className="bg-secondary-bg flex h-full flex-col px-6 pt-6 pb-7">

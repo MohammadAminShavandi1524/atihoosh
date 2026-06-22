@@ -27,6 +27,7 @@ const OurServices = ({}: OurServicesProps) => {
             t("cards.web.tags.backend"),
             t("cards.web.tags.fullStack"),
           ]}
+          iamgeSrc="/whatWeDo/1.png"
         />
 
         <WWOCard
@@ -38,6 +39,7 @@ const OurServices = ({}: OurServicesProps) => {
             t("cards.mobile.tags.android"),
             t("cards.mobile.tags.crossPlatform"),
           ]}
+          iamgeSrc="/whatWeDo/2.png"
         />
 
         <WWOCard
@@ -49,6 +51,7 @@ const OurServices = ({}: OurServicesProps) => {
             t("cards.ai.tags.automation"),
             t("cards.ai.tags.chatbot"),
           ]}
+          iamgeSrc="/whatWeDo/3.png"
         />
 
         <WWOCard
@@ -60,6 +63,7 @@ const OurServices = ({}: OurServicesProps) => {
             t("cards.consulting.tags.architecture"),
             t("cards.consulting.tags.techStack"),
           ]}
+          iamgeSrc="/whatWeDo/4.png"
         />
       </div>
     </div>

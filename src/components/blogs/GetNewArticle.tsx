@@ -9,7 +9,7 @@ const GetNewArticle = ({}: GetNewArticleProps) => {
   const locale = useLocale();
   const isRTL = locale === "fa";
   return (
-    <div className="my-40 px-50">
+    <div className="w90 my-40 px-50">
       <div
         className={`relative flex min-h-[220px] items-center justify-between rounded-xl py-16 ps-24 pe-56 ${
           isRTL

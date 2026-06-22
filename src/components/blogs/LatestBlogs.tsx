@@ -13,7 +13,7 @@ const LatestBlogs = ({}: LatestBlogsProps) => {
     locale === "en" ? EN_latestBlogsSample : FA_latestBlogsSample;
 
   return (
-    <div className="px-50">
+    <div className="px-50 w90">
       {/* title */}
       <div className="text-primary mb-4 text-lg">
         {t("titlePart1")} {t("titlePart2")}
