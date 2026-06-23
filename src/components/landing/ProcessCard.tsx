@@ -65,7 +65,7 @@ function ProcessCard({ title, description, className }: ProcessCardProps) {
           duration: 0.8,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="absolute top-36 left-14 z-10 max-w-[500px] text-xl leading-10 whitespace-pre-line text-white/70"
+        className="absolute top-14 left-14 z-10 max-w-[500px] text-xl leading-10 whitespace-pre-line text-white/70"
       >
         {description}
       </motion.p>

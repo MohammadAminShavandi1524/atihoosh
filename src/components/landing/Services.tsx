@@ -109,7 +109,7 @@ const Services = () => {
             style={{ backgroundColor: service.bgColor }}
           />
 
-          <div className="relative z-10 flex h-full flex-col p-7">
+          <div className="relative z-10 flex h-full flex-col px-7 py-7">
             {/* Title */}
             <motion.h3
               className={cn(

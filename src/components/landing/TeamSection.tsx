@@ -83,7 +83,7 @@ export default function TeamSection() {
             {t("description")}
           </p>
 
-          <AnimatedArrowButton label={t("button")} labelClassName="text-xl" />
+          <AnimatedArrowButton href="" label={t("button")} labelClassName="text-xl" />
         </motion.div>
       </div>
     </section>

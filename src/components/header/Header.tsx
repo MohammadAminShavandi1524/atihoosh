@@ -10,18 +10,30 @@ import Nav from "./Nav";
 import { ThemeButton } from "../theme/ThemeButton";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface HeaderProps {}
 
 const Header = ({}: HeaderProps) => {
   const locale = useLocale();
 
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   if (pathname === `/${locale}/project-start`)
     return <div className="hidden"></div>;
 
   return (
-    <div>
+    <div className={cn(theme === "dark" ? "bg-[#0f0f0f]" : "bg-[#e8e8e8]")}>
       <div
         style={locale === "en" ? { fontFamily: "var(--font-noto-serif)" } : {}}
         className="w90 flex items-center justify-between py-4"
@@ -35,7 +47,7 @@ const Header = ({}: HeaderProps) => {
         {/* search language and theme buttons container */}
         <div className="flex items-center gap-x-2">
           {/* search */}
-          <div className="cursor-pointer px-2 py-3">
+          <div className="cursor-pointer px-2 py-3 hidden">
             <Search />
           </div>
 

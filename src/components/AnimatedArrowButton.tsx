@@ -3,22 +3,26 @@
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 import { useLocale } from "next-intl";
+import Link from "next/link";
 
 interface AnimatedArrowButtonProps {
   label: string;
   labelClassName?: string;
   className?: string;
+  href: string;
 }
 
 const AnimatedArrowButton = ({
   label,
   labelClassName,
   className,
+  href
 }: AnimatedArrowButtonProps) => {
   const locale = useLocale();
 
   return (
-    <button
+    <Link
+      href={href}
       className={cn(
         "group flex cursor-pointer items-center gap-x-5",
         className,
@@ -47,7 +51,7 @@ const AnimatedArrowButton = ({
           />
         </span>
       </span>
-    </button>
+    </Link>
   );
 };
 
