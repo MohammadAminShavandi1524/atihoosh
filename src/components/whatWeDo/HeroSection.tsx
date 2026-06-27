@@ -10,17 +10,21 @@ const HeroSection = ({}: HeroSectionProps) => {
   return (
     <div className="border-b-border mb-12 flex flex-col items-center border-b pt-20 pb-20">
       {/* title */}
-      <div className="mb-12 text-center text-[85px]">
+      {/* <div className="mb-12 text-center text-[85px]">
         <div>
           <span>{t("titlePart1")} </span>
           <span className="text-primary">{t("titleHighlight")}</span>
         </div>
         <div>{t("titlePart2")}</div>
-      </div>
+      </div> */}
 
       {/* description */}
-      <div className="mx-auto w-5/10 text-center text-2xl/[40px]">
-        {t("description")}
+      {/* <div className="mx-auto w-5/10 text-center text-2xl/[40px]">
+        
+      </div> */}
+
+      <div className="w90 text-center text-[60px] 2xl:px-40">
+        {t("description2")}
       </div>
     </div>
   );

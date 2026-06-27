@@ -18,11 +18,11 @@ const page = ({}: pageProps) => {
       {/* how we work */}
       <HowWeWork />
 
-      {/* Technology */}
-      <Technology />
+      {/* Technology === hidden*/}
+      {/* <Technology /> */}
 
-      {/* Ready to Build Something? */}
-      <ReadyToBuild />
+      {/* Ready to Build Something? === hidden */}
+      {/* <ReadyToBuild /> */}
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Logo = ({}: LogoProps) => {
 
   return (
     <Link className="min-h-[65px]" href={`/${locale}`}>
-      <Image src="/logo.png" alt="logo" width={95} height={95} />
+      <Image src="/logo.png" alt="logo" width={95} height={65} />
     </Link>
   );
 };

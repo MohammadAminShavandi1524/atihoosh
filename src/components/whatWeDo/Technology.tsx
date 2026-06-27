@@ -21,7 +21,7 @@ const Technology = ({}: TechnologyProps) => {
   const t = useTranslations("whatWeDo");
 
   return (
-    <div className="w90 mt-20 mb-30 flex flex-col px-40">
+    <div className="w90 mt-20 mb-30 flex flex-col px-40 hidden">
       {/* title */}
       <div className="text-primary mb-10 text-xl">
         {t("services.sectionTitle")}

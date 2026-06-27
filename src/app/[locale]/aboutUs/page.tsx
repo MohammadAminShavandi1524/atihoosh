@@ -34,7 +34,7 @@ const page = ({}: pageProps) => {
       <section className="flex flex-col">
         {/* hero section */}
         <div className="mb-18.75 pt-18.75">
-          <div className="w90 flex flex-col gap-y-12.5 text-center">
+          <div className="w90 flex flex-col gap-y-12.5 text-center 2xl:px-30">
             <div className="text-[90px] font-medium">
               <span>{t("HeroSection.titlePart1") + " "}</span>
               <span className="text-primary">
@@ -42,8 +42,9 @@ const page = ({}: pageProps) => {
               </span>
               <span>{t("HeroSection.titlePart3")} </span>
             </div>
-            <div className="text-[28px] font-medium">
-              {t("HeroSection.description")}
+            <div className="flex flex-col text-justify text-[28px] font-medium gap-y-4">
+              <span>{t("HeroSection.description1")}</span>
+              <span>{t("HeroSection.description2")}</span>
             </div>
           </div>
         </div>
@@ -70,7 +71,7 @@ const page = ({}: pageProps) => {
           </div>
         </div>
 
-        {/* our story */}
+        {/* our story === hidden */}
         <div className="w90 my-15 grid hidden h-100 grid-cols-2 px-30 2xl:px-40">
           {/* left side */}
           <div className="flex flex-col pe-20 2xl:pe-25">
@@ -110,7 +111,8 @@ const page = ({}: pageProps) => {
         </div>
       </section>
 
-      <section className="relative my-15 flex hidden h-120 w-full">
+    {/* hidden */}
+      <section className="relative my-15  hidden h-120 w-full">
         {/* banner */}
         <div className="relative flex w-full flex-col">
           {/* image */}
@@ -136,7 +138,7 @@ const page = ({}: pageProps) => {
           </div>
         </div>
       </section>
-
+      
       <section className="flex flex-col">
         {/* Our values */}
         <div className="border-b-border mb-20 border-b pb-20">

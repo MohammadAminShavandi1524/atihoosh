@@ -101,7 +101,8 @@
       "titlePart1": "We Build",
       "titleHighlight": "Software",
       "titlePart2": "That Works",
-      "description": "From idea to deployment — we design and develop software solutions tailored to your business needs."
+      "description1": "From idea to deployment — we design and develop software solutions tailored to your business needs.",
+      "description2": "From IT infrastructure and software development to AI-powered solutions, we help businesses build, grow, and innovate."
     },
     "services": {
       "sectionTitle": "Our Services",
@@ -185,7 +186,8 @@
       "titlePart1": "We are",
       "titlePart2": "Ati Hoosh",
       "titlePart3": "",
-      "description": "A team of designers and developers who use AI to create better digital experiences."
+      "description1": "Ati Hoosh Bonyan is a group of IT professionals working to provide practical and reliable solutions for businesses. Our focus is on designing and implementing technology infrastructure, software and web development, network support, process automation, and artificial intelligence solutions.",
+      "description2": "We believe that technology is valuable when it can help solve real business problems. For this reason, in each project, we strive to provide solutions that, in addition to technical quality, are also effective in improving performance, increasing productivity, and growing organizations."
     },
     "StatsSection": {
       "successfulProjects": "Successful Projects",
@@ -292,7 +294,7 @@
 
       "emailLabel": "Email",
       "phoneLabel": "Phone",
-      "phoneNumber": "09126079834",
+      "phoneNumber": "09126956223",
 
       "followTitle": "Follow us"
     }

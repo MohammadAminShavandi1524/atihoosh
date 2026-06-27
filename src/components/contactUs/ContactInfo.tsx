@@ -54,10 +54,10 @@ const ContactInfo = ({}: ContactInfoProps) => {
 
         <ContactItem Logo={Mail} label={t("emailLabel")}>
           <Link
-            href="mailto:atihooshco@gmail.com"
+            href="mailto:Atihooshbonyanco@gmail.com"
             className="hover:text-primary transition-colors"
           >
-            atihooshco@gmail.com
+            Atihooshbonyanco@gmail.com
           </Link>
         </ContactItem>
 

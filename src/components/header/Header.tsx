@@ -62,7 +62,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "border-b-border fixed top-0 right-0 left-0 z-50 min-h-[97px] border-b transition-transform duration-300",
+        "border-b-border fixed top-0 right-0 left-0 z-50 min-h-[97px] max-h-[98px] border-b transition-transform duration-300",
         showHeader ? "translate-y-0" : "-translate-y-full",
       )}
     >
