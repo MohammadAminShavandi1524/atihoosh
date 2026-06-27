@@ -81,7 +81,6 @@
           "title": "Design and Implementation",
           "description": "We transform ideas into practical solutions. Once the requirements are clearly defined, the design and development process begins. Throughout implementation, we carefully consider technical requirements, user experience, and long-term scalability to deliver not just a product, but a reliable and effective solution."
         },
-
         "continuousResponsibility": {
           "title": "Delivery, support, and improvement",
           "description": "A project doesn't just end with delivery. After launch, we check how the system is performing, and make any needed tweaks and provide support. Our goal is to give you a solution that can grow along with your business."
@@ -186,9 +185,8 @@
       "titlePart1": "We are",
       "titlePart2": "Ati Hoosh",
       "titlePart3": "",
-      "description": "Ati Hoosh Bonyan is a team of IT professionals dedicated to delivering practical and reliable technology solutions for businesses. We specialize in technology infrastructure design and implementation, software and web development, network support, process automation, and artificial intelligence solutions.\n\nWe believe technology creates real value only when it solves real business challenges. That is why, in every project, we focus on delivering solutions that not only meet high technical standards but also improve efficiency, enhance productivity, and support sustainable business growth."
+      "description": "A team of designers and developers who use AI to create better digital experiences."
     },
-
     "StatsSection": {
       "successfulProjects": "Successful Projects",
       "teamMembers": "Team Members",
