@@ -118,7 +118,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
                 Thank you for your information. We will contact you shortly to
                 get started
               </div>
-              <button className="bg-primary hover:bg-primary-hover flex h-[44px] w-[270px] cursor-pointer items-center justify-center gap-x-1 rounded-md ps-3 font-medium transition-all">
+              <button className="opacity-0 bg-primary hover:bg-primary-hover flex h-[44px] w-[270px] cursor-pointer items-center justify-center gap-x-1 rounded-md ps-3 font-medium transition-all">
                 <span className="font-medium">Go to Dashboard</span>
                 <span>
                   <ArrowRight className="size-4.5 pt-0.5" />

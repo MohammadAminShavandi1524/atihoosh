@@ -18,26 +18,26 @@ export default function FooterContent() {
       {/* links */}
       <div className="grid w-150 grid-cols-2 text-2xl">
         <div className="flex flex-col gap-y-8">
-          <Link className="footer-link" href="">
+          <Link className="footer-link" href={`/${locale}/what-we-do`}>
             {t("links.whatWeDo")}
           </Link>
-          <Link className="footer-link" href="">
+          <Link className="footer-link" href={`/${locale}/aboutUs`}>
             {t("links.aboutUs")}
           </Link>
-          <Link className="footer-link" href="">
+          <Link className="footer-link" href={`/${locale}/blogs`}>
             {t("links.blog")}
           </Link>
-          <Link className="footer-link" href="">
+          <Link className="footer-link" href={`/${locale}/project-start`}>
             {t("links.projectStart")}
           </Link>
         </div>
 
         <div className="flex flex-col gap-y-8">
-          <Link className="footer-link" href="">
+          {/* <Link className="footer-link" href="">
             {t("links.terms")}
-          </Link>
-          <Link className="footer-link" href="">
-            {t("links.privacy")}
+          </Link>*/}
+          <Link className="footer-link" href={`/${locale}/contact-us`}>
+            {t("links.conatctUs")}
           </Link>
           <Link className="footer-link" href={`/${locale}/talent`}>
             {t("links.talent")}

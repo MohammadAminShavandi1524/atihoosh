@@ -29,7 +29,10 @@ const CTA = ({}: CTAProps) => {
       </div>
 
       {/* button */}
-      <AnimatedArrowButton label={t("button")} />
+      <AnimatedArrowButton
+        href={`/${locale}/project-start`}
+        label={t("button")}
+      />
     </div>
   );
 };

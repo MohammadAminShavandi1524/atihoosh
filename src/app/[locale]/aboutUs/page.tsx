@@ -7,7 +7,9 @@ import OurValuesBox from "@/components/aboutUs/OurValuesBox";
 import TimeLine from "@/components/aboutUs/TimeLine";
 import { BadgeCheck, Lightbulb, Users } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface pageProps {}
 
@@ -17,11 +19,20 @@ const page = ({}: pageProps) => {
   const member = t.raw("TeamSection.members.default");
   const locale = useLocale();
 
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="">
       <section className="flex flex-col">
         {/* hero section */}
-        <div className="border-t-border pt-18.75 mb-18.75 border-t">
+        <div className="border-t-border mb-18.75 border-t pt-18.75">
           <div className="w90 flex flex-col gap-y-12.5 text-center">
             <div className="text-[90px] font-medium">
               <span>{t("HeroSection.titlePart1") + " "}</span>
@@ -38,7 +49,7 @@ const page = ({}: pageProps) => {
 
         {/* experience */}
         <div className="border-y-border my-10 border-y py-25">
-          <div className="w90 flex items-center justify-between px-30 2xl:px-40">
+          <div className="w90 flex max-w-[1000px] items-center justify-between">
             {/* experience section */}
             <ExpSection
               number="+50"
@@ -54,12 +65,12 @@ const page = ({}: pageProps) => {
               topLineClassName="ms-1.5"
             />
 
-            <ExpSection number="24/7" label={t("StatsSection.support")} />
+            {/* <ExpSection number="24/7" label={t("StatsSection.support")} /> */}
           </div>
         </div>
 
         {/* our story */}
-        <div className="w90 my-15 grid h-100 grid-cols-2 px-30 2xl:px-40">
+        <div className="w90 my-15 grid hidden h-100 grid-cols-2 px-30 2xl:px-40">
           {/* left side */}
           <div className="flex flex-col pe-20 2xl:pe-25">
             <div className="text-primary text-2xl">
@@ -98,16 +109,20 @@ const page = ({}: pageProps) => {
         </div>
       </section>
 
-      <section className="relative my-15 flex h-120 w-full">
+      <section className="relative my-15 flex hidden h-120 w-full">
         {/* banner */}
         <div className="relative flex w-full flex-col">
           {/* image */}
           <div className="absolute top-0 h-120 w-full">
-            <Image alt="AUbanner" src={"/AUbanner.png"} fill />
+            <Image
+              alt="AUbanner"
+              src={theme === "dark" ? "/AUbanner.png" : "/AUbannerLight.png"}
+              fill
+            />
           </div>
 
           {/* content */}
-          <div className="z-10 mx-auto flex h-full flex-col items-center justify-center gap-y-8 text-white 2xl:w-[60%]">
+          <div className="z-10 mx-auto flex h-full flex-col items-center justify-center gap-y-8 2xl:w-[60%]">
             {/* title */}
             <div className="text-center text-[40px]">
               {t("BannerSection.title")}
@@ -131,22 +146,32 @@ const page = ({}: pageProps) => {
 
             <div className="mb-10 text-[48px]">{t("ValuesSection.title")}</div>
 
-            <div className="flex items-center justify-between gap-x-18">
+            <div className="grid grid-cols-3 gap-x-18 gap-y-18 2xl:grid-cols-5 2xl:gap-x-10 2xl:gap-y-10">
               <OurValuesBox
-                title={values.innovation.title}
-                description={values.innovation.description}
+                title="Commitment to timely project delivery"
+                // description={values.innovation.description}
                 Logo={Lightbulb}
               />
 
               <OurValuesBox
-                title={values.teamwork.title}
-                description={values.teamwork.description}
+                title="Quality"
+                // description={values.teamwork.description}
                 Logo={Users}
               />
 
               <OurValuesBox
-                title={values.quality.title}
-                description={values.quality.description}
+                title="Innovation"
+                // description={values.quality.description}
+                Logo={BadgeCheck}
+              />
+              <OurValuesBox
+                title="Continuous support and companionship"
+                // description={values.quality.description}
+                Logo={BadgeCheck}
+              />
+              <OurValuesBox
+                title="Expert and experienced team"
+                // description={values.quality.description}
                 Logo={BadgeCheck}
               />
             </div>
