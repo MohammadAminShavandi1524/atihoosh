@@ -1,47 +1,10 @@
 "use client";
 
 import { Dispatch, SetStateAction, useState } from "react";
+import { useTranslations } from "next-intl";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 
-const services = [
-  {
-    id: 1,
-    title: "Website design and development",
-    desc: "Modern and Responsive Website Design",
-    imageSrc: "/project-start/1.png",
-  },
-  {
-    id: 2,
-    title: "Logo and logo motion design",
-    desc: "Custom web Applications and Development",
-    imageSrc: "/project-start/2.png",
-  },
-  {
-    id: 3,
-    title: "SEO and digital marketing",
-    desc: "IOS and Android Mobile Applications",
-    imageSrc: "/project-start/3.png",
-  },
-  {
-    id: 4,
-    title: "UI/UX Design",
-    desc: "User experience and interface design",
-    imageSrc: "/project-start/4.png",
-  },
-  {
-    id: 5,
-    title: "Branding",
-    desc: "Brand identity and visual design",
-    imageSrc: "/project-start/5.png",
-  },
-  {
-    id: 6,
-    title: "Network Support",
-    desc: "Computer systems & infrastructure maintenance",
-    imageSrc: "/project-start/6.png",
-  },
-];
 interface ServiceSelectorProps {
   step: number;
   setStep: Dispatch<SetStateAction<number>>;
@@ -51,6 +14,15 @@ export default function ServiceSelector({
   step,
   setStep,
 }: ServiceSelectorProps) {
+  const t = useTranslations("projectStart.services");
+
+  const services = t.raw("items") as {
+    id: number;
+    title: string;
+    desc: string;
+    imageSrc: string;
+  }[];
+
   const [selected, setSelected] = useState<number[]>([]);
 
   const toggle = (id: number) => {
@@ -84,27 +56,19 @@ export default function ServiceSelector({
                   height={20}
                 />
 
-                {/* checkbox */}
-                <div className="">
-                  <div
-                    className={`flex h-5 w-5 items-center justify-center rounded border ${
-                      isActive
-                        ? "border-primary bg-primary-hover"
-                        : "border-muted-foreground"
-                    }`}
-                  >
-                    {isActive && (
-                      <Check size={14} className="text-foreground" />
-                    )}
-                  </div>
+                <div
+                  className={`flex h-5 w-5 items-center justify-center rounded border ${
+                    isActive
+                      ? "border-primary bg-primary-hover"
+                      : "border-muted-foreground"
+                  }`}
+                >
+                  {isActive && <Check size={14} />}
                 </div>
               </div>
 
-              {/* content */}
               <h3 className="mb-2 text-[17px] font-semibold">{item.title}</h3>
-              {item.desc && (
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
-              )}
+              <p className="text-muted-foreground text-sm">{item.desc}</p>
             </div>
           );
         })}
@@ -116,20 +80,16 @@ export default function ServiceSelector({
           onClick={() => setStep(1)}
           className="border-border text-muted-foreground hover:text-foreground hover:border-muted-foreground shadow-border bg-secondary-bg flex h-[44px] w-[240px] cursor-pointer items-center justify-center gap-x-1 rounded-md border pe-3 shadow-sm transition-all"
         >
-          <span>
-            <ArrowLeft className="size-4.5 pt-0.5" />
-          </span>
-          <span className="font-medium">Back</span>
+          <ArrowLeft className="size-4.5 pt-0.5 rtl:rotate-180" />
+          <span className="font-medium">{t("buttons.back")}</span>
         </button>
 
         <button
           onClick={() => setStep(3)}
           className="bg-primary hover:bg-primary-hover flex h-[44px] w-[240px] cursor-pointer items-center justify-center gap-x-1 rounded-md ps-3 font-medium transition-all"
         >
-          <span className="font-medium">Continue</span>
-          <span>
-            <ArrowRight className="size-4.5 pt-0.5" />
-          </span>
+          <span>{t("buttons.continue")}</span>
+          <ArrowRight className="size-4.5 pt-0.5 rtl:rotate-180" />
         </button>
       </div>
     </div>

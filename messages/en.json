@@ -328,6 +328,107 @@
     }
   },
 
+  "projectStart": {
+    "steps": {
+      "step1": "Your information",
+      "step2": "Select Product",
+      "step3": "Confirmation"
+    },
+    "step1": {
+      "label": "STEP 1 OF 3",
+      "title": {
+        "part1": "Let’s Get",
+        "highlight": "Started"
+      },
+      "desc": {
+        "line1": "Please enter your name",
+        "line2": "and phone number to continue"
+      }
+    },
+    "step2": {
+      "label": "STEP 2 OF 3",
+      "title": {
+        "part1": "Choose Your",
+        "highlight": "Product"
+      },
+      "desc": "Select the product you are interested in"
+    },
+    "step3": {
+      "label": "STEP 3 OF 3",
+      "title": {
+        "part1": "You’re",
+        "highlight": "All Set!"
+      },
+      "desc": "Thank you for your information. We will contact you shortly to get started."
+    },
+    "form": {
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Enter your full name",
+      "phone": "Phone number",
+      "phonePlaceholder": "Enter your phone number"
+    },
+    "buttons": {
+      "continue": "Continue",
+      "goDashboard": "Go to Dashboard"
+    },
+    "result": {
+      "name": "Name",
+      "phone": "Phone number",
+      "product": "Selected Product",
+      "contactTime": "We will contact you",
+      "contactDesc": "Within 24h"
+    },
+    "services": {
+      "items": [
+        {
+          "id": 1,
+          "title": "Website design and development",
+          "desc": "Modern and responsive website design",
+          "imageSrc": "/project-start/1.png"
+        },
+        {
+          "id": 2,
+          "title": "Logo and motion design",
+          "desc": "Custom visual identity design",
+          "imageSrc": "/project-start/2.png"
+        },
+        {
+          "id": 3,
+          "title": "SEO and digital marketing",
+          "desc": "Business growth and optimization",
+          "imageSrc": "/project-start/3.png"
+        },
+        {
+          "id": 4,
+          "title": "UI/UX Design",
+          "desc": "User experience and interface design",
+          "imageSrc": "/project-start/4.png"
+        },
+        {
+          "id": 5,
+          "title": "Branding",
+          "desc": "Professional brand identity design",
+          "imageSrc": "/project-start/5.png"
+        },
+        {
+          "id": 6,
+          "title": "Network Support",
+          "desc": "Infrastructure maintenance and support",
+          "imageSrc": "/project-start/6.png"
+        }
+      ],
+      "buttons": {
+        "back": "Back",
+        "continue": "Continue"
+      }
+    },
+    "footer": {
+      "secure": "Secure & Protected",
+      "safe": "Your data is safe",
+      "support": "24/7 support"
+    }
+  },
+
   "Talent": {
     "HeroSection": {
       "titlePart1": "Build a career that's as",

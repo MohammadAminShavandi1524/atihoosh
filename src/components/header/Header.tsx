@@ -62,11 +62,11 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "border-b-border fixed top-0 right-0 left-0 z-50 min-h-[97px] max-h-[98px] border-b transition-transform duration-300",
+        "border-b-border fixed top-0 right-0 left-0 z-50 max-h-[98px] min-h-[97px] border-b transition-transform duration-300",
         showHeader ? "translate-y-0" : "-translate-y-full",
       )}
     >
-      <div className={cn(theme === "dark" ? "customGradient" : "bg-[#e8e8e8]")}>
+      <div className="bg-[#f6f7f9] dark:bg-[#101010]">
         <div
           style={
             locale === "en"
