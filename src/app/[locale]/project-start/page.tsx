@@ -51,12 +51,7 @@ const page = ({}: pageProps) => {
             src="/step3.png"
             alt="projectStartBackground"
             fill
-            className={cn(
-              locale === "fa"
-                ? "scale-x-[-1] rotate-0"
-                : "scale-x-100 rotate-0",
-              "object-cover",
-            )}
+            className={cn("object-cover")}
           />
         </div>
       )}

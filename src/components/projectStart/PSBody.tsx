@@ -47,7 +47,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
             </div>
 
             <div className="mb-8.5 text-xl text-[45px]">
-              <span>{t("step1.title.part1")}</span>
+              <span>{t("step1.title.part1")} </span>
               <span className="text-primary">{t("step1.title.highlight")}</span>
             </div>
 
@@ -104,7 +104,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
             </div>
 
             <div className="mb-8.5 text-xl text-[45px]">
-              <span>{t("step2.title.part1")}</span>
+              <span>{t("step2.title.part1")} </span>
               <span className="text-primary">{t("step2.title.highlight")}</span>
             </div>
 
@@ -119,7 +119,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 3 */}
       {step === 3 && (
-        <div className="mt-20 flex gap-x-20 ps-135">
+        <div className="mt-[80px] flex gap-x-20 ps-[540px] rtl:mt-[80px] rtl:gap-x-16 rtl:ps-[440px]">
           <div className="flex flex-col">
             <div className="flex flex-col p-7.5">
               <div className="text-primary mb-3.25 text-xl">
@@ -127,7 +127,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
               </div>
 
               <div className="mb-8.5 text-xl text-[45px]">
-                <span>{t("step3.title.part1")}</span>
+                <span>{t("step3.title.part1")}&nbsp; </span>
                 <span className="text-primary">
                   {t("step3.title.highlight")}
                 </span>
@@ -144,7 +144,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
             </div>
           </div>
 
-          <div className="border-border bg-secondary-bg mt-12 flex h-fit w-100 flex-col gap-y-6.5 rounded-lg border px-6 py-6">
+          <div className="border-border bg-secondary-bg mt-10 flex h-fit w-100 flex-col gap-y-6.5 rounded-lg border px-6 py-6 rtl:mt-8">
             <ResultRow
               Logo={User}
               title={t("result.name")}

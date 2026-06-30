@@ -25,6 +25,14 @@ const Header = () => {
     setMounted(true);
   }, []);
 
+  // Sync sticky offset with header visibility
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--header-offset",
+      showHeader ? "130px" : "40px",
+    );
+  }, [showHeader]);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
