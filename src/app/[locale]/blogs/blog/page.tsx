@@ -15,7 +15,7 @@ const page = ({}: pageProps) => {
   const locale = useLocale();
 
   return (
-    <div className="headerPadding w90 flex flex-col">
+    <div dir="rtl" className="font-IRANYekanX headerPadding w90 flex flex-col">
       {/* hero section */}
       <div className="mt-30 mb-40 grid grid-cols-2">
         <div className="mt-10 flex flex-col pe-20">
