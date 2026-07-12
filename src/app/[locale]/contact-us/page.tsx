@@ -1,6 +1,5 @@
 import ContactInfo from "@/components/contactUs/ContactInfo";
 import HeroSection from "@/components/contactUs/HeroSection";
-import SendMessageForm from "@/components/contactUs/SendMessageForm";
 
 interface pageProps {}
 
@@ -10,8 +9,8 @@ const page = ({}: pageProps) => {
       <div>
         <HeroSection />
 
-        <div className="w90 my-18 grid grid-cols-3 gap-x-10 px-50">
-          <SendMessageForm />
+        <div className="w90 my-18 flex justify-center px-50">
+          {/* <SendMessageForm /> */}
           <ContactInfo />
         </div>
       </div>

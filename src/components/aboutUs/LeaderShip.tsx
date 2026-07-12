@@ -19,11 +19,11 @@ const LeadershipSection = ({}: LeadershipSectionProps) => {
 
         {/* description */}
         <div className="text-muted-foreground flex flex-col text-justify text-xl">
-          <div className="mb-8">{t("paragraph1")}</div>
+          <div className="mb-8 leading-8">{t("paragraph1")}</div>
 
-          <div className="mb-8">{t("paragraph2")}</div>
+          <div className="mb-8 leading-8">{t("paragraph2")}</div>
 
-          <div>{t("paragraph3")}</div>
+          <div className="leading-8">{t("paragraph3")}</div>
 
           {/* line */}
           <div className="bg-border my-8 h-0.5 w-36" />

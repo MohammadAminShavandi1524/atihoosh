@@ -71,7 +71,7 @@ export default function TeamSection() {
             isRtl ? "left-[6vw] text-right" : "right-[6vw] text-left",
           )}
         >
-          <span className="mb-8 block text-lg font-medium tracking-[0.15em] text-foreground/70  uppercase">
+          <span className="text-foreground/70 mb-8 block text-lg font-medium tracking-[0.15em] uppercase">
             {t("badge")}
           </span>
 
@@ -79,11 +79,15 @@ export default function TeamSection() {
             {t("title")}
           </h2>
 
-          <p className="font-playfair mb-9 text-[28px] text-foreground/90">
+          <p className="font-playfair text-foreground/90 mb-9 text-[28px]">
             {t("description")}
           </p>
 
-          <AnimatedArrowButton href="" label={t("button")} labelClassName="text-xl" />
+          <AnimatedArrowButton
+            href={`/${locale}/talent`}
+            label={t("button")}
+            labelClassName="text-xl"
+          />
         </motion.div>
       </div>
     </section>

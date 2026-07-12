@@ -73,6 +73,8 @@ const SendMessageForm = ({}: SendMessageFormProps) => {
           {t("privacy")}
         </p>
       </form>
+
+      
     </div>
   );
 };

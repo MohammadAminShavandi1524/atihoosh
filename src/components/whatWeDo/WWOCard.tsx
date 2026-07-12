@@ -25,7 +25,7 @@ const WWOCard = ({
         <Image src={iamgeSrc} alt="" fill className="object-cover" />
       </div>
       {/* content */}
-      <div className="bg-secondary-bg flex min-h-52.5 flex-col gap-y-3 px-6 py-6">
+      <div className="bg-secondary-bg flex min-h-52.5 flex-col gap-y-3 px-6 pt-6 pb-7">
         {/* index */}
         <div className="text-primary text-sm">{indexNumber}</div>
         {/* title */}
@@ -46,9 +46,9 @@ const WWOCard = ({
           })}
         </div>
         {/* Learn more */}
-        <div className="text-primary mt-2 cursor-pointer text-base">
+        {/* <div className="text-primary mt-2 cursor-pointer text-base ">
           {t("learnMore")}
-        </div>
+        </div> */}
       </div>
     </div>
   );
