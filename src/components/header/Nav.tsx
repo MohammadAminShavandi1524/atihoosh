@@ -5,16 +5,18 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface NavProps {}
+interface NavProps {
+  className?: string;
+}
 
-const Nav = ({}: NavProps) => {
+const Nav = ({className}: NavProps) => {
   const t = useTranslations("Header.Navigation");
   const locale = useLocale();
   const pathname = usePathname();
 
   return (
     <nav>
-      <ul className="flex items-center gap-x-9 ps-20 text-lg">
+      <ul className={cn("flex items-center gap-x-9 ps-20 text-lg",className)}>
         {/* home */}
         <li>
           <Link

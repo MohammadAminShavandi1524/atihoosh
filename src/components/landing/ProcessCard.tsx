@@ -21,9 +21,9 @@ function ProcessCard({ title, description, className }: ProcessCardProps) {
       initial="initial"
       whileHover="hover"
       className={cn(
-        "group  relative h-[480px] w-[49%] overflow-hidden rounded-3xl bg-[#0041f0] p-14",
+        "group relative h-[480px] w-[49%] overflow-hidden rounded-3xl bg-[#0041f0] p-14",
         className,
-        "text-white"
+        "text-white",
       )}
     >
       <TechnicalBackground />
@@ -69,47 +69,6 @@ function ProcessCard({ title, description, className }: ProcessCardProps) {
       >
         {description}
       </motion.p>
-
-      {/* Button */}
-      <motion.button
-        variants={{
-          initial: {
-            opacity: 0,
-            y: 360,
-          },
-          hover: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        transition={{
-          duration: 0.85,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="absolute bottom-14 z-10 flex items-center gap-2 text-lg ltr:right-14 rtl:left-14"
-      >
-        <span> {t("button")}</span>
-
-        <motion.div
-          variants={{
-            initial: {
-              x: 0,
-            },
-            hover: {
-              x: locale === "en" ? 6 : -6,
-            },
-          }}
-          transition={{
-            duration: 0.3,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        >
-          <ChevronRight
-            className={cn(locale === "fa" && "rotate-180", "pt-0.25")}
-            size={22}
-          />
-        </motion.div>
-      </motion.button>
     </motion.div>
   );
 }

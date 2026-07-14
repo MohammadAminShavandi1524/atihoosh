@@ -90,3 +90,38 @@ export const FA_latestBlogsSample: {
     avgReadTime: 6,
   },
 ];
+
+export const relatedArticles = [
+  {
+    id: 1,
+    image: "/blogs/1.png",
+    title: "هوش مصنوعی در سال ۲۰۲۶؛ چه کسب‌وکارهایی عقب می‌مانند؟",
+    category: "هوش مصنوعی",
+    readingTime: "۷ دقیقه",
+    date: "۳۰ تیر ۱۴۰۵",
+  },
+  {
+    id: 2,
+    image: "/blogs/2.png",
+    title: "اتوماسیون کسب‌وکار؛ از کجا شروع کنیم؟",
+    category: "تحول دیجیتال",
+    readingTime: "۵ دقیقه",
+    date: "۲۸ تیر ۱۴۰۵",
+  },
+  {
+    id: 3,
+    image: "/blogs/3.png",
+    title: "چگونه CRM هوشمند فروش شما را افزایش می‌دهد؟",
+    category: "CRM",
+    readingTime: "۶ دقیقه",
+    date: "۲۵ تیر ۱۴۰۵",
+  },
+  {
+    id: 4,
+    image: "/blogs/4.png",
+    title: "تصمیم‌گیری مبتنی بر داده؛ مزیت رقابتی شرکت‌های مدرن",
+    category: "تحلیل داده",
+    readingTime: "۸ دقیقه",
+    date: "۲۱ تیر ۱۴۰۵",
+  },
+];

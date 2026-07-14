@@ -5,6 +5,7 @@ import { div } from "framer-motion/client";
 import { ArrowRight, Clock } from "lucide-react";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 interface BlogSummaryProps {
   indexNumber: string;
@@ -90,12 +91,15 @@ const BlogSummary = ({
             )}
           </div>
           {/* readmore article */}
-          <div className="text-primary flex cursor-pointer items-center gap-x-1">
+          <Link
+            href={`/${locale}/blogs/blog`}
+            className="text-primary flex cursor-pointer items-center gap-x-1"
+          >
             <span className="">
               {locale === "en" ? " Read more" : "ادامه مطلب"}
             </span>
             <ArrowRight className="size-5 pt-px rtl:rotate-180" />
-          </div>
+          </Link>
         </div>
       </div>
     </div>

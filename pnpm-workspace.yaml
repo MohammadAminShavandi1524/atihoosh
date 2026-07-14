@@ -5,5 +5,6 @@ allowBuilds:
   msw: true
   sharp: true
 ignoredBuiltDependencies:
+  - '@tsparticles/engine'
   - sharp
   - unrs-resolver

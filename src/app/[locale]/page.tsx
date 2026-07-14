@@ -1,16 +1,14 @@
-import AnimatedArrowButton from "@/components/AnimatedArrowButton";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+
 import CTA from "@/components/landing/CTA";
 import HeroSection from "@/components/landing/HeroSection";
 import OurCustomers from "@/components/landing/OurCustomers";
 import Services from "@/components/landing/Services";
 import StickyTitle from "@/components/landing/StickyTitle";
 import TeamSection from "@/components/landing/TeamSection";
-import { cn } from "@/lib/utils";
+
 
 import { Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import Image from "next/image";
 import { use } from "react";
 
 export default function IndexPage({ params }: PageProps<"/[locale]">) {
