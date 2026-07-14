@@ -13,6 +13,8 @@ import {
 import { ContactItem } from "./contactItem";
 import { useLocale, useTranslations } from "next-intl";
 import { englishToPersianNumber } from "@/lib/utils";
+import LoginBackground from "./LoginBackground";
+import ParticlesBackground from "./Particles";
 
 interface ContactInfoProps {}
 
@@ -40,65 +42,82 @@ const ContactInfo = ({}: ContactInfoProps) => {
   const locale = useLocale();
 
   return (
-    <div className="border-border bg-secondary-bg col-span-1 flex flex-col rounded-2xl border p-8 md:p-10">
-      <span className="text-primary text-sm font-medium tracking-[0.15em] uppercase">
-        {t("badge")}
-      </span>
+    <div className="border-border bg-secondary-bg relative flex w-full flex-col overflow-hidden rounded-2xl border p-8 md:p-10">
+      {/* Background */}
+      <LoginBackground />
+      <ParticlesBackground />
 
-      <h2 className="mt-4 text-3xl font-bold">{t("title")}</h2>
+      {/* content */}
 
-      <div className="mt-12 space-y-8">
-        <ContactItem label={t("addressLabel")} Logo={MapPin}>
-          {t("addressValue")}
-        </ContactItem>
+      <div className="relative z-10">
+        <span className="text-primary text-sm font-medium tracking-[0.15em] uppercase">
+          {t("badge")}
+        </span>
 
-        <ContactItem Logo={Mail} label={t("emailLabel")}>
-          <Link
-            href="mailto:atihooshco@gmail.com"
-            className="hover:text-primary transition-colors"
-          >
-            atihooshco@gmail.com
-          </Link>
-        </ContactItem>
+        <h2 className="mt-4 text-3xl font-bold">{t("title")}</h2>
 
-        <ContactItem Logo={Phone} label={t("phoneLabel")}>
-          <Link
-            href="tel:+982100000000"
-            dir="ltr"
-            className="hover:text-primary inline-block transition-colors"
-          >
-            {locale === "en" ? (
-              <>{t("phoneNumber")}</>
-            ) : (
-              <>{englishToPersianNumber(t("phoneNumber"))}</>
-            )}
-          </Link>
-        </ContactItem>
-      </div>
+        <div className="mt-10 space-y-6">
+          <ContactItem label={t("addressLabel")} Logo={MapPin}>
+            {t("addressValue")}
+          </ContactItem>
 
-      {/* separator */}
-      <div className="border-foreground/8 my-10 border-t" />
-
-      <div className="mb-6">
-        <h3 className="text-2xl font-semibold">{t("followTitle")}</h3>
-
-        <div className="mt-6 flex flex-wrap gap-3">
-          {socials.map(({ icon: Icon, href }, index) => (
+          <ContactItem Logo={Mail} label={t("emailLabel")}>
             <Link
-              key={index}
-              href={href}
-              className="border-muted-foreground hover:border-primary hover:text-primary text-primary-hover flex size-12 items-center justify-center rounded-xl border transition-colors"
+              href="mailto:Atihooshbonyanco@gmail.com"
+              className="hover:text-primary transition-colors"
             >
-              <Icon className="size-5" />
+              Atihooshbonyanco@gmail.com
             </Link>
-          ))}
-        </div>
-      </div>
+          </ContactItem>
 
-      <div className="border-primary/20 bg-primary/5 mt-auto flex h-40 items-center justify-center rounded-2xl border">
-        <div className="bg-primary/20 text-primary flex size-16 rotate-45 items-center justify-center rounded-2xl">
-          <MapPin className="size-8 -rotate-45" />
+          <ContactItem Logo={Phone} label={t("phoneLabel")}>
+            <Link
+              href="tel:+982100000000"
+              dir="ltr"
+              className="hover:text-primary inline-block transition-colors"
+            >
+              {locale === "en" ? (
+                <>{t("phoneNumber")}</>
+              ) : (
+                <>{englishToPersianNumber(t("phoneNumber"))}</>
+              )}
+            </Link>
+          </ContactItem>
         </div>
+
+        {/* separator */}
+        <div className="border-foreground/8 my-8 border-t" />
+
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold">{t("followTitle")}</h3>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            {socials.map(({ icon: Icon, href }, index) => (
+              <Link
+                key={index}
+                href={href}
+                className="border-muted-foreground hover:border-primary hover:text-primary text-primary-hover flex size-12 items-center justify-center rounded-xl border transition-colors"
+              >
+                <Icon className="size-5" />
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="border-primary/20 mt-auto h-72 overflow-hidden rounded-2xl border">
+  <iframe
+    src="https://www.google.com/maps?q=35.6892,51.3890&z=15&output=embed"
+    width="100%"
+    height="100%"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    className="border-0"
+  />
+</div>
+
+
+
       </div>
     </div>
   );

@@ -40,8 +40,6 @@ const page = ({}: pageProps) => {
         </div>
       )}
 
-      
-
       <Header />
       <PSBody step={step} setStep={setStep} />
       <Footer />
