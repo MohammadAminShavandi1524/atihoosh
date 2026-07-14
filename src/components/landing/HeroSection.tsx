@@ -16,8 +16,7 @@ const HeroSection = ({}: HeroSectionProps) => {
   const locale = useLocale();
   const t = useTranslations("HomePage.HeroSection.content");
 
-
-    const { theme } = useTheme();
+  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -29,30 +28,22 @@ const HeroSection = ({}: HeroSectionProps) => {
   return (
     <div
       dir="ltr"
-      className="relative flex h-112 w-full overflow-hidden pt-[120px] "
+      className="relative flex h-112 w-full overflow-hidden pt-[120px]"
     >
       {/* background image */}
-      
 
-      {theme === "dark" ? 
-      <div className="absolute inset-0 scale-105 bg-[url('/herosection.png')] bg-cover bg-center bg-no-repeat" />
-      :<div className="absolute inset-0 scale-105 bg-[url('/lighthero.png')] bg-cover bg-center bg-no-repeat" />}
-
-      
+      {theme === "dark" ? (
+        <div className="absolute inset-0 scale-105 bg-[url('/herosection.png')] bg-cover bg-center bg-no-repeat" />
+      ) : (
+        <div className="absolute inset-0 scale-105 bg-[url('/lighthero.png')] bg-cover bg-center bg-no-repeat" />
+      )}
 
       {/* dark overlay */}
-     {theme === "dark" &&  <div className="absolute inset-0 bg-black/50" />}
-
+      {theme === "dark" && <div className="absolute inset-0 bg-black/50" />}
 
       {/* <HeroBackground/> */}
 
-          {theme === "dark" ? (
-    <ParticlesBackground/>
-) : (
-    <LightParticles />
-)}
-
-     
+      {theme === "dark" ? <ParticlesBackground /> : <LightParticles />}
 
       {/* محتوا */}
       <div
@@ -80,7 +71,7 @@ const HeroSection = ({}: HeroSectionProps) => {
         {/* button */}
         <button className="flex cursor-pointer items-center gap-x-2.5">
           <span className="text-lg">{t("buttonText")}</span>
-          <span className="flex size-5 items-center justify-center bg-primary">
+          <span className="bg-primary flex size-5 items-center justify-center">
             <ChevronRight
               className={cn(locale === "fa" && "rotate-180")}
               size={18}
@@ -93,15 +84,3 @@ const HeroSection = ({}: HeroSectionProps) => {
 };
 
 export default HeroSection;
-
-
-
-
-
-
-
-
-
-
-
-

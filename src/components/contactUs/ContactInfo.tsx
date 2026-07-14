@@ -15,6 +15,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { englishToPersianNumber } from "@/lib/utils";
 import LoginBackground from "./LoginBackground";
 import ParticlesBackground from "./Particles";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import LightParticles from "./LightParticles";
 
 interface ContactInfoProps {}
 
@@ -41,11 +44,20 @@ const ContactInfo = ({}: ContactInfoProps) => {
   const t = useTranslations("ContactUs.ContactInfo");
   const locale = useLocale();
 
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="border-border bg-secondary-bg relative flex w-full flex-col overflow-hidden rounded-2xl border p-8 md:p-10">
       {/* Background */}
       <LoginBackground />
-      <ParticlesBackground />
+      {theme === "dark" ? <ParticlesBackground /> : <LightParticles />}
 
       {/* content */}
 
@@ -72,15 +84,13 @@ const ContactInfo = ({}: ContactInfoProps) => {
 
           <ContactItem Logo={Phone} label={t("phoneLabel")}>
             <Link
-              href="tel:+982100000000"
+              href="tel:+989126956223"
               dir="ltr"
               className="hover:text-primary inline-block transition-colors"
             >
-              {locale === "en" ? (
-                <>{t("phoneNumber")}</>
-              ) : (
-                <>{englishToPersianNumber(t("phoneNumber"))}</>
-              )}
+              {locale === "en"
+                ? "+98 912 695 6223"
+                : englishToPersianNumber("+98 912 695 6223")}
             </Link>
           </ContactItem>
         </div>
@@ -105,19 +115,16 @@ const ContactInfo = ({}: ContactInfoProps) => {
         </div>
 
         <div className="border-primary/20 mt-auto h-72 overflow-hidden rounded-2xl border">
-  <iframe
-    src="https://www.google.com/maps?q=35.6892,51.3890&z=15&output=embed"
-    width="100%"
-    height="100%"
-    loading="lazy"
-    allowFullScreen
-    referrerPolicy="no-referrer-when-downgrade"
-    className="border-0"
-  />
-</div>
-
-
-
+          <iframe
+            src="https://www.google.com/maps?q=35.6892,51.3890&z=15&output=embed"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            className="border-0"
+          />
+        </div>
       </div>
     </div>
   );

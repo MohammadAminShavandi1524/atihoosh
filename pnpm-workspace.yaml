@@ -1,7 +1,6 @@
 allowBuilds:
   '@parcel/watcher': true
   '@swc/core': true
-  '@tsparticles/engine': false
   msw: true
   sharp: true
 ignoredBuiltDependencies:

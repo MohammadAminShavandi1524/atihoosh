@@ -44,8 +44,8 @@ export default function LanguageSwitcher({ defaultLocale }: Props) {
       <span>
         <Earth size={24} />
       </span>
-      <span style={{ fontFamily: "var(--font-inter)" }} className={cn(locale === "fa" && "pt-[3px] ", "pt-px text-xl")}>
-        {defaultLocale !== "fa" ? "fa" : "en"}
+      <span className={cn(locale === "fa" ? "pt-[3px]" : "pt-[3px] font-IRANYekanX", " text-xl")}>
+        {defaultLocale !== "fa" ? "فا" : "en"}
       </span>
     </button>
   );
