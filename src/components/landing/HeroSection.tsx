@@ -28,7 +28,10 @@ const HeroSection = ({}: HeroSectionProps) => {
   return (
     <div
       dir="ltr"
-      className="relative flex h-112 w-full overflow-hidden pt-[120px]"
+      className={cn(
+        locale === "en" ? "pt-[80px]" : "pt-[120px]",
+        "relative flex h-112 w-full overflow-hidden",
+      )}
     >
       {/* background image */}
 
@@ -48,9 +51,9 @@ const HeroSection = ({}: HeroSectionProps) => {
       {/* محتوا */}
       <div
         // style={{ fontFamily: "var(--font-inter)" }}
-        // style={{ fontFamily: "var(--font-playfair)" }}
+        style={{ fontFamily: "var(--font-notoSerif)" }}
         // style={{ fontFamily: "var(--font-space)" }}
-        className="relative flex w-6/10 flex-col ps-[12%] pe-[16%] text-[80px]/[85px] font-bold"
+        className="relative flex w-6/10 flex-col ps-[12%] pe-[16%] pt-10 text-[80px]/[85px] font-bold"
       >
         <div className="self-start">ATI HOOSH</div>
         <div className="flex self-end">
@@ -67,11 +70,18 @@ const HeroSection = ({}: HeroSectionProps) => {
         {/* title */}
         <div className="mb-12 text-[24px]">{t("title")}</div>
         {/* description */}
-        <div className="mb-20 text-justify text-lg">{t("description")}</div>
+        <div
+          className={cn(
+            locale === "en" ? "mb-16 leading-8" : "mb-20 leading-9",
+            "text-justify text-lg",
+          )}
+        >
+          {t("description")}
+        </div>
         {/* button */}
         <button className="flex cursor-pointer items-center gap-x-2.5">
           <span className="text-lg">{t("buttonText")}</span>
-          <span className="bg-primary flex size-5 items-center justify-center">
+          <span className="bg-primary flex size-5 items-center justify-center text-white">
             <ChevronRight
               className={cn(locale === "fa" && "rotate-180")}
               size={18}

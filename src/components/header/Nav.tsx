@@ -9,20 +9,21 @@ interface NavProps {
   className?: string;
 }
 
-const Nav = ({className}: NavProps) => {
+const Nav = ({ className }: NavProps) => {
   const t = useTranslations("Header.Navigation");
   const locale = useLocale();
   const pathname = usePathname();
 
   return (
     <nav>
-      <ul className={cn("flex items-center gap-x-9 ps-20 text-lg",className)}>
+      <ul className={cn("flex items-center gap-x-9 ps-20 text-lg", className)}>
         {/* home */}
         <li>
           <Link
             className={cn(
               "hover:text-primary transition-all",
-              pathname === `/${locale}` && "text-primary",
+              pathname === `/${locale}` &&
+                "dark:text-primary font-medium text-[#2B4C7E]",
             )}
             href={`/${locale}`}
           >
@@ -34,7 +35,8 @@ const Nav = ({className}: NavProps) => {
           <Link
             className={cn(
               "hover:text-primary transition-all",
-              pathname === `/${locale}/what-we-do` && "text-primary",
+              pathname === `/${locale}/what-we-do` &&
+                "dark:text-primary font-medium text-[#2B4C7E]",
             )}
             href={`/${locale}/what-we-do`}
           >
@@ -46,7 +48,8 @@ const Nav = ({className}: NavProps) => {
           <Link
             className={cn(
               "hover:text-primary transition-all",
-              pathname === `/${locale}/aboutUs` && "text-primary",
+              pathname === `/${locale}/aboutUs` &&
+                "dark:text-primary font-medium text-[#2B4C7E]",
             )}
             href={`/${locale}/aboutUs`}
           >
@@ -58,7 +61,8 @@ const Nav = ({className}: NavProps) => {
           <Link
             className={cn(
               "hover:text-primary transition-all",
-              pathname === `/${locale}/contact-us` && "text-primary",
+              pathname === `/${locale}/contact-us` &&
+                "dark:text-primary font-medium text-[#2B4C7E]",
             )}
             href={`/${locale}/contact-us`}
           >
@@ -70,7 +74,8 @@ const Nav = ({className}: NavProps) => {
           <Link
             className={cn(
               "hover:text-primary transition-all",
-              pathname === `/${locale}/blogs` && "text-primary",
+              pathname === `/${locale}/blogs` &&
+                "dark:text-primary font-medium text-[#2B4C7E]",
             )}
             href={`/${locale}/blogs`}
           >
@@ -82,7 +87,8 @@ const Nav = ({className}: NavProps) => {
           <Link
             className={cn(
               "hover:text-primary transition-all",
-              pathname === `/${locale}/project-start` && "text-primary",
+              pathname === `/${locale}/project-start` &&
+                "dark:text-primary font-medium text-[#2B4C7E]",
             )}
             href={`/${locale}/project-start`}
           >

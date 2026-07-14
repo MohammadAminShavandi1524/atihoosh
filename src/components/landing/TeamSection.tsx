@@ -67,7 +67,7 @@ export default function TeamSection() {
             x: textX,
           }}
           className={cn(
-            "absolute top-[22vh] w-[26vw]",
+            "absolute top-[22vh] w-[36vw]",
             isRtl ? "left-[6vw] text-right" : "right-[6vw] text-left",
           )}
         >
@@ -79,7 +79,7 @@ export default function TeamSection() {
             {t("title")}
           </h2>
 
-          <p className="font-playfair text-foreground/90 mb-9 text-[28px]">
+          <p className="font-playfair text-foreground/90 mb-9 text-[28px] text-justify">
             {t("description")}
           </p>
 

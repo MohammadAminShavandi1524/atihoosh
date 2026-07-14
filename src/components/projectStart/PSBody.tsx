@@ -97,7 +97,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 2 */}
       {step === 2 && (
-        <div className="mt-20 flex gap-x-20 ps-60">
+        <div className="mt-0 flex gap-x-20 ps-60">
           <div className="flex flex-col p-7.5">
             <div className="text-primary mb-3.25 text-xl">
               {t("step2.label")}

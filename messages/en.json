@@ -22,8 +22,8 @@
   "HomePage": {
     "HeroSection": {
       "content": {
-        "title": "Shaping tomorrow, today",
-        "description": "In a world of constant change, innovation is a continuous strategy. We help organizations rewrite the rules of growth, innovation, and resilience.",
+        "title": "Building a smart future",
+        "description": "By leveraging intelligent, agile, and innovative information technology solutions, we pave the way for the sustainable growth, transformation, and development of industries and businesses",
         "buttonText": "See what we do"
       }
     },
@@ -90,7 +90,7 @@
 
     "TeamSection": {
       "badge": "OUR TEAM",
-      "title": "The People Behind Exceptional Digital Products",
+      "title": "Where Experience Shapes Expertise",
       "description": "Our team brings together expertise in software engineering, design, and AI to create scalable digital solutions.",
       "button": "Join us"
     }

@@ -98,7 +98,7 @@ const ParticlesBackground = () => {
                   width: 1920,
                   height: 1080,
                 },
-                value: 100,
+                value: 150,
               },
 
               opacity: {

@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
+import { FormField } from "../FormField";
 
 interface ServiceSelectorProps {
   step: number;
@@ -73,6 +74,10 @@ export default function ServiceSelector({
           );
         })}
       </div>
+
+      {/* description text area  */}
+
+      <FormField label="" placeholder=""/>
 
       {/* buttons */}
       <div className="mt-10 flex gap-x-4">

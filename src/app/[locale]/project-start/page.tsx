@@ -11,7 +11,7 @@ import { useState } from "react";
 interface pageProps {}
 
 const page = ({}: pageProps) => {
-  const [step, setStep] = useState<number>(1);
+  const [step, setStep] = useState<number>(2);
   const locale = useLocale();
   return (
     <div className="relative h-screen w-full overflow-hidden">
