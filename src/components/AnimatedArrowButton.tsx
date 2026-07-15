@@ -44,7 +44,7 @@ const AnimatedArrowButton = ({
         <span className="bg-primary-hover absolute inset-0 origin-left scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-x-100" />
 
         {/* Icon */}
-        <span className="relative z-10">
+        <span className="relative z-10 text-white">
           <ChevronRight
             className={cn(locale === "fa" && "rotate-180")}
             size={28}

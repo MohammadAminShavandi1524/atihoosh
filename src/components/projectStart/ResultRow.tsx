@@ -16,9 +16,9 @@ const ResultRow = ({ Logo, description, title }: ResultRowProps) => {
         <Logo className="text-primary size-5" />
       </div>
       {/* title */}
-      <div className="text-foreground text-lg w-[220px]">{title}</div>
+      <div className="text-foreground text-lg w-[220px] shrink-0">{title}</div>
       {/* description */}
-      <div className="text-muted-foreground text-xs">{description}</div>
+      <div className="text-muted-foreground text-sm">{description}</div>
     </div>
   );
 };

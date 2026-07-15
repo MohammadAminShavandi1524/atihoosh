@@ -22,8 +22,8 @@
   "HomePage": {
     "HeroSection": {
       "content": {
-        "title": "Shaping tomorrow, today",
-        "description": "In a world of constant change, innovation is a continuous strategy. We help organizations rewrite the rules of growth, innovation, and resilience.",
+        "title": "Building a smart future",
+        "description": "By leveraging intelligent, agile, and innovative information technology solutions, we pave the way for the sustainable growth, transformation, and development of industries and businesses",
         "buttonText": "See what we do"
       }
     },
@@ -90,7 +90,7 @@
 
     "TeamSection": {
       "badge": "OUR TEAM",
-      "title": "The People Behind Exceptional Digital Products",
+      "title": "Where Experience Shapes Expertise",
       "description": "Our team brings together expertise in software engineering, design, and AI to create scalable digital solutions.",
       "button": "Join us"
     }
@@ -379,6 +379,8 @@
       "contactDesc": "Within 24h"
     },
     "services": {
+      "description": "Project Description (Optional)",
+      "descriptionPlaceholder": "Enter any details about your project...",
       "items": [
         {
           "id": 1,
@@ -419,7 +421,8 @@
       ],
       "buttons": {
         "back": "Back",
-        "continue": "Continue"
+        "continue": "Continue",
+        "backToPrevious": "Back to previous step"
       }
     },
     "footer": {
@@ -458,11 +461,22 @@
       "resume": "Resume",
       "resumeUploadText": "Drag & drop your resume, or",
       "resumeUploadAction": "click to upload",
-      "resumeHint": "PDF only, up to 10MB",
+      "resumeHint": "PDF only, up to 5MB",
 
       "button": "Submit application",
+      "uploading": "Uploading...",
 
-      "privacy": "Your information is reviewed only by our HR team and is never shared with sales or third parties."
+      "privacy": "Your information is reviewed only by our HR team and is never shared with sales or third parties.",
+      "success": "Your resume has been submitted successfully."
+    },
+    "Validation": {
+      "fullNameMin": "Name must be at least 3 characters",
+      "phoneInvalid": "Phone number is not valid",
+      "emailInvalid": "Email is not valid",
+      "resumeRequired": "Please upload your resume",
+      "resumeUploadFailed": "Resume upload failed, please try again",
+      "resumeOnlyPdf": "Only PDF files are allowed",
+      "resumeTooLarge": "Resume file size must be less than 5MB"
     }
   },
 

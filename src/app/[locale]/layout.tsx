@@ -17,6 +17,7 @@ import Footer from "@/components/footer/Footer";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/Providers";
+import AppToaster from "@/components/AppToaster";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -94,10 +95,12 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider>
           <ThemeProvider>
+            <AppToaster />
+
             <div className="text-foreground bg-background relative">
               <Header />
 
-             {children}
+              {children}
 
               <Footer />
             </div>

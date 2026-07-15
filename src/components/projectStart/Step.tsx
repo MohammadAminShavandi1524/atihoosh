@@ -17,10 +17,10 @@ const Step = ({ stepNumber, label, setStep, step }: StepProps) => {
       {/* dot */}
       <button
         className={cn(
-          "bg-tertiary border-primary size-12.5 cursor-pointer rounded-full border",
+          "bg-tertiary border-primary size-12.5 rounded-full border",
           activeStep && "bg-primary",
         )}
-        onClick={() => setStep(stepNumber)}
+        // onClick={() => setStep(stepNumber)}
       >
         {stepNumber}
       </button>

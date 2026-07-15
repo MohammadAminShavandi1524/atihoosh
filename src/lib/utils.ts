@@ -33,3 +33,15 @@ export function englishToPersianNumber(input: string) {
 
   return output;
 }
+
+export function getServiceTitles(
+  ids: number[],
+  services: {
+    id: number;
+    title: string;
+  }[],
+) {
+  return services
+    .filter((service) => ids.includes(service.id))
+    .map((service) => service.title);
+}
