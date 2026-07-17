@@ -2,7 +2,7 @@
 
 import Footer from "@/components/projectStart/Footer";
 import Header from "@/components/projectStart/Header";
-import PSBody from "@/components/projectStart/PSBody";
+
 
 import { cn } from "@/lib/utils";
 
@@ -17,6 +17,7 @@ import { useState } from "react";
 
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import PSBody from "@/components/projectStart/PSBody";
 
 const Page = () => {
   const [step, setStep] = useState(1);

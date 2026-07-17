@@ -6,7 +6,6 @@ import { useFormContext } from "react-hook-form";
 
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
-
 import { FormField } from "../FormField";
 import type { ProjectStartForm } from "@/lib/validations/projectStart";
 
