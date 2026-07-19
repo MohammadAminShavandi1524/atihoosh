@@ -1,7 +1,7 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
-import { useTranslations } from "next-intl";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { useFormContext } from "react-hook-form";
 
 import StepDots from "./StepDots";
@@ -22,6 +22,8 @@ import { FormField } from "../FormField";
 import type { ProjectStartForm } from "@/lib/validations/projectStart";
 import ServiceTags from "./ServiceTags";
 import { cn } from "@/lib/utils";
+import { MergedService, mergeServices } from "@/lib/utils/mergeServices";
+import { getServices } from "@/lib/api/services";
 
 interface PSBodyProps {
   step: number;
@@ -30,6 +32,7 @@ interface PSBodyProps {
 
 const PSBody = ({ step, setStep }: PSBodyProps) => {
   const t = useTranslations("projectStart");
+  const locale = useLocale();
 
   const {
     register,
@@ -43,16 +46,16 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
   const phone = watch("phone");
   const services = watch("services") ?? [];
 
-  const serviceItems = t.raw("services.items") as {
-    id: number;
-    title: string;
-    desc: string;
-    imageSrc: string;
-  }[];
+  // const serviceItems = t.raw("services.items") as {
+  //   id: number;
+  //   title: string;
+  //   desc: string;
+  //   imageSrc: string;
+  // }[];
 
-  const selectedServiceTitles = serviceItems
-    .filter((service) => services.includes(service.id))
-    .map((service) => service.title);
+  // const selectedServiceTitles = serviceItems
+  //   .filter((service) => services.includes(service.id))
+  //   .map((service) => service.title);
 
   const handleStepOne = async () => {
     const valid = await trigger(["full_name", "phone"]);
@@ -62,12 +65,28 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
     setStep(2);
   };
 
-  const onSubmit = (data: ProjectStartForm) => {
-    console.log("FORM DATA:", data);
+  // ? services
+  const [serviceList, setServiceList] = useState<MergedService[]>([]);
 
-    // بعداً API
-    // await fetch(...)
-  };
+  const selectedServiceTitles = serviceList
+    .filter(
+      (service) =>
+        services.includes(service.enId) || services.includes(service.faId),
+    )
+    .map((service) => service.name[locale as "fa" | "en"]);
+
+  useEffect(() => {
+    async function fetchServices() {
+      const [faServices, enServices] = await Promise.all([
+        getServices("fa"),
+        getServices("en"),
+      ]);
+
+      setServiceList(mergeServices(faServices, enServices));
+    }
+
+    fetchServices();
+  }, []);
 
   return (
     <div className="w90 relative z-10 flex w-full flex-col">
@@ -155,7 +174,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 3 */}
       {step === 3 && (
-        <div className="mt-[80px] flex gap-x-20 justify-center rtl:gap-x-16 ">
+        <div className="mt-[80px] flex justify-center gap-x-20 rtl:gap-x-16">
           <div className="flex flex-col">
             <div className="flex flex-col p-7.5">
               <div className="text-primary mb-3.25 text-xl">
@@ -192,10 +211,15 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
             <div
               className={cn(
                 "flex gap-x-3",
-               services.length < 2 && "items-center"
+                services.length < 2 && "items-center",
               )}
             >
-              <Package className={cn("text-primary size-5.75",services.length > 1 && "mt-0.75")} />
+              <Package
+                className={cn(
+                  "text-primary size-5.75",
+                  services.length > 1 && "mt-0.75",
+                )}
+              />
 
               <div
                 className={cn(

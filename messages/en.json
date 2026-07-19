@@ -369,6 +369,7 @@
     },
     "buttons": {
       "continue": "Continue",
+      "submit": "Submit Request",
       "goDashboard": "Go to Dashboard"
     },
     "result": {
@@ -422,6 +423,7 @@
       "buttons": {
         "back": "Back",
         "continue": "Continue",
+        "submit": "Submit Request",
         "backToPrevious": "Back to previous step"
       }
     },

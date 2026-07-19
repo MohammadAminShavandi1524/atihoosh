@@ -18,7 +18,7 @@ const Step = ({ stepNumber, label, setStep, step }: StepProps) => {
       <button
         className={cn(
           "bg-tertiary border-primary size-12.5 rounded-full border",
-          activeStep && "bg-primary",
+          activeStep && "bg-primary text-white",
         )}
         // onClick={() => setStep(stepNumber)}
       >

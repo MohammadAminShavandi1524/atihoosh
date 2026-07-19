@@ -369,6 +369,7 @@
     },
     "buttons": {
       "continue": "ادامه",
+      "submit": "ثبت درخواست",
       "goDashboard": "رفتن به داشبورد"
     },
     "result": {
@@ -379,7 +380,7 @@
       "contactDesc": "تا 24 ساعت آینده"
     },
     "services": {
-     "description": "توضیحات پروژه (اختیاری)",
+      "description": "توضیحات پروژه (اختیاری)",
       "descriptionPlaceholder": "توضیحات مورد نیاز درباره پروژه خود را وارد کنید...",
       "items": [
         {
@@ -422,6 +423,7 @@
       "buttons": {
         "back": "بازگشت",
         "continue": "ادامه",
+        "submit": "ثبت درخواست",
         "backToPrevious": "بازگشت به مرحله قبل"
       }
     },
