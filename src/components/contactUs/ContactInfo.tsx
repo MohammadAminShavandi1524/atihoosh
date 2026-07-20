@@ -24,7 +24,7 @@ interface ContactInfoProps {}
 const socials = [
   {
     icon: Instagram,
-    href: "#",
+    href: "https://www.instagram.com/atihooshbonyan?igsh=dHdvbHdkcXNiZGRn",
   },
   {
     icon: Linkedin,
@@ -91,6 +91,15 @@ const ContactInfo = ({}: ContactInfoProps) => {
               {locale === "en"
                 ? "+98 912 695 6223"
                 : englishToPersianNumber("+98 912 695 6223")}
+            </Link>
+            <Link
+              href="tel:+982144624084"
+              dir="ltr"
+              className="hover:text-primary inline-block transition-colors"
+            >
+              {locale === "en"
+                ? "+98 21 4462 4084"
+                : englishToPersianNumber("+98 21 4462 4084")}
             </Link>
           </ContactItem>
         </div>

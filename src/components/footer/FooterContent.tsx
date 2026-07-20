@@ -61,7 +61,7 @@ export default function FooterContent() {
         </Link>
 
         <Link
-          href="https://www.instagram.com/atihooshbonyan"
+          href="https://www.instagram.com/atihooshbonyan?igsh=dHdvbHdkcXNiZGRn"
           target="_blank"
           rel="noopener noreferrer"
         >
