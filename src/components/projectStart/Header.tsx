@@ -12,7 +12,7 @@ interface HeaderProps {}
 const Header = ({}: HeaderProps) => {
   const locale = useLocale();
   return (
-    <div className="border-b-border relative z-10 h-21 w-full border-b">
+    <div className="border-b-border relative z-10  w-full border-b py-2.5">
       <div className="w90 flex h-full items-center justify-between">
         {/* Logo */}
         <Logo />

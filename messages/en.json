@@ -1,4 +1,9 @@
 {
+  "Manifest": {
+    "name": "AtiHoosh",
+    "shortName": "AtiHoosh",
+    "description": "Website design, development, and smart digital solutions"
+  },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"
@@ -369,6 +374,7 @@
     },
     "buttons": {
       "continue": "Continue",
+      "submit": "Submit Request",
       "goDashboard": "Go to Dashboard"
     },
     "result": {
@@ -379,6 +385,8 @@
       "contactDesc": "Within 24h"
     },
     "services": {
+      "description": "Project Description (Optional)",
+      "descriptionPlaceholder": "Enter any details about your project...",
       "items": [
         {
           "id": 1,
@@ -419,7 +427,9 @@
       ],
       "buttons": {
         "back": "Back",
-        "continue": "Continue"
+        "continue": "Continue",
+        "submit": "Submit Request",
+        "backToPrevious": "Back to previous step"
       }
     },
     "footer": {
@@ -458,11 +468,22 @@
       "resume": "Resume",
       "resumeUploadText": "Drag & drop your resume, or",
       "resumeUploadAction": "click to upload",
-      "resumeHint": "PDF only, up to 10MB",
+      "resumeHint": "PDF only, up to 5MB",
 
       "button": "Submit application",
+      "uploading": "Uploading...",
 
-      "privacy": "Your information is reviewed only by our HR team and is never shared with sales or third parties."
+      "privacy": "Your information is reviewed only by our HR team and is never shared with sales or third parties.",
+      "success": "Your resume has been submitted successfully."
+    },
+    "Validation": {
+      "fullNameMin": "Name must be at least 3 characters",
+      "phoneInvalid": "Phone number is not valid",
+      "emailInvalid": "Email is not valid",
+      "resumeRequired": "Please upload your resume",
+      "resumeUploadFailed": "Resume upload failed, please try again",
+      "resumeOnlyPdf": "Only PDF files are allowed",
+      "resumeTooLarge": "Resume file size must be less than 5MB"
     }
   },
 

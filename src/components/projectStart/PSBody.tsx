@@ -1,9 +1,15 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
-import { useTranslations } from "next-intl";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { useFormContext } from "react-hook-form";
+
 import StepDots from "./StepDots";
+import ServiceSelector from "./ServiceSelector";
+import ResultRow from "./ResultRow";
+
 import {
+  ArrowLeft,
   ArrowRight,
   ClockFading,
   Package,
@@ -11,9 +17,13 @@ import {
   User,
   User2,
 } from "lucide-react";
+
+import { FormField } from "../FormField";
+import type { ProjectStartForm } from "@/lib/validations/projectStart";
+import ServiceTags from "./ServiceTags";
 import { cn } from "@/lib/utils";
-import ServiceSelector from "./ServiceSelector";
-import ResultRow from "./ResultRow";
+import { MergedService, mergeServices } from "@/lib/utils/mergeServices";
+import { getServices } from "@/lib/api/services";
 
 interface PSBodyProps {
   step: number;
@@ -22,18 +32,65 @@ interface PSBodyProps {
 
 const PSBody = ({ step, setStep }: PSBodyProps) => {
   const t = useTranslations("projectStart");
+  const locale = useLocale();
 
-  const inputClassName =
-    "bg-secondary-bg text-muted-foreground min-w-80 rounded-md py-2.5 ps-12 pe-6 text-[17px] " +
-    "outline-none border border-transparent " +
-    "focus:border-primary focus:ring-2 focus:ring-primary/30 " +
-    "transition-all duration-200 " +
-    "placeholder:text-muted-foreground/60 " +
-    "disabled:opacity-50 disabled:cursor-not-allowed";
+  const {
+    register,
+    watch,
+    trigger,
+    handleSubmit,
+    formState: { errors },
+  } = useFormContext<ProjectStartForm>();
+
+  const fullName = watch("full_name");
+  const phone = watch("phone");
+  const services = watch("services") ?? [];
+
+  // const serviceItems = t.raw("services.items") as {
+  //   id: number;
+  //   title: string;
+  //   desc: string;
+  //   imageSrc: string;
+  // }[];
+
+  // const selectedServiceTitles = serviceItems
+  //   .filter((service) => services.includes(service.id))
+  //   .map((service) => service.title);
+
+  const handleStepOne = async () => {
+    const valid = await trigger(["full_name", "phone"]);
+
+    if (!valid) return;
+
+    setStep(2);
+  };
+
+  // ? services
+  const [serviceList, setServiceList] = useState<MergedService[]>([]);
+
+  const selectedServiceTitles = serviceList
+    .filter(
+      (service) =>
+        services.includes(service.enId) || services.includes(service.faId),
+    )
+    .map((service) => service.name[locale as "fa" | "en"]);
+
+  useEffect(() => {
+    async function fetchServices() {
+      const [faServices, enServices] = await Promise.all([
+        getServices("fa"),
+        getServices("en"),
+      ]);
+
+      setServiceList(mergeServices(faServices, enServices));
+    }
+
+    fetchServices();
+  }, []);
 
   return (
     <div className="w90 relative z-10 flex w-full flex-col">
-      {/* steps Dots */}
+      {/* steps dots */}
       <div className="mt-10 flex items-center justify-center">
         <StepDots step={step} setStep={setStep} />
       </div>
@@ -46,7 +103,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
               {t("step1.label")}
             </div>
 
-            <div className="mb-8.5 text-xl text-[45px]">
+            <div className="mb-8.5 text-[45px]">
               <span>{t("step1.title.part1")} </span>
               <span className="text-primary">{t("step1.title.highlight")}</span>
             </div>
@@ -58,38 +115,36 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
           </div>
 
           <div className="flex w-125 flex-col pt-7">
-            {/* full name */}
-            <div className="mb-10">
-              <div className="mb-4 ps-1.5">{t("form.fullName")}</div>
-              <div className="relative flex">
-                <User2 className="text-muted-foreground absolute top-1/2 size-5 -translate-1/2 ltr:left-6" />
-                <input
-                  className={cn(inputClassName)}
-                  type="text"
-                  placeholder={t("form.fullNamePlaceholder")}
-                />
-              </div>
+            <div className="relative mb-10">
+              {/* <User2 className="text-muted-foreground absolute top-[45px] size-5 ltr:left-6 rtl:right-6" /> */}
+
+              <FormField
+                className=""
+                label={t("form.fullName")}
+                placeholder={t("form.fullNamePlaceholder")}
+                register={register("full_name")}
+                error={errors.full_name}
+              />
             </div>
 
-            {/* phone */}
-            <div className="mb-14">
-              <div className="mb-4 ps-1.5">{t("form.phone")}</div>
-              <div className="relative flex">
-                <Phone className="text-muted-foreground absolute top-1/2 size-5 -translate-1/2 ltr:left-6" />
-                <input
-                  className={cn(inputClassName)}
-                  type="text"
-                  placeholder={t("form.phonePlaceholder")}
-                />
-              </div>
+            <div className="relative mb-14">
+              {/* <Phone className="text-muted-foreground absolute top-[45px] size-5 ltr:left-6 rtl:right-6" /> */}
+
+              <FormField
+                label={t("form.phone")}
+                placeholder={t("form.phonePlaceholder")}
+                register={register("phone")}
+                error={errors.phone}
+              />
             </div>
 
             <button
-              onClick={() => setStep(2)}
+              onClick={handleStepOne}
               className="bg-primary hover:bg-primary-hover text-tertiary flex h-11.5 w-40 cursor-pointer items-center justify-center gap-x-1 rounded-md ps-2 text-sm"
             >
               <span className="font-medium">{t("buttons.continue")}</span>
-              <ArrowRight className="size-4.5 pt-0.5 rtl:rotate-180 rtl:pt-0.75" />
+
+              <ArrowRight className="size-4.5 pt-0.5 rtl:rotate-180" />
             </button>
           </div>
         </div>
@@ -97,18 +152,18 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 2 */}
       {step === 2 && (
-        <div className="mt-0 flex gap-x-20 ps-60">
-          <div className="flex flex-col p-7.5">
+        <div className="mt-10 flex justify-center gap-x-20">
+          <div className="mt-5 flex flex-col p-7.5">
             <div className="text-primary mb-3.25 text-xl">
               {t("step2.label")}
             </div>
 
-            <div className="mb-8.5 text-xl text-[45px]">
+            <div className="mb-8.5 text-[45px]">
               <span>{t("step2.title.part1")} </span>
               <span className="text-primary">{t("step2.title.highlight")}</span>
             </div>
 
-            <div className="text-muted-foreground flex flex-col text-xl">
+            <div className="text-muted-foreground text-xl">
               {t("step2.desc")}
             </div>
           </div>
@@ -119,15 +174,16 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 3 */}
       {step === 3 && (
-        <div className="mt-[80px] flex gap-x-20 ps-[540px] rtl:mt-[80px] rtl:gap-x-16 rtl:ps-[440px]">
+        <div className="mt-[80px] flex justify-center gap-x-20 rtl:gap-x-16">
           <div className="flex flex-col">
             <div className="flex flex-col p-7.5">
               <div className="text-primary mb-3.25 text-xl">
                 {t("step3.label")}
               </div>
 
-              <div className="mb-8.5 text-xl text-[45px]">
-                <span>{t("step3.title.part1")}&nbsp; </span>
+              <div className="mb-8.5 text-[45px]">
+                <span>{t("step3.title.part1")}&nbsp;</span>
+
                 <span className="text-primary">
                   {t("step3.title.highlight")}
                 </span>
@@ -136,30 +192,53 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
               <div className="text-muted-foreground mb-16 flex max-w-79 flex-col text-xl">
                 {t("step3.desc")}
               </div>
-
-              <button className="bg-primary hover:bg-primary-hover flex h-[44px] w-[270px] cursor-pointer items-center justify-center gap-x-1 rounded-md ps-3 font-medium opacity-0 transition-all">
-                <span>{t("buttons.goDashboard")}</span>
-                <ArrowRight className="size-4.5 pt-0.5" />
-              </button>
             </div>
           </div>
 
-          <div className="border-border bg-secondary-bg mt-10 flex h-fit w-100 flex-col gap-y-6.5 rounded-lg border px-6 py-6 rtl:mt-8">
+          <div className="border-border bg-secondary-bg mt-10 flex h-fit max-w-120 min-w-100 flex-col gap-y-6.5 rounded-lg border px-6 py-6">
             <ResultRow
               Logo={User}
               title={t("result.name")}
-              description="Ali karimi"
+              description={fullName || "-"}
             />
+
             <ResultRow
               Logo={Phone}
               title={t("result.phone")}
-              description="+989125554422"
+              description={phone || "-"}
             />
-            <ResultRow
-              Logo={Package}
-              title={t("result.product")}
-              description="Web Design"
-            />
+            {/* selected products */}
+            <div
+              className={cn(
+                "flex gap-x-3",
+                services.length < 2 && "items-center",
+              )}
+            >
+              <Package
+                className={cn(
+                  "text-primary size-5.75",
+                  services.length > 1 && "mt-0.75",
+                )}
+              />
+
+              <div
+                className={cn(
+                  "flex w-full gap-y-2",
+                  services.length < 2 ? "flex-row items-center" : "flex-col",
+                )}
+              >
+                <span
+                  className={cn(
+                    "text-lg font-medium",
+                    services.length < 2 && "w-[220px]",
+                  )}
+                >
+                  {t("result.product")}
+                </span>
+
+                <ServiceTags services={selectedServiceTitles} />
+              </div>
+            </div>
 
             <div className="bg-muted-foreground my-1 h-px w-full" />
 
