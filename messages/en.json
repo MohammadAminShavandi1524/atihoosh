@@ -27,7 +27,7 @@
   "HomePage": {
     "HeroSection": {
       "content": {
-        "title": "Building a smart future",
+        "title": "Where Engineering Meets Intelligence",
         "description": "By leveraging intelligent, agile, and innovative information technology solutions, we pave the way for the sustainable growth, transformation, and development of industries and businesses",
         "buttonText": "See what we do"
       }
@@ -37,23 +37,23 @@
       "expandButton": "Expand",
 
       "1": {
-        "title": "Design and production of monitoring and automation systems",
+        "title": "Monitoring & Automation Systems Design",
         "subTitle": "Automation and monitoring systems enable continuous monitoring of processes and automated execution of tasks. These solutions increase the speed of work, reduce human errors, and help improve overall system performance."
       },
 
       "2": {
-        "title": "Website and software design and production",
-        "subTitle": "We turn your ideas into digital solutions. We offer practical solutions tailored to your business needs through website design and dedicated software. Our focus is on beauty, efficiency, and creating a professional presence in the digital world."
+        "title": "Intelligent Website & Software Development",
+        "subTitle": "We transform your ideas into powerful digital products by designing and developing custom website and intelligent software base on your business needs."
       },
 
       "3": {
-        "title": "Network and system support",
-        "subTitle": "Stable infrastructure is the beating heart of everyone and successful work. By providing specialized network services and support, we guarantee the security and stability of your systems. From start-up to maintenance and troubleshooting, we are with you so that you can focus on growing your business by reducing downtime."
+        "title": "Network, System Design & Support",
+        "subTitle": "A reliable infrastructure is the foundation of every successful business. We provide professional network and system support services to ensure the security, stability, and optimal performance of your infrastructure, so you can focus on growing your business with confidence."
       },
 
       "4": {
         "title": "Logo And Logo Motion",
-        "subTitle": "Your brand identity starts with a professional logo. We give winners personality and longevity by designing creative logos and engaging motion logos."
+        "subTitle": "Visual identity is the first connection between a brand and its audience. Through creative motion logo design, we transform your brand identity into a dynamic & memorable experience. By combining motion, design, and visual storytelling, we create a distinctive & impactful brand presence."
       }
     },
 
@@ -79,16 +79,16 @@
       "button": "learn more",
       "cards": {
         "structuredExecution": {
+          "title": "Requirements Discovery and Analysis",
+          "description": "Building on the technical expertise of our professional team across various industrial fields, we identify and analyze your business needs and goals to design and develop a smart, precise, and tailored solution that fits your real-world requirements."
+        },
+        "contractDrivenScope": {
           "title": "Understanding and Reviewing Needs",
           "description": "Every project starts with a clear understanding of the problem. Before taking any action, we look into your business needs, goals, and challenges to create a solution that fits your real situation. This step ensures the project gets off on the right track from the very beginning."
         },
-        "contractDrivenScope": {
-          "title": "Design and Implementation",
-          "description": "We transform ideas into practical solutions. Once the requirements are clearly defined, the design and development process begins. Throughout implementation, we carefully consider technical requirements, user experience, and long-term scalability to deliver not just a product, but a reliable and effective solution."
-        },
         "continuousResponsibility": {
-          "title": "Delivery, support, and improvement",
-          "description": "A project doesn't just end with delivery. After launch, we check how the system is performing, and make any needed tweaks and provide support. Our goal is to give you a solution that can grow along with your business."
+          "title": "Sustainable Development and Support",
+          "description": "Our commitment does not end after project delivery. Through continuous support, performance optimization, and ongoing development, we stay by your side to ensure your product continues to grow over time and evolves alongside your business goals and changing needs."
         }
       }
     },
@@ -115,40 +115,20 @@
       "learnMore": "Learn more",
       "cards": {
         "web": {
-          "title": "Web Application Development",
-          "description": "We build fast, scalable, and modern web applications from scratch — tailored to your business logic and goals.",
-          "tags": {
-            "frontend": "Frontend",
-            "backend": "Backend",
-            "fullStack": "Full Stack"
-          }
+          "title": "Intelligent Software",
+          "description": "We develop intelligent software solutions and AI-powered technologies to help industries optimize their processes, increase efficiency, and make smarter data-driven decisions."
         },
         "mobile": {
-          "title": "Mobile App Development",
-          "description": "Native and cross-platform mobile apps that deliver smooth experiences on both iOS and Android.",
-          "tags": {
-            "ios": "iOS",
-            "android": "Android",
-            "crossPlatform": "Cross-platform"
-          }
+          "title": "Automation",
+          "description": "We optimize your business processes with intelligent automation solutions, improving efficiency, accuracy, and operational speed."
         },
         "ai": {
-          "title": "AI Integration",
-          "description": "We integrate intelligent AI features into your existing software — chatbots, automation, data analysis and more.",
-          "tags": {
-            "machineLearning": "Machine Learning",
-            "automation": "Automation",
-            "chatbot": "Chatbot"
-          }
+          "title": "Network Setup & Support",
+          "description": "We design, install, and support secure network infrastructures to provide reliable connectivity and stable performance for your business."
         },
         "consulting": {
-          "title": "Software Consulting",
-          "description": "Not sure where to start? We help you plan, architect, and choose the right tech stack for your project.",
-          "tags": {
-            "strategy": "Strategy",
-            "architecture": "Architecture",
-            "techStack": "Tech Stack"
-          }
+          "title": "Web & Mobile App Development",
+          "description": "We build fast, scalable, and modern applications from scratch — tailored to your business logic and goals."
         }
       }
     },

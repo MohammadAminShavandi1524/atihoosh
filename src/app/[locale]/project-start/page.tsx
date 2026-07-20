@@ -19,7 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import PSBody from "@/components/projectStart/PSBody";
 
 const Page = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
 
   const locale = useLocale();
 

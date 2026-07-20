@@ -28,7 +28,7 @@ export const ContactItem = ({
           {label}
         </p>
 
-        <div className="text-foreground mt-1 text-base leading-8">{children}</div>
+        <div className="text-foreground mt-1 text-base leading-8 flex flex-col gap-y-0">{children}</div>
       </div>
     </div>
   );

@@ -81,7 +81,7 @@ const Header = () => {
               ? { fontFamily: "var(--font-noto-serif)" }
               : undefined
           }
-          className="w90 flex items-center justify-between py-4"
+          className="w90 flex items-center justify-between py-3"
         >
           {/* Logo */}
           <Logo />

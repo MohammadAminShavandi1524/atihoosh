@@ -7,14 +7,14 @@ interface WWOCardProps {
   indexNumber: string;
   title: string;
   description: string;
-  tags: string[];
+
   iamgeSrc: string;
 }
 
 const WWOCard = ({
   description,
   indexNumber,
-  tags,
+
   title,
   iamgeSrc,
 }: WWOCardProps) => {
@@ -29,22 +29,10 @@ const WWOCard = ({
         {/* index */}
         <div className="text-primary text-sm">{indexNumber}</div>
         {/* title */}
-        <div className="text-lg">{title}</div>
+        <div className="text-xl">{title}</div>
         {/* description */}
-        <div className="text-muted text-base">{description}</div>
-        {/* tags */}
-        <div className="flex items-center gap-x-3">
-          {tags.map((tag, index) => {
-            return (
-              <div
-                key={index}
-                className="border-primary text-primary bg-secondary rounded-lg border px-2.5 py-1.25 text-base"
-              >
-                {tag}
-              </div>
-            );
-          })}
-        </div>
+        <div className="text-muted text-base text-justify">{description}</div>
+
         {/* Learn more */}
         {/* <div className="text-primary mt-2 cursor-pointer text-base ">
           {t("learnMore")}
