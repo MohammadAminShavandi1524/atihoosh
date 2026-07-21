@@ -19,7 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import PSBody from "@/components/projectStart/PSBody";
 
 const Page = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(3);
 
   const locale = useLocale();
 
@@ -41,12 +41,23 @@ const Page = () => {
     <div className="relative h-screen w-full overflow-hidden">
       {/* background iamge */}
       {step === 1 && (
-        <div className="absolute top-1/2 z-1 me-auto h-[730px] w-[1026px] -translate-y-1/2 ltr:right-0 rtl:left-0">
-          <Image src="/step11.png" alt="projectStartBackground" fill />
+        <div
+          className={cn(
+            "absolute top-1/2 right-0 z-1 me-auto h-[730px] w-[1026px] -translate-y-1/2",
+          )}
+        >
+          <Image
+            className={cn()}
+            src="/step11.png"
+            alt="projectStartBackground"
+            fill
+          />
         </div>
       )}
       {step === 2 && (
-        <div className="absolute top-1/2 z-1 aspect-1715/917 h-full w-full -translate-y-1/2 ltr:right-0 rtl:left-0">
+        <div className={cn("absolute top-1/2 z-1 aspect-1715/917 h-full w-full -translate-y-1/2 ltr:right-0 rtl:left-0",
+          locale === "fa" && "-scale-x-100"
+        )}>
           <Image
             src="/step22.png"
             alt="projectStartBackground"
@@ -56,7 +67,12 @@ const Page = () => {
         </div>
       )}
       {step === 3 && (
-        <div className="absolute top-1/2 z-1 aspect-1738/905 h-full w-full -translate-y-[45%] ltr:right-0 rtl:left-0">
+        <div
+          className={cn(
+            
+            "absolute top-1/2 z-1 aspect-1738/905 h-full w-full -translate-y-[45%] ltr:right-0 rtl:left-0",
+          )}
+        >
           <Image
             src="/step33.png"
             alt="projectStartBackground"

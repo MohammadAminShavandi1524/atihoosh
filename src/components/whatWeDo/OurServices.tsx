@@ -22,23 +22,20 @@ const OurServices = ({}: OurServicesProps) => {
           indexNumber="01"
           title={t("cards.web.title")}
           description={t("cards.web.description")}
-        
-          iamgeSrc="/whatWeDo/1.png"
+          iamgeSrc="/whatWeDo/wwd1.png"
         />
 
         <WWOCard
           indexNumber="02"
           title={t("cards.mobile.title")}
-          description={t("cards.mobile.description")}
-        
-          iamgeSrc="/whatWeDo/2.png"
+          description={t("cards.mobile.description")}  
+          iamgeSrc="/whatWeDo/wwd2.png"
         />
 
         <WWOCard
           indexNumber="03"
           title={t("cards.ai.title")}
-          description={t("cards.ai.description")}
-         
+          description={t("cards.ai.description")}        
           iamgeSrc="/whatWeDo/3.png"
         />
 
@@ -46,7 +43,6 @@ const OurServices = ({}: OurServicesProps) => {
           indexNumber="04"
           title={t("cards.consulting.title")}
           description={t("cards.consulting.description")}
-         
           iamgeSrc="/whatWeDo/4.png"
         />
       </div>
