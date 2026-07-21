@@ -9,16 +9,16 @@
 ========================= */
 @theme inline {
   /** breakpoints **/
-  --breakpoint-xs: 20rem;
-  --breakpoint-xss: 25rem;
-  --breakpoint-s: 30rem;
-  --breakpoint-sm: 40rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-mlg: 56rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 80rem;
-  --breakpoint-2xl: 96rem;
-  --breakpoint-3xl: 106rem;
+  --breakpoint-xs: 20rem; /* 320px */
+  --breakpoint-xss: 25rem; /* 400px */
+  --breakpoint-s: 30rem; /* 480px */
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-mlg: 56rem; /* 896px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 96rem; /* 1536px */
+  --breakpoint-3xl: 106rem; /* 1696px */
 
   /** font **/
   --font-IRANYekanX: "IRANYekanX";
@@ -237,8 +237,57 @@
   }
 
   .headerPadding {
-    padding-top: 98px;
+    padding-top: 68px;
   }
+
+  @media (min-width: 320px) {
+    .headerPadding {
+    }
+  }
+
+  @media (min-width: 400px) {
+    .headerPadding {
+    }
+  }
+
+  @media (min-width: 480px) {
+    .headerPadding {
+    }
+  }
+
+  @media (min-width: 640px) {
+    .headerPadding {
+    }
+  }
+
+  @media (min-width: 768px) {
+    .headerPadding {
+    }
+  }
+
+  @media (min-width: 896px) {
+    .headerPadding {
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .headerPadding {
+       padding-top: 69px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .headerPadding {
+       padding-top: 77px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .headerPadding {
+       padding-top: 89px;
+    }
+  }
+
 
   /* .customGradient {
     background: linear-gradient(

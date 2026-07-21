@@ -23,7 +23,7 @@ const HeroSection = ({}: HeroSectionProps) => {
           {t("description")}
         </div>
 
-        <Stats />
+        {/* <Stats /> */}
       </div>
     </div>
   );

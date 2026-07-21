@@ -168,11 +168,11 @@
 
   "AboutPage": {
     "HeroSection": {
-      "titlePart1": "We are",
-      "titlePart2": "Ati Hoosh",
-      "titlePart3": "",
-      "description1": "Ati Hoosh Bonyan is a group of IT professionals working to provide practical and reliable solutions for businesses. Our focus is on designing and implementing technology infrastructure, software and web development, network support, process automation, and artificial intelligence solutions.",
-      "description2": "We believe that technology is valuable when it can help solve real business problems. For this reason, in each project, we strive to provide solutions that, in addition to technical quality, are also effective in improving performance, increasing productivity, and growing organizations."
+      "titlePart1": "ATI Hoosh Bonyan",
+      "titlePart2": "Industrial Intelligence Company",
+      "description1": "We transform technology into a competitive advantage. By combining engineering expertise, industrial knowledge, and advanced software development, we create intelligent solutions that transform the way organizations operate. Our software is more than just a tool—it is a driving force behind smarter decisions, higher productivity, and sustainable growth.",
+      "description2": "We bridge the gap between industry and technology by delivering solutions that improve accuracy, reduce costs, minimize human error, and accelerate the digital transformation of businesses and industries.",
+      "description3": "For us, innovation is more than developing software; it is about creating technologies that make industries smarter, faster, and more competitive."
     },
     "StatsSection": {
       "successfulProjects": "Successful Projects",
@@ -207,17 +207,21 @@
       "badge": "Our values",
       "title": "What makes us different",
       "items": {
-        "innovation": {
-          "title": "Innovation",
-          "description": "We're always looking for creative and different solutions"
+        "onTimeDelivery": {
+          "title": "On-Time Project Delivery",
+          "description": "Through structured planning, transparent workflows, and effective project management, we deliver every project on schedule without compromising quality."
         },
-        "teamwork": {
-          "title": "Teamwork",
-          "description": "We consider the customer's success as our own success"
+        "customerFocusedSolutions": {
+          "title": "Tailored to Real Business Needs",
+          "description": "Every business is unique. We carefully analyze your goals, challenges, and operational requirements to deliver solutions that are designed specifically for your organization."
         },
-        "quality": {
-          "title": "Quality",
-          "description": "We never compromise on quality at any stage"
+        "crossDisciplinaryExpertise": {
+          "title": "Software Meets Industry Knowledge",
+          "description": "Our team combines experienced software engineers with industry specialists, enabling us to build intelligent solutions that are both technically robust and practically aligned with your field."
+        },
+        "continuousSupport": {
+          "title": "Continuous Support & Growth",
+          "description": "Our commitment goes beyond project delivery. We provide ongoing support, optimization, and continuous improvements to ensure your solution evolves alongside your business."
         }
       }
     },
@@ -234,9 +238,9 @@
     "LeadershipSection": {
       "badge": "Our Leadership",
       "title": "A Word from the CEO",
-      "paragraph1": "We believe that the gap between Iranian businesses and the world's leading brands is more about vision and intelligent use of technology than about capabilities.",
-      "paragraph2": "Our goal is to provide a platform for Iranian companies to compete with global standards by applying innovative solutions in the fields of information technology, artificial intelligence, and digital marketing.",
-      "paragraph3": "For us, each project is not just a service; it is a step on the path of growth, innovation, and sustainable value creation. The future belongs to organizations that embrace change, and we will be their companion and development partner on this path.",
+      "paragraph1": "At ATI Hoosh Bonyan, we believe the future of industry is driven by artificial intelligence, intelligent software, and engineering innovation. Our mission is to develop specialized solutions that enhance productivity, enable smarter decision-making, and turn digital transformation into a sustainable competitive advantage for industries.",
+      "paragraph2": "We see technology not merely as a tool, but as a driving force for creating value, fostering growth, and strengthening competitiveness. Through expertise, innovation, and close collaboration, we are committed to delivering solutions that meet global standards and to being a trusted partner for organizations on their journey toward a smarter future.",
+      "paragraph3": "Thank you for your trust. We look forward to partnering with you and supporting your digital transformation journey.",
       "name": "Nahid Shams",
       "role": "CEO & Founder"
     }
@@ -306,10 +310,8 @@
       "badge": "4 articles"
     },
     "GetNewArticle": {
-      "title": "Get new articles in your inbox",
-      "description": "Practical insights on AI, software and security — no noise, just what's useful for your business.",
-      "inputPlaceholder": "Your email address",
-      "button": "Subscribe"
+      "title": "Have Questions About Our Articles?",
+      "description": "Our team is ready to answer your questions and provide more insights about our articles."
     }
   },
 

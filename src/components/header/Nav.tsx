@@ -16,7 +16,7 @@ const Nav = ({ className }: NavProps) => {
 
   return (
     <nav>
-      <ul className={cn("flex items-center gap-x-9 ps-20 text-lg", className)}>
+      <ul className={cn("flex items-center gap-x-7.25 xl:gap-x-8 2xl:gap-x-9 ps-8 xl:rtl:ps-12 ltr:ps-12 2xl:ps-20 text-base 2xl:text-lg", className)}>
         {/* home */}
         <li>
           <Link

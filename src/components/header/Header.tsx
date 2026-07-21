@@ -1,6 +1,6 @@
 "use client";
 
-import { Search } from "lucide-react";
+import { Menu, Search, TextAlignJustify } from "lucide-react";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -70,7 +70,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "border-b-border fixed top-0 right-0 left-0 z-50 max-h-[98px] min-h-[97px] border-b transition-transform duration-300",
+        "border-b-border fixed top-0 right-0 left-0 z-50 transition-transform duration-300",
         showHeader ? "translate-y-0" : "-translate-y-full",
       )}
     >
@@ -81,21 +81,33 @@ const Header = () => {
               ? { fontFamily: "var(--font-noto-serif)" }
               : undefined
           }
-          className="w90 flex items-center justify-between py-3"
+          className="max-s:px-8  w90 s:py-2.5 flex items-center justify-between py-3.5 max-sm:w-full max-sm:px-8 xl:py-2.75 2xl:py-3"
         >
-          {/* Logo */}
-          <Logo />
+          {/* Logo for 1024 and more*/}
+          <div className="hidden lg:block">
+            <Logo />
+          </div>
 
-          {/* Nav */}
-          <Nav />
+          {/* hamberger menu for mobile and tablet*/}
+          <div className="block lg:hidden">
+            <TextAlignJustify className="s:mx-2 s:my-3 size-7 s:size-8 stroke-2 s:stroke-3" />
+          </div>
+
+          {/* Nav for 1024 */}
+          <div className="hidden lg:block">
+            <Nav />
+          </div>
+
+          {/* logo for mobile and tablet */}
+          <div className="block lg:hidden">
+            <Logo />
+          </div>
 
           {/* Actions */}
           <div className="flex items-center gap-x-2">
-            <div className="hidden cursor-pointer px-2 py-3">
-              <Search />
+            <div className="hidden lg:block">
+              <LanguageSwitcher defaultLocale={locale} />
             </div>
-
-            <LanguageSwitcher defaultLocale={locale} />
             <ThemeButton />
           </div>
         </div>

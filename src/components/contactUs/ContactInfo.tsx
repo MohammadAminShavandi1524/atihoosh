@@ -24,7 +24,7 @@ interface ContactInfoProps {}
 const socials = [
   {
     icon: Instagram,
-    href: "#",
+    href: "https://www.instagram.com/atihooshbonyan?igsh=dHdvbHdkcXNiZGRn",
   },
   {
     icon: Linkedin,
@@ -36,7 +36,7 @@ const socials = [
   },
   {
     icon: Send,
-    href: "#",
+    href: "telegram.com/atihooshbonyanco",
   },
 ];
 
@@ -75,10 +75,10 @@ const ContactInfo = ({}: ContactInfoProps) => {
 
           <ContactItem Logo={Mail} label={t("emailLabel")}>
             <Link
-              href="mailto:Atihooshbonyanco@gmail.com"
+              href="mailto:info@atihooshbonyan.com"
               className="hover:text-primary transition-colors"
             >
-              Atihooshbonyanco@gmail.com
+              info@atihooshbonyan.com
             </Link>
           </ContactItem>
 
@@ -125,13 +125,15 @@ const ContactInfo = ({}: ContactInfoProps) => {
 
         <div className="border-primary/20 mt-auto h-72 overflow-hidden rounded-2xl border">
           <iframe
-            src="https://www.google.com/maps?q=35.6892,51.3890&z=15&output=embed"
+            src="https://www.google.com/maps?q=35.755164,51.333777&z=15&output=embed"
             width="100%"
             height="100%"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
             className="border-0"
+
+            
           />
         </div>
       </div>
