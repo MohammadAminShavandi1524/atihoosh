@@ -10,20 +10,15 @@ import { ThemeButton } from "../theme/ThemeButton";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useMobileSidebar } from "../ui/mobile-sidebar";
 
 const Header = () => {
   const locale = useLocale();
   const pathname = usePathname();
-  const { theme } = useTheme();
 
-  const [mounted, setMounted] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
 
   const lastScrollY = useRef(0);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Sync sticky offset with header visibility
   useEffect(() => {
@@ -61,7 +56,8 @@ const Header = () => {
     };
   }, []);
 
-  if (!mounted) return null;
+  // ? side bar
+  const { open, setOpen } = useMobileSidebar();
 
   if (pathname === `/${locale}/project-start`) {
     return null;
@@ -81,7 +77,7 @@ const Header = () => {
               ? { fontFamily: "var(--font-noto-serif)" }
               : undefined
           }
-          className="max-s:px-8  w90 s:py-2.5 flex items-center justify-between py-3.5 max-sm:w-full max-sm:px-8 xl:py-2.75 2xl:py-3"
+          className="max-s:px-8 w90 s:py-2.5 flex items-center justify-between py-3.5 max-sm:w-full max-sm:px-8 xl:py-2.75 2xl:py-3"
         >
           {/* Logo for 1024 and more*/}
           <div className="hidden lg:block">
@@ -89,9 +85,9 @@ const Header = () => {
           </div>
 
           {/* hamberger menu for mobile and tablet*/}
-          <div className="block lg:hidden">
-            <TextAlignJustify className="s:mx-2 s:my-3 size-7 s:size-8 stroke-2 s:stroke-3" />
-          </div>
+          <button onClick={() => setOpen(!open)} className="block lg:hidden">
+            <TextAlignJustify className="s:mx-2 s:my-3 s:size-8 s:stroke-3 size-7 stroke-2" />
+          </button>
 
           {/* Nav for 1024 */}
           <div className="hidden lg:block">

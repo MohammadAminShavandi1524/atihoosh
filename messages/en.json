@@ -24,6 +24,11 @@
     }
   },
 
+  "MobileMenu": {
+    "close": "Close menu",
+    "copyright": "© ATI HOOSH BONYAN"
+  },
+
   "HomePage": {
     "HeroSection": {
       "content": {

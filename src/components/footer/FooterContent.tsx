@@ -33,9 +33,6 @@ export default function FooterContent() {
         </div>
 
         <div className="flex flex-col gap-y-8">
-          {/* <Link className="footer-link" href="">
-            {t("links.terms")}
-          </Link>*/}
           <Link className="footer-link" href={`/${locale}/contact-us`}>
             {t("links.conatctUs")}
           </Link>

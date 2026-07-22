@@ -19,6 +19,11 @@ import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/Providers";
 import AppToaster from "@/components/AppToaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import {
+  MobileSidebar,
+  MobileSidebarContent,
+} from "@/components/ui/mobile-sidebar";
+import MobileMenu from "@/components/mobile-menu/mobile-menu";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -96,8 +101,12 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider>
           <ThemeProvider>
-           
+            <MobileSidebar>
               <AppToaster />
+
+              <MobileSidebarContent width={340}>
+                <MobileMenu />
+              </MobileSidebarContent>
 
               <div className="text-foreground bg-background relative">
                 <Header />
@@ -106,7 +115,7 @@ export default async function LocaleLayout({
 
                 <Footer />
               </div>
-           
+            </MobileSidebar>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

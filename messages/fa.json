@@ -25,6 +25,11 @@
     }
   },
 
+  "MobileMenu": {
+    "close": "بستن منو",
+    "copyright": "© آتی هوش بنیان"
+  },
+
   "HomePage": {
     "HeroSection": {
       "content": {
