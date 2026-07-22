@@ -37,14 +37,19 @@ export default function LanguageSwitcher({ defaultLocale }: Props) {
       onClick={handleToggle}
       disabled={isPending}
       className={clsx(
-        "flex items-center gap-x-1.25 rounded px-2 py-3",
+        "flex items-center gap-x-1 rounded px-2 py-3 2xl:gap-x-1.25",
         isPending ? "cursor-not-allowed opacity-50" : "cursor-pointer",
       )}
     >
       <span>
-        <Earth size={24} />
+        <Earth className="size-5 2xl:size-6" />
       </span>
-      <span className={cn(locale === "fa" ? "pt-[3px]" : "pt-[3px] font-IRANYekanX", " text-xl")}>
+      <span
+        className={cn(
+          locale === "fa" ? "pt-px xl:pt-[2px] 2xl:pt-[3px]" : "font-IRANYekanX pt-px xl:pt-[2px] 2xl:pt-[3px]",
+          "text-[17px] 2xl:text-xl",
+        )}
+      >
         {defaultLocale !== "fa" ? "فا" : "en"}
       </span>
     </button>

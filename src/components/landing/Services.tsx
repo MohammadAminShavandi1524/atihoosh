@@ -5,16 +5,17 @@ import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
-
-type ServiceColor = "black" | "white";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 type Service = {
   key: string;
   title: string;
   subTitle: string;
-  src: string;
-  color: ServiceColor;
-  bgColor: string;
+  lightSrc: string;
+  darkSrc: string;
+  backgroundClass: string;
+  backgroundClassDark: string;
 };
 
 const Services = () => {
@@ -26,35 +27,50 @@ const Services = () => {
       key: "1",
       title: t("1.title"),
       subTitle: t("1.subTitle"),
-      src: "/services/1.png",
-      color: "black",
-      bgColor: "#010716",
+      lightSrc: "/services/light1.jpg",
+      darkSrc: "/services/dark1.jpg",
+      backgroundClass: "#c6e5f4",
+      backgroundClassDark: "#113d63",
     },
     {
       key: "2",
       title: t("2.title"),
       subTitle: t("2.subTitle"),
-      src: "/services/2.png",
-      color: "white",
-      bgColor: "#131331",
+      lightSrc: "/services/light2.png",
+      darkSrc: "/services/dark2.png",
+
+      backgroundClass: "#e2dff2",
+      backgroundClassDark: "#29264b",
     },
     {
       key: "3",
       title: t("3.title"),
       subTitle: t("3.subTitle"),
-      src: "/services/3.png",
-      color: "black",
-      bgColor: "#00031f",
+      lightSrc: "/services/light3.png",
+      darkSrc: "/services/dark3.png",
+
+      backgroundClass: "#d6edea",
+      backgroundClassDark: "#0c4237",
     },
     {
       key: "4",
       title: t("4.title"),
       subTitle: t("4.subTitle"),
-      src: "/services/4.png",
-      color: "white",
-      bgColor: "#05002a",
+      lightSrc: "/services/light4.png",
+      darkSrc: "/services/dark4.png",
+      backgroundClass: "#f8e2dc",
+      backgroundClassDark: "#502e23",
     },
   ];
+
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <div className="w90 flex justify-between gap-x-16 px-0 pt-20">
@@ -87,9 +103,9 @@ const Services = () => {
           >
             <Image
               fill
-              src={service.src}
+              src={theme === "dark" ? service.darkSrc : service.lightSrc}
               alt={service.title}
-              className="object-cover"
+              className="border-border rounded-xl object-cover"
             />
           </motion.div>
 
@@ -106,7 +122,12 @@ const Services = () => {
             className={cn(
               "absolute -right-60 -bottom-60 h-282 w-282 rounded-full",
             )}
-            style={{ backgroundColor: service.bgColor }}
+            style={{
+              backgroundColor:
+                theme === "dark"
+                  ? service.backgroundClassDark
+                  : service.backgroundClass,
+            }}
           />
 
           <div className="relative z-10 flex h-full flex-col px-7 py-7">
@@ -114,7 +135,7 @@ const Services = () => {
             <motion.h3
               className={cn(
                 "mb-6 min-h-16 text-[24px] font-bold",
-                "text-white",
+                "text-foreground",
               )}
             >
               {service.title}
@@ -138,13 +159,13 @@ const Services = () => {
                   },
                 },
               }}
-              className={cn("mt-5 max-w-md text-justify text-lg", "text-white")}
+              className={cn("mt-5 max-w-md text-justify text-lg", "text-foreground")}
             >
               {service.subTitle}
             </motion.p>
 
             {/* Expand Button */}
-            <motion.button
+            {/* <motion.button
               variants={{
                 initial: { opacity: 0, y: 20 },
                 hover: { opacity: 1, y: 0 },
@@ -155,7 +176,7 @@ const Services = () => {
               }}
               className={cn(
                 "mt-auto flex cursor-pointer items-center",
-                "text-white",
+                "text-foreground",
                 locale === "en"
                   ? "gap-x-1.5 self-end text-[22px]"
                   : "gap-x-4 self-end text-lg",
@@ -187,7 +208,13 @@ const Services = () => {
                   size={24}
                 />
               </motion.div>
-            </motion.button>
+            </motion.button> */}
+
+
+
+
+
+
           </div>
         </motion.div>
       ))}

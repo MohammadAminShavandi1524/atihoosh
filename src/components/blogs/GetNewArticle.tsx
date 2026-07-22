@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface GetNewArticleProps {}
@@ -23,33 +24,30 @@ const GetNewArticle = ({}: GetNewArticleProps) => {
   return (
     <div className="w90 my-40 px-50">
       <div
-        className={`relative flex min-h-[220px] items-center justify-between rounded-xl py-16 ps-24 pe-56 ${
+        className={`relative flex min-h-[220px] items-center justify-center rounded-xl px-24 py-12 ${
           isRTL
             ? "bg-[radial-gradient(circle_600px_at_top_right,color-mix(in_srgb,var(--primary)_8%,transparent)_0%,color-mix(in_srgb,var(--primary)_3%,transparent)_35%,var(--secondary-bg)_75%)]"
             : "bg-[radial-gradient(circle_600px_at_top_left,color-mix(in_srgb,var(--primary)_8%,transparent)_0%,color-mix(in_srgb,var(--primary)_3%,transparent)_35%,var(--secondary-bg)_75%)]"
         }`}
       >
         <div>
-          <div className="mb-5 text-[32px]">{t("title")}</div>
+          {/* <div className="mb-5 text-[32px]">}</div> */}
+          <div className="text-primary mb-6 text-center text-[40px]">
+            {t("title")}
+          </div>
 
-          <div className="text-muted-foreground max-w-[368px] text-base">
+          <div className="text-muted-foreground mb-12 text-justify text-base">
             {t("description")}
           </div>
-        </div>
 
-        <div className="flex items-center gap-x-2.5">
-          <button className="text-muted-foreground border-muted-foreground bg-secondary-bg cursor-pointer rounded-lg border px-5 py-2.5">
-            {t("inputPlaceholder")}
-          </button>
-
-          <button
-            className={cn(
-              "bg-primary cursor-pointer rounded-lg px-5 py-2.5 text-white",
-             
-            )}
-          >
-            {t("button")}
-          </button>
+          <div className="flex w-full justify-center">
+            <Link
+              className="hover:text-primary text-xl transition-colors duration-300"
+              href="mailto:support@atihooshbonyan.com"
+            >
+              support@atihooshbonyan.com
+            </Link>
+          </div>
         </div>
       </div>
     </div>

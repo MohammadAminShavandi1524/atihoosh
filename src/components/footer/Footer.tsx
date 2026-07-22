@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <div
       ref={footerRef}
-      className={cn("w90 relative grid grid-cols-2 pt-30", isRtl && "rtl")}
+      className={cn("w90 relative grid grid-cols-2 pt-30 max-lg:hidden", isRtl && "rtl")}
       dir={isRtl ? "rtl" : "ltr"}
     >
       <FooterContent />

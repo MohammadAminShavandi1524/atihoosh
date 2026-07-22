@@ -19,12 +19,12 @@ export function ThemeButton() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="text-foreground cursor-pointer px-2 py-3"
+      className="text-foreground s:px-2 s:py-3 cursor-pointer"
     >
       {isDark ? (
-        <Sun size={24} strokeWidth={2} />
+        <Sun className="s:size-8 s:stroke-3 size-7 stroke-2 lg:size-5 lg:stroke-2 2xl:size-6" />
       ) : (
-        <Moon size={24} strokeWidth={2} />
+        <Moon className="s:size-8 s:stroke-3 size-7 stroke-2 lg:size-5 lg:stroke-2 2xl:size-6" />
       )}
     </button>
   );

@@ -34,17 +34,17 @@ const page = ({}: pageProps) => {
       <section className="flex flex-col">
         {/* hero section */}
         <div className="border-b-border mb-20 border-b pt-20 pb-20">
-          <div className="w90 flex flex-col gap-y-12.5 text-center 2xl:px-30">
-            <div className="text-[90px] font-medium">
-              <span>{t("HeroSection.titlePart1") + " "}</span>
-              <span className="text-primary">
-                {t("HeroSection.titlePart2") + " "}
+          <div className="w90 flex flex-col gap-y-17.5 text-center 2xl:px-30">
+            <div className="flex flex-col font-medium">
+              <span className="text-primary text-[108px]">
+                {t("HeroSection.titlePart1")}
               </span>
-              <span>{t("HeroSection.titlePart3")} </span>
+              <span className="text-[48px]">{t("HeroSection.titlePart2")}</span>
             </div>
-            <div className="flex flex-col gap-y-4 text-justify text-[28px] font-medium">
+            <div className="flex flex-col gap-y-6 text-justify text-[28px] font-medium">
               <span>{t("HeroSection.description1")}</span>
               <span>{t("HeroSection.description2")}</span>
+              <span>{t("HeroSection.description3")}</span>
             </div>
           </div>
         </div>
@@ -149,62 +149,24 @@ const page = ({}: pageProps) => {
 
             <div className="mb-10 text-[48px]">{t("ValuesSection.title")}</div>
 
-            <div className="grid grid-cols-3 gap-x-18 gap-y-18 2xl:grid-cols-5 2xl:gap-x-10 2xl:gap-y-10">
+            <div className="grid grid-cols-3 gap-x-18 gap-y-18 2xl:grid-cols-4 2xl:gap-x-10 2xl:gap-y-10">
               <OurValuesBox
-                title="Commitment to timely project delivery"
-                // description={values.innovation.description}
-                Logo={Lightbulb}
+                title={t("ValuesSection.items.onTimeDelivery.title")}
+              />
+              <OurValuesBox
+                title={t("ValuesSection.items.customerFocusedSolutions.title")}
               />
 
               <OurValuesBox
-                title="Quality"
-                // description={values.teamwork.description}
-                Logo={Users}
-              />
-
-              <OurValuesBox
-                title="Innovation"
-                // description={values.quality.description}
-                Logo={BadgeCheck}
+                title={t("ValuesSection.items.crossDisciplinaryExpertise.title")}
               />
               <OurValuesBox
-                title="Continuous support and companionship"
-                // description={values.quality.description}
-                Logo={BadgeCheck}
-              />
-              <OurValuesBox
-                title="Expert and experienced team"
-                // description={values.quality.description}
-                Logo={BadgeCheck}
+                title={t("ValuesSection.items.continuousSupport.title")}
               />
             </div>
           </div>
         </div>
 
-        {/* our team */}
-
-        {/* <div className="mt-20 mb-10 border-y-1 border-y-[#32323261] py-25">
-          <div className="w90 flex flex-col 2xl:px-30">
-            <div className="text-primary text-[22px]">
-              {t("TeamSection.badge")}
-            </div>
-
-            <div className="mb-[72px] text-[44px]">
-              {t("TeamSection.title")}
-            </div>
-
-           
-            <div className="grid grid-cols-4 gap-x-7 gap-y-14">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <OurTeamBox
-                  key={i}
-                  EmployeeName={member.name}
-                  EmployeeStatus={member.role}
-                />
-              ))}
-            </div>
-          </div>
-        </div> */}
       </section>
 
       {/* ceo */}

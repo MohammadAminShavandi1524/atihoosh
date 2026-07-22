@@ -48,12 +48,12 @@ export default function FooterContent() {
       {/* socials */}
       {/* socials */}
       <div className="mt-20 mb-10 flex items-center gap-x-3">
-        <Link href="mailto:Atihooshbonyanco@gmail.com">
+        <Link href="mailto:info@atihooshbonyan.com">
           <Mail className="text-primary size-6 cursor-pointer" />
         </Link>
 
         <Link
-          href="https://t.me/Atihooshbonyan"
+          href="telegram.com/atihooshbonyanco"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/Providers";
 import AppToaster from "@/components/AppToaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -95,15 +96,17 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider>
           <ThemeProvider>
-            <AppToaster />
+           
+              <AppToaster />
 
-            <div className="text-foreground bg-background relative">
-              <Header />
+              <div className="text-foreground bg-background relative">
+                <Header />
 
-              {children}
+                {children}
 
-              <Footer />
-            </div>
+                <Footer />
+              </div>
+           
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
