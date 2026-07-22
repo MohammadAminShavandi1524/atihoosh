@@ -86,7 +86,7 @@ const Header = () => {
 
           {/* hamberger menu for mobile and tablet*/}
           <button onClick={() => setOpen(!open)} className="block lg:hidden">
-            <TextAlignJustify className="s:mx-2 s:my-3 s:size-8 s:stroke-3 size-7 stroke-2" />
+            <TextAlignJustify className="s:mx-2 s:my-3 s:size-8 s:stroke-3 size-7 stroke-2 cursor-pointer" />
           </button>
 
           {/* Nav for 1024 */}

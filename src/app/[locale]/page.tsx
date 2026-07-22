@@ -23,25 +23,21 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
       <HeroSection />
 
       {/* services */}
-      <Services />
-
-      {/* style={locale === "en" ? { fontFamily: "var(--font-inter)" } : {}} */}
-      {/* style={locale === "en" ? { fontFamily: "var(--font-playfair)" } : {}} */}
-      {/* style={locale === "en" ? { fontFamily: "var(--font-space)" } : {}} */}
+      {/* <Services /> */}
 
       {/* Entrust Your Project To Us */}
-      <CTA />
+      {/* <CTA /> */}
 
       {/* read more carousel  */}
-      <OurCustomers />
+      {/* <OurCustomers /> */}
 
       {/* How We Run Software Project  stiky title !!*/}
 
-      <StickyTitle />
+      {/* <StickyTitle /> */}
 
       {/* team section */}
 
-      <TeamSection />
+      {/* <TeamSection /> */}
     </div>
   );
 }

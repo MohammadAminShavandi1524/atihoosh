@@ -22,9 +22,9 @@ export function ThemeButton() {
       className="text-foreground s:px-2 s:py-3 cursor-pointer"
     >
       {isDark ? (
-        <Sun className="s:size-8 s:stroke-3 size-7 stroke-2 lg:size-5 lg:stroke-2 2xl:size-6" />
+        <Sun className="s:size-8 s:stroke-2 size-7 stroke-2 lg:size-5 lg:stroke-2 2xl:size-6" />
       ) : (
-        <Moon className="s:size-8 s:stroke-3 size-7 stroke-2 lg:size-5 lg:stroke-2 2xl:size-6" />
+        <Moon className="s:size-8 s:stroke-2 size-7 stroke-2 lg:size-5 lg:stroke-2 2xl:size-6" />
       )}
     </button>
   );

@@ -23,7 +23,7 @@ const ParticlesBackground = () => {
       {init && (
         <Particles
           id="tsparticles"
-          className="absolute inset-0 h-full w-full max-lg:hidden"
+          className="absolute inset-0 h-full w-full "
           particlesLoaded={particlesLoaded}
           options={{
             fullScreen: {
