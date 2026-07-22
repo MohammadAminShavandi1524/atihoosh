@@ -77,7 +77,7 @@ const Header = () => {
               ? { fontFamily: "var(--font-noto-serif)" }
               : undefined
           }
-          className="max-s:px-8 w90 s:py-2.5 flex items-center justify-between py-3.5 max-sm:w-full max-sm:px-8 xl:py-2.75 2xl:py-3"
+          className="px-6 w90 s:py-2.5 flex items-center justify-between py-3.5 max-sm:w-full max-sm:px-8 xl:py-2.75 2xl:py-3"
         >
           {/* Logo for 1024 and more*/}
           <div className="hidden lg:block">

@@ -13,11 +13,13 @@ export default function FooterContent() {
   return (
     <div className={cn("flex flex-col", isRtl && "text-right")}>
       {/* title */}
-      <div className="mb-40 text-[48px] font-medium">{t("title")}</div>
+      <div className="s:text-[40px] mb-10 s:mb-12 text-[36px] font-medium xl:mb-22 2xl:mb-40 2xl:text-[48px]">
+        {t("title")}
+      </div>
 
       {/* links */}
-      <div className="grid w-150 grid-cols-2 text-2xl">
-        <div className="flex flex-col gap-y-8">
+      <div className="s:grid s:w-120 s:grid-cols-2 flex flex-col pe-4 text-[22px] s:text-xl xl:w-135 xl:text-[22px] 2xl:w-150 2xl:text-2xl">
+        <div className="s:mb-0 mb-6 flex flex-col gap-y-6 s:gap-y-7 xl:gap-y-8">
           <Link className="footer-link" href={`/${locale}/what-we-do`}>
             {t("links.whatWeDo")}
           </Link>
@@ -32,7 +34,7 @@ export default function FooterContent() {
           </Link>
         </div>
 
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-col gap-y-6 s:gap-y-7 xl:gap-y-8">
           <Link className="footer-link" href={`/${locale}/contact-us`}>
             {t("links.conatctUs")}
           </Link>
@@ -43,8 +45,7 @@ export default function FooterContent() {
       </div>
 
       {/* socials */}
-      {/* socials */}
-      <div className="mt-20 mb-10 flex items-center gap-x-3">
+      <div className="s:mt-15 mt-10 mb-7.5 flex items-center gap-x-3 xl:mt-20 xl:mb-10">
         <Link href="mailto:info@atihooshbonyan.com">
           <Mail className="text-primary size-6 cursor-pointer" />
         </Link>
