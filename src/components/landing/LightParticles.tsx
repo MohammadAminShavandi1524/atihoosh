@@ -23,7 +23,7 @@ const LightParticles = () => {
       {init && (
         <Particles
           id="tsparticles-light"
-          className="absolute inset-0 h-full w-full "
+          className="absolute inset-0 h-full w-full max-lg:hidden"
           particlesLoaded={particlesLoaded}
           options={{
             fullScreen: {

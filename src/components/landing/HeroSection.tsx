@@ -48,7 +48,7 @@ const HeroSection = ({}: HeroSectionProps) => {
       )}
 
       {/* dark overlay */}
-      {theme === "dark" && <div className="absolute inset-0 bg-black/50" />}
+      {theme === "dark" && <div className="absolute inset-0 s:bg-black/50" />}
 
       {/* <HeroBackground /> */}
 
