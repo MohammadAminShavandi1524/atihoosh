@@ -159,16 +159,6 @@
           "description": "استقرار، تست و پشتیبانی پس از تحویل پروژه."
         }
       }
-    },
-    "technology": {
-      "title": "Technology",
-      "subtitle": "Tools We Use"
-    },
-    "readyToBuild": {
-      "title": "آماده‌اید شروع کنیم؟",
-      "description": "پروژه‌تان را برای ما توضیح دهید، و ما ظرف ۲۴ ساعت با شما تماس می‌گیریم.",
-      "primaryButton": "شروع پروژه",
-      "secondaryButton": "مشاهده نمونه‌کارها"
     }
   },
 

@@ -45,7 +45,7 @@ export default function TeamSectionMobile() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="mlg:hidden relative mb-16">
+    <section ref={sectionRef} className="mlg:hidden relative mb-28">
       <div className="w-full">
         {/* IMAGE */}
 

@@ -158,16 +158,6 @@
           "description": "Deploy, test and support after delivery."
         }
       }
-    },
-    "technology": {
-      "title": "Technology",
-      "subtitle": "Tools We Use"
-    },
-    "readyToBuild": {
-      "title": "Ready to Build Something?",
-      "description": "Tell us about your project and we'll get back to you within 24 hours.",
-      "primaryButton": "Start a Project",
-      "secondaryButton": "See Our Work"
     }
   },
 
