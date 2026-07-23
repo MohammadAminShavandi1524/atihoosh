@@ -81,6 +81,10 @@
   --color-card-secondary-foreground: var(--card-secondary-foreground);
   --color-card-tertiary-foreground: var(--card-tertiary-foreground);
 
+  /* success */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
   /* borders */
   --color-border-secondary: var(--border-secondary);
 
@@ -132,6 +136,9 @@
 
   --destructive: #ef4444;
 
+  --success: #16a34a;
+  --success-foreground: #ffffff;
+
   --popover: #ffffff;
   --popover-foreground: #111111;
 
@@ -177,6 +184,9 @@
   --accent-foreground: #ffffff;
 
   --destructive: #ef4444;
+
+  --success: #22c55e;
+  --success-foreground: #ffffff;
 
   --popover: #131313;
   --popover-foreground: #ffffff;
@@ -272,22 +282,21 @@
 
   @media (min-width: 1024px) {
     .headerPadding {
-       padding-top: 69px;
+      padding-top: 69px;
     }
   }
 
   @media (min-width: 1280px) {
     .headerPadding {
-       padding-top: 77px;
+      padding-top: 77px;
     }
   }
 
   @media (min-width: 1536px) {
     .headerPadding {
-       padding-top: 89px;
+      padding-top: 89px;
     }
   }
-
 
   /* .customGradient {
     background: linear-gradient(

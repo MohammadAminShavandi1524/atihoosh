@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { Check } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 
 interface StepProps {
@@ -10,22 +11,35 @@ interface StepProps {
   setStep: Dispatch<SetStateAction<number>>;
 }
 
-const Step = ({ stepNumber, label, setStep, step }: StepProps) => {
+const Step = ({ stepNumber, label, step }: StepProps) => {
   const activeStep = stepNumber === step;
+  const completedStep = stepNumber < step;
+
   return (
-    <div className="relative z-10 flex min-w-34 flex-col items-center gap-y-4.5">
-      {/* dot */}
+    <div className="s:w-[100px] relative z-10 flex w-[88px] flex-col items-center gap-y-3 text-center sm:w-[120px] lg:min-w-34 lg:gap-y-4.5">
       <button
         className={cn(
-          "bg-tertiary border-primary size-12.5 rounded-full border",
+          "bg-tertiary border-primary flex size-11 items-center justify-center rounded-full border text-sm transition-colors sm:size-12 lg:size-12.5 lg:text-base",
           activeStep && "bg-primary text-white",
+          completedStep && "border-success bg-success text-white",
         )}
-        // onClick={() => setStep(stepNumber)}
       >
-        {stepNumber}
+        {completedStep ? (
+          <Check className="size-5 lg:size-6" strokeWidth={2.5} />
+        ) : (
+          stepNumber
+        )}
       </button>
-      {/* title */}
-      <div className={cn("", activeStep && "text-primary")}>{label}</div>
+
+      <div
+        className={cn(
+          "text-muted-foreground s:text-sm text-xs leading-[1.45] lg:text-base",
+          activeStep && "text-primary ",
+          completedStep && " text-success",
+        )}
+      >
+        {label}
+      </div>
     </div>
   );
 };

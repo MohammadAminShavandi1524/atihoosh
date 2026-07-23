@@ -14,30 +14,29 @@ const StepDots = ({ step, setStep }: StepsDotsProps) => {
   const t = useTranslations("projectStart.steps");
 
   return (
-    <div className="relative flex items-center gap-x-45">
-      {/* step 1-2 line */}
+    <div className="relative flex w-full max-w-[760px] items-start justify-between">
+      {/* line 1 */}
       <div
         className={cn(
-          "bg-foreground/10 absolute top-6.25 h-px w-4/10 ltr:left-19 rtl:right-19",
-          step !== 1 && "bg-primary",
+          "bg-foreground/10 absolute top-5.5 s:top-5.75 sm:top-6 lg:top-6.25 h-px",
+          "start-[9%] end-[50%]",
+          step !== 1 && "bg-success",
         )}
       />
 
-      {/* step 2-3 line */}
+      {/* line 2 */}
       <div
         className={cn(
-          "bg-foreground/10 absolute top-6.25 h-px w-4/10 ltr:right-19 rtl:left-19",
-          step === 3 && "bg-primary",
+          "bg-foreground/10 absolute top-5.5 s:top-5.75 sm:top-6 lg:top-6.25 h-px",
+          "start-[50%] end-[9%]",
+          step === 3 && "bg-success",
         )}
       />
 
-      {/* step 1 */}
       <Step step={step} setStep={setStep} stepNumber={1} label={t("step1")} />
 
-      {/* step 2 */}
       <Step step={step} setStep={setStep} stepNumber={2} label={t("step2")} />
 
-      {/* step 3 */}
       <Step step={step} setStep={setStep} stepNumber={3} label={t("step3")} />
     </div>
   );

@@ -15,7 +15,6 @@ import {
   Package,
   Phone,
   User,
-  User2,
 } from "lucide-react";
 
 import { FormField } from "../FormField";
@@ -45,17 +44,6 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
   const fullName = watch("full_name");
   const phone = watch("phone");
   const services = watch("services") ?? [];
-
-  // const serviceItems = t.raw("services.items") as {
-  //   id: number;
-  //   title: string;
-  //   desc: string;
-  //   imageSrc: string;
-  // }[];
-
-  // const selectedServiceTitles = serviceItems
-  //   .filter((service) => services.includes(service.id))
-  //   .map((service) => service.title);
 
   const handleStepOne = async () => {
     const valid = await trigger(["full_name", "phone"]);
@@ -97,29 +85,30 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 1 */}
       {step === 1 && (
-        <div className="mt-20 flex gap-x-50 ps-110">
-          <div className="flex flex-col p-7.5">
-            <div className="text-primary mb-3.25 text-xl">
+        <div className="xs:mt-10 s:mt-12 3xl:gap-40 flex flex-col items-center gap-10 md:mt-12 lg:mt-18 lg:flex-row lg:items-start lg:justify-center lg:gap-14 xl:mt-20 xl:gap-24 2xl:gap-24">
+          {/* Left */}
+          <div className="flex w-full max-w-[450px] flex-col text-center lg:px-0 lg:text-start xl:pt-6 2xl:pt-8">
+            <div className="text-primary mb-3 text-sm sm:text-base lg:text-lg xl:text-xl">
               {t("step1.label")}
             </div>
 
-            <div className="mb-8.5 text-[45px]">
+            <div className="s:text-[40px] mb-6 text-[34px] leading-[1.15] md:text-[46px] xl:text-[52px] 2xl:text-[56px]">
               <span>{t("step1.title.part1")} </span>
+
               <span className="text-primary">{t("step1.title.highlight")}</span>
             </div>
 
-            <div className="text-muted-foreground flex flex-col text-xl">
+            <div className="text-foreground sm:text-muted-foreground s:text-lg flex flex-col text-base leading-8 md:text-xl">
               <span>{t("step1.desc.line1")}</span>
               <span>{t("step1.desc.line2")}</span>
             </div>
           </div>
 
-          <div className="flex w-125 flex-col pt-7">
-            <div className="relative mb-10">
-              {/* <User2 className="text-muted-foreground absolute top-[45px] size-5 ltr:left-6 rtl:right-6" /> */}
-
+          {/* Right */}
+          <div className="ice flex w-full max-w-[400px] flex-col lg:max-w-[430px] xl:max-w-[470px] 2xl:max-w-[450px]">
+            <div className="mb-8">
               <FormField
-                className=""
+                containerClassName="max-lg:w-full max-w-100"
                 label={t("form.fullName")}
                 placeholder={t("form.fullNamePlaceholder")}
                 register={register("full_name")}
@@ -127,10 +116,9 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
               />
             </div>
 
-            <div className="relative mb-14">
-              {/* <Phone className="text-muted-foreground absolute top-[45px] size-5 ltr:left-6 rtl:right-6" /> */}
-
+            <div className="mb-10">
               <FormField
+                containerClassName="max-lg:w-full max-w-100"
                 label={t("form.phone")}
                 placeholder={t("form.phonePlaceholder")}
                 register={register("phone")}
@@ -140,11 +128,11 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
             <button
               onClick={handleStepOne}
-              className="bg-primary hover:bg-primary-hover text-tertiary flex h-11.5 w-40 cursor-pointer items-center justify-center gap-x-1 rounded-md ps-2 text-sm"
+              className="bg-primary hover:bg-primary-hover text-tertiary flex h-12 items-center justify-center gap-2 rounded-lg text-sm font-medium max-lg:w-full lg:w-48"
             >
-              <span className="font-medium">{t("buttons.continue")}</span>
+              <span>{t("buttons.continue")}</span>
 
-              <ArrowRight className="size-4.5 pt-0.5 rtl:rotate-180" />
+              <ArrowRight className="size-4 rtl:rotate-180" />
             </button>
           </div>
         </div>
