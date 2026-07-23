@@ -3,6 +3,7 @@ import HeroSection from "@/components/landing/HeroSection";
 import OurCustomers from "@/components/landing/OurCustomers";
 import ProcessSection from "@/components/landing/proccesSection/ProcessSection";
 import Services from "@/components/landing/Services";
+import TeamSection from "@/components/landing/TeamSection";
 
 
 import { Locale, useTranslations } from "next-intl";
@@ -37,7 +38,7 @@ export default function IndexPage({ params }: PageProps<"/[locale]">) {
 
       {/* team section */}
 
-      {/* <TeamSection /> */}
+      <TeamSection />
     </div>
   );
 }

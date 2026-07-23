@@ -20,7 +20,7 @@ export default function ProcessCardMobile({
 
   const isInView = useInView(ref, {
     amount: 1,
-    margin: "-80px 0px -80px 0px",
+    margin: "-40px 0px -40px 0px",
     once: false,
   });
 

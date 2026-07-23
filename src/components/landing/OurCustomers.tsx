@@ -14,7 +14,7 @@ const OurCustomers = ({}: OurCustomersProps) => {
   const locale = useLocale();
 
   return (
-    <div className="border-t-border mlg:mt-10 mlg:pt-9 mt-14 border-t pt-8 lg:mt-12 lg:pt-10 xl:mt-14 xl:pt-12 2xl:mt-16 2xl:pt-13">
+    <div className="border-t-border mlg:mt-14 mlg:pt-14 mt-14 border-t pt-8 lg:mt-14 lg:pt-10 xl:mt-14 xl:pt-12 2xl:mt-16 2xl:pt-13">
       <div className="s:w90 mlg:px-14 flex flex-col items-center px-5 xss:px-7 md:px-10 lg:px-18 xl:px-24 2xl:px-30">
         {/* title */}
         <div className="s:text-[30px] s:mb-8 xss:text-[28px] mt-4 mb-8 text-center text-[26px] leading-relaxed font-medium sm:text-[34px] md:mb-10 xl:mb-14 xl:text-[34px] 2xl:mb-16 2xl:text-[36px]">

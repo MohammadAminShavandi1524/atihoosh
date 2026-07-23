@@ -14,7 +14,6 @@ const CTA = ({}: CTAProps) => {
     <div
       className={cn(
         "mt-50 flex w-full flex-col items-center px-6",
-
         "3xl:mt-46",
         "2xl:mt-42",
         "xl:mt-36",
@@ -25,7 +24,6 @@ const CTA = ({}: CTAProps) => {
         "s:mt-16",
         "xss:mt-16",
         "xs:mt-16",
-
         "sm:px-8",
       )}
     >
