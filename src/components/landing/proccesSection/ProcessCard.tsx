@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import TechnicalBackground from "./TechnicalBackground";
+import TechnicalBackground from "../TechnicalBackground";
 import { useLocale, useTranslations } from "next-intl";
 
 type ProcessCardProps = {
@@ -21,7 +21,7 @@ function ProcessCard({ title, description, className }: ProcessCardProps) {
       initial="initial"
       whileHover="hover"
       className={cn(
-        "group relative h-[480px] w-[49%] overflow-hidden rounded-3xl bg-[#0041f0] p-14",
+        "group relative h-90 w-[60%] overflow-hidden rounded-3xl bg-[#0041f0] p-10 xl:h-105 xl:w-[49%] 2xl:h-120 2xl:p-14",
         className,
         "text-white",
       )}
@@ -44,7 +44,7 @@ function ProcessCard({ title, description, className }: ProcessCardProps) {
           duration: 0.8,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="absolute bottom-14 z-10 text-3xl ltr:left-14 rtl:right-14"
+        className="absolute start-10 bottom-10 z-10 2xl:start-14 2xl:bottom-14 2xl:text-3xl ltr:text-[24px] rtl:text-[28px]"
       >
         {title}
       </motion.h3>
@@ -65,7 +65,7 @@ function ProcessCard({ title, description, className }: ProcessCardProps) {
           duration: 0.8,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="text-justify absolute top-14 left-14 z-10 max-w-[500px] text-xl leading-10 whitespace-pre-line text-white/70"
+        className="absolute start-10 top-10 z-10 max-w-[80%] text-justify text-lg leading-10 whitespace-pre-line text-white/70 2xl:start-14 2xl:top-14 2xl:text-xl"
       >
         {description}
       </motion.p>

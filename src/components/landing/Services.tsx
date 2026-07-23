@@ -175,52 +175,6 @@ const Services = () => {
               >
                 {service.subTitle}
               </motion.p>
-
-              {/* Expand Button */}
-              {/* <motion.button
-              variants={{
-                initial: { opacity: 0, y: 20 },
-                hover: { opacity: 1, y: 0 },
-              }}
-              transition={{
-                duration: 0.55,
-                ease: [0.19, 1, 0.22, 1],
-              }}
-              className={cn(
-                "mt-auto flex cursor-pointer items-center",
-                "text-foreground",
-                locale === "en"
-                  ? "gap-x-1.5 self-end text-[22px]"
-                  : "gap-x-4 self-end text-lg",
-              )}
-            >
-              <span
-                className={cn(
-                  "pb-0.5 font-medium",
-                  locale === "en"
-                    ? "enServicesExpandButton"
-                    : "faServicesExpandButton",
-                )}
-              >
-                {t("expandButton")}
-              </span>
-
-              <motion.div
-                variants={{
-                  initial: { x: 0 },
-                  hover: { x: 8 },
-                }}
-                transition={{
-                  duration: 0.4,
-                  ease: [0.19, 1, 0.22, 1],
-                }}
-              >
-                <ChevronRight
-                  className={cn(locale === "fa" && "rotate-180")}
-                  size={24}
-                />
-              </motion.div>
-            </motion.button> */}
             </div>
           </motion.div>
         ))}
@@ -228,7 +182,7 @@ const Services = () => {
 
       {/* mobile carousel */}
 
-      <div className="sm:hidden pt-20">
+      <div className="pt-20 sm:hidden">
         <ServicesCarousel services={_services} />
       </div>
     </>

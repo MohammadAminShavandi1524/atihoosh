@@ -15,7 +15,7 @@ const Companies = ({}: CompaniesProps) => {
       <motion.div
         initial={false}
         whileHover="hover"
-        className="bg-background text-muted flex cursor-pointer flex-col items-center gap-y-6 px-30 py-4"
+        className="bg-background text-muted mlg:px-18 s:py-4 flex cursor-pointer flex-col items-center gap-y-4 md:gap-y-6 md:px-12 xl:px-24 2xl:px-30"
       >
         <motion.div
           variants={{
@@ -26,16 +26,17 @@ const Companies = ({}: CompaniesProps) => {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <Image
-            className="rounded-full"
-            src="/ati_abzar.webp"
-            alt="ati-abzar"
-            width={105}
-            height={105}
-          />
+          <div className="s:size-[105px] relative size-[96px]">
+            <Image
+              className="rounded-full"
+              src="/ati_abzar.webp"
+              alt="ati-abzar"
+              fill
+            />
+          </div>
         </motion.div>
 
-        <span className="text-muted-foreground text-lg font-medium">
+        <span className="text-muted-foreground s:text-lg text-base font-medium">
           {locale === "en" ? "Ati Abzar Pishro" : "آتی ابزار پیشرو"}
         </span>
       </motion.div>

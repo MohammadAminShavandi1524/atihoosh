@@ -13,7 +13,7 @@ const CarouselProgress = ({
   isRTL = false,
 }: CarouselProgressProps) => {
   return (
-    <div className="mt-6 px-5">
+    <div className="mt-6 ps-3 pe-5">
       <div className="bg-border relative h-1 overflow-hidden rounded-full">
         <div
           className="bg-primary absolute top-0 h-full rounded-full transition-all duration-75"

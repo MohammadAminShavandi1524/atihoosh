@@ -55,7 +55,7 @@ export default function Footer() {
     <div
       ref={footerRef}
       className={cn(
-        "w90 px-8 s:px-10 sm:px-6 relative pt-20 sm:pt-30 pb-12 s:pb-16 max-sm:w-full  lg:grid lg:grid-cols-2 lg:pb-0",
+        "w90 px-8 s:px-10 sm:px-6 relative pt-16 xss:pt-20 sm:pt-30 pb-8 xss:pb-12 s:pb-16 max-sm:w-full  lg:grid lg:grid-cols-2 lg:pb-0",
         isRtl && "rtl",
       )}
       dir={isRtl ? "rtl" : "ltr"}
