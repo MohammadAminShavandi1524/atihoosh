@@ -5,7 +5,6 @@ import ProcessSection from "@/components/landing/proccesSection/ProcessSection";
 import Services from "@/components/landing/Services";
 import TeamSection from "@/components/landing/TeamSection";
 
-
 import { Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
