@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
 
 interface SubmitButtonProps {
   isUploading: boolean;
@@ -10,7 +9,6 @@ interface SubmitButtonProps {
 }
 
 const SubmitButton = ({ isUploading, text }: SubmitButtonProps) => {
-  const { theme } = useTheme();
   const t = useTranslations("Talent.ApplyForm");
 
   return (
@@ -18,7 +16,7 @@ const SubmitButton = ({ isUploading, text }: SubmitButtonProps) => {
       type="submit"
       disabled={isUploading}
       className={cn(
-        "bg-primary flex h-13 w-full cursor-pointer items-center justify-center rounded-lg font-semibold text-[#f8fafc] transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 dark:text-[#06151a]",
+        "bg-primary flex h-11 w-full cursor-pointer items-center justify-center rounded-lg px-6 text-sm font-semibold text-[#f8fafc] transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:h-12 sm:text-base lg:h-13 dark:text-[#06151a]",
       )}
     >
       {isUploading ? t("uploading") : text}

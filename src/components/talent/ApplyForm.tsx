@@ -40,7 +40,8 @@ const ApplyForm = ({}: ApplyFormProps) => {
   const [isUploading, setIsUploading] = useState(false);
   const [resumeUrl, setResumeUrl] = useState("");
   const [resumeError, setResumeError] = useState("");
-  const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+
+  const MAX_FILE_SIZE = 5 * 1024 * 1024;
 
   const uploadResume = async () => {
     if (!file) return "";
@@ -62,9 +63,6 @@ const ApplyForm = ({}: ApplyFormProps) => {
       setResumeUrl(data.url);
 
       return data.url;
-    } catch (error) {
-      // console.error(error);
-      return "";
     } finally {
       setIsUploading(false);
     }
@@ -102,8 +100,7 @@ const ApplyForm = ({}: ApplyFormProps) => {
       reset();
       setFile(null);
       setResumeUrl("");
-    } catch (error) {
-      // console.error(error);
+    } catch {
       setResumeError(tValidation("resumeUploadFailed"));
     }
   };
@@ -117,23 +114,29 @@ const ApplyForm = ({}: ApplyFormProps) => {
   if (!mounted) return null;
 
   return (
-    <div className="mt-24 mb-24 flex flex-col items-center">
-      <div className="flex max-w-200 flex-col items-center">
-        <span className="text-primary text-sm font-medium tracking-[0.15em] uppercase">
+    <section className="mt-14 mb-14 flex justify-center sm:mt-16 sm:mb-16 lg:mt-20 lg:mb-20 xl:mt-24 xl:mb-24">
+      <div className="w90 flex max-w-full flex-col items-center sm:max-w-[90%] lg:max-w-[850px] xl:max-w-[900px]">
+        {/* badge */}
+        <span className="text-primary text-xs font-medium tracking-[0.15em] uppercase sm:text-sm">
           {t("badge")}
         </span>
 
-        <h2 className="mt-5 text-4xl font-bold">{t("title")}</h2>
+        {/* title */}
+        <h2 className="xss:text-[34px] s:text-[38px] mt-4 text-center text-[30px] leading-[1.2] font-bold md:mt-5 md:text-[40px]">
+          {t("title")}
+        </h2>
 
-        <p className="text-muted-foreground mt-4 mb-12 text-lg">
+        {/* description */}
+        <p className="text-muted-foreground mt-4 mb-8 w-full text-center text-base leading-[1.9] sm:mb-10 sm:max-w-[90%] sm:text-[17px] lg:mb-12 lg:max-w-[700px] lg:text-lg">
           {t("description")}
         </p>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-secondary-bg border-foreground/8 w-full space-y-6 rounded-xl border p-10"
+          className="s:bg-secondary-bg s:border-foreground/8 s:p-6 w-full space-y-5 rounded-xl s:border p-0 sm:space-y-6 sm:p-8 lg:p-10 max-s:mt-6"
         >
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {" "}
+          <div className="grid grid-cols-1 gap-5 mlg:grid-cols-2 md:gap-6">
             <FormField
               label={t("fullName")}
               placeholder={t("fullNamePlaceholder")}
@@ -150,7 +153,6 @@ const ApplyForm = ({}: ApplyFormProps) => {
               error={errors.phone}
             />
           </div>
-
           <FormField
             label={t("email")}
             type="email"
@@ -159,9 +161,8 @@ const ApplyForm = ({}: ApplyFormProps) => {
             {...register("email")}
             error={errors.email}
           />
-
           <div className="flex flex-col gap-y-3">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <label className="text-foreground ps-1.5 text-sm font-semibold">
                 {t("resume")}
               </label>
@@ -181,14 +182,12 @@ const ApplyForm = ({}: ApplyFormProps) => {
 
                 if (!selected) return;
 
-                // check type
                 if (selected.type !== "application/pdf") {
                   setResumeError(tValidation("resumeOnlyPdf"));
                   setFile(null);
                   return;
                 }
 
-                // check size
                 if (selected.size > MAX_FILE_SIZE) {
                   setResumeError(tValidation("resumeTooLarge"));
                   setFile(null);
@@ -204,18 +203,16 @@ const ApplyForm = ({}: ApplyFormProps) => {
             <label
               htmlFor="resume-upload"
               className={cn(
-                "border-foreground/20 hover:border-primary mb-4 flex min-h-45 w-full cursor-pointer flex-col items-center rounded-xl border-2 border-dashed pt-8 transition",
+                "border-foreground/20 hover:border-primary mb-2 flex min-h-[220px] w-full cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed px-4 py-8 text-center transition sm:mb-4 sm:min-h-[240px]",
                 theme === "dark" ? "bg-[#151515]" : "bg-[#F5F5F5]",
               )}
             >
-              <div className="bg-primary/50 mb-2 flex size-11 items-center justify-center rounded-lg">
+              <div className="bg-primary/50 mb-3 flex size-10 items-center justify-center rounded-lg sm:size-11">
                 <Upload className="text-primary size-5" />
               </div>
 
-              <div className="mb-2 text-lg">
-                {/* <span>{t("resumeUploadText")} </span> */}
-
-                <span className="text-primary text-xl">
+              <div className="mb-2 text-base sm:text-lg">
+                <span className="text-primary text-lg sm:text-xl">
                   {t("resumeUploadAction")}
                 </span>
               </div>
@@ -225,21 +222,19 @@ const ApplyForm = ({}: ApplyFormProps) => {
               </div>
 
               {file && (
-                <div className="mt-6 mb-6 rounded-lg bg-green-500/10 px-3 py-2 text-sm text-green-600">
+                <div className="mt-5 rounded-lg bg-green-500/10 px-3 py-2 text-center text-sm text-green-600">
                   {file.name}
                 </div>
               )}
             </label>
           </div>
-
           <SubmitButton isUploading={isUploading} text={t("button")} />
-
-          <p className="text-muted-foreground text-center text-sm">
+          <p className="text-muted-foreground text-center text-xs leading-[1.8] sm:text-sm">
             {t("privacy")}
           </p>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { TextareaHTMLAttributes, InputHTMLAttributes } from "react";
-
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 interface BaseProps {
@@ -34,10 +33,11 @@ export const FormField = (props: FormFieldProps) => {
   } = props;
 
   return (
-    <div className={cn("flex flex-col gap-3", containerClassName)}>
-      <div className="flex items-center justify-between px-1.5">
+    <div className={cn("flex flex-col gap-2 sm:gap-3", containerClassName)}>
+      <div className="flex  gap-1 px-1.5 sm:flex-row items-center justify-between">
         <label className="text-foreground text-sm font-semibold">{label}</label>
-        {error && <p className="text-xs text-red-500 ">{error.message}</p>}
+
+        {error && <p className="text-xs text-red-500 pt-0.5">{error.message}</p>}
       </div>
 
       {as === "textarea" ? (
@@ -45,7 +45,7 @@ export const FormField = (props: FormFieldProps) => {
           {...(rest as TextareaHTMLAttributes<HTMLTextAreaElement>)}
           {...register}
           className={cn(
-            "bg-secondary-bg text-foreground placeholder:text-muted-foreground h-24 w-full resize-none rounded-lg border px-4 py-2.5 transition-colors outline-none rtl:text-right",
+            "bg-secondary-bg text-foreground placeholder:text-muted-foreground h-28 w-full resize-none rounded-lg border px-3 py-3 text-sm transition-colors outline-none sm:h-24 sm:px-4 sm:py-2.5 sm:text-base rtl:text-right",
 
             error
               ? "border-red-500 focus:border-red-500"
@@ -57,7 +57,7 @@ export const FormField = (props: FormFieldProps) => {
           {...(rest as InputHTMLAttributes<HTMLInputElement>)}
           {...register}
           className={cn(
-            "bg-secondary-bg text-foreground placeholder:text-muted-foreground h-12 w-full rounded-lg border px-4 transition-colors outline-none rtl:text-right",
+            "bg-secondary-bg text-foreground placeholder:text-muted-foreground h-11 w-full rounded-lg border px-3 text-sm transition-colors outline-none sm:h-12 sm:px-4 sm:text-base rtl:text-right",
 
             error
               ? "border-red-500 focus:border-red-500"
