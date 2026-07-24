@@ -26,28 +26,28 @@ const OurServices = ({}: OurServicesProps) => {
           indexNumber="01"
           title={t("cards.web.title")}
           description={t("cards.web.description")}
-          iamgeSrc="/whatWeDo/wwd1.png"
+          iamgeSrc="/whatWeDo/wwd1.webp"
         />
 
         <WWOCard
           indexNumber="02"
           title={t("cards.mobile.title")}
           description={t("cards.mobile.description")}
-          iamgeSrc="/whatWeDo/wwd2.png"
+          iamgeSrc="/whatWeDo/wwd2.webp"
         />
 
         <WWOCard
           indexNumber="03"
           title={t("cards.ai.title")}
           description={t("cards.ai.description")}
-          iamgeSrc="/whatWeDo/3.png"
+          iamgeSrc="/whatWeDo/3.webp"
         />
 
         <WWOCard
           indexNumber="04"
           title={t("cards.consulting.title")}
           description={t("cards.consulting.description")}
-          iamgeSrc="/whatWeDo/4.png"
+          iamgeSrc="/whatWeDo/4.webp"
         />
       </div>
     </div>

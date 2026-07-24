@@ -79,7 +79,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
   return (
     <div className="w90 relative z-10 flex w-full flex-col">
       {/* steps dots */}
-      <div className="mt-10 flex items-center justify-center">
+      <div className="mt-10 hidden lg:flex items-center justify-center">
         <StepDots step={step} setStep={setStep} />
       </div>
 
@@ -140,7 +140,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 2 */}
       {step === 2 && (
-        <div className="mt-10 flex justify-center gap-x-20">
+        <div className=" mt-10 flex justify-center gap-x-20">
           <div className="mt-5 flex flex-col p-7.5">
             <div className="text-primary mb-3.25 text-xl">
               {t("step2.label")}

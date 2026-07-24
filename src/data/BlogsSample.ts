@@ -12,7 +12,7 @@ export const EN_latestBlogsSample: {
     tags: ["Artificial Intelligence", "Business Strategy"],
     description:
       "Artificial intelligence is no longer a futuristic concept—it's becoming a core part of modern business. Companies that continue relying on traditional processes risk losing market share and falling behind competitors that embrace AI-driven innovation.",
-    imageSrc: "/blogs/1.png",
+    imageSrc: "/blogs/1.webp",
     avgReadTime: 6,
   },
   {
@@ -21,7 +21,7 @@ export const EN_latestBlogsSample: {
     tags: ["Software Development", "Technology"],
     description:
       "Every successful software product is built through careful planning, design, development, and testing. From understanding business needs to deployment and continuous improvement, each stage plays a vital role in delivering a high-quality user experience.",
-    imageSrc: "/blogs/2.png",
+    imageSrc: "/blogs/2.webp",
     avgReadTime: 7,
   },
   {
@@ -30,7 +30,7 @@ export const EN_latestBlogsSample: {
     tags: ["Cybersecurity", "Business Security"],
     description:
       "Cyber threats are no longer limited to large enterprises. From phishing attacks and ransomware to weak passwords, every organization faces security risks and can lose valuable data and customer trust without proper preparation.",
-    imageSrc: "/blogs/3.png",
+    imageSrc: "/blogs/3.webp",
     avgReadTime: 7,
   },
   {
@@ -40,7 +40,7 @@ export const EN_latestBlogsSample: {
     tags: ["Digital Transformation", "Innovation"],
     description:
       "Digital transformation is more than adopting new technologies. It requires rethinking processes, decision-making, and customer experience. Companies that embrace data-driven innovation early are more likely to achieve sustainable growth and long-term competitive advantage.",
-    imageSrc: "/blogs/4.png",
+    imageSrc: "/blogs/4.webp",
     avgReadTime: 6,
   },
 ];
@@ -59,7 +59,7 @@ export const FA_latestBlogsSample: {
     tags: ["هوش مصنوعی", "کسب‌وکار"],
     description:
       "هوش مصنوعی دیگر یک فناوری آینده‌نگرانه نیست؛ بلکه به بخشی از واقعیت کسب‌وکارها تبدیل شده است. شرکت‌هایی که همچنان به روش‌های سنتی متکی باشند، به‌تدریج سهم بازار خود را از دست می‌دهند و از رقابت عقب می‌مانند.",
-    imageSrc: "/blogs/1.png",
+    imageSrc: "/blogs/1.webp",
     avgReadTime: 6,
   },
   {
@@ -68,7 +68,7 @@ export const FA_latestBlogsSample: {
     tags: ["توسعه نرم‌افزار", "فناوری"],
     description:
       "هر نرم‌افزار موفق حاصل مجموعه‌ای از تحلیل، طراحی، توسعه و آزمون است. از شناسایی نیازهای کسب‌وکار تا انتشار و پشتیبانی، هر مرحله نقش مهمی در کیفیت نهایی محصول و تجربه کاربران ایفا می‌کند.",
-    imageSrc: "/blogs/2.png",
+    imageSrc: "/blogs/2.webp",
     avgReadTime: 7,
   },
   {
@@ -77,7 +77,7 @@ export const FA_latestBlogsSample: {
     tags: ["امنیت سایبری", "امنیت کسب‌وکار"],
     description:
       "تهدیدات سایبری دیگر تنها شرکت‌های بزرگ را هدف قرار نمی‌دهند. از حملات فیشینگ و باج‌افزارها تا رمزهای عبور ضعیف، هر سازمانی می‌تواند در معرض خطر باشد و بدون آمادگی، اطلاعات و اعتبار خود را از دست بدهد.",
-    imageSrc: "/blogs/3.png",
+    imageSrc: "/blogs/3.webp",
     avgReadTime: 7,
   },
   {
@@ -86,7 +86,7 @@ export const FA_latestBlogsSample: {
     tags: ["تحول دیجیتال", "نوآوری"],
     description:
       "تحول دیجیتال تنها استفاده از فناوری‌های جدید نیست، بلکه بازنگری در فرآیندها، تصمیم‌گیری و تجربه مشتری است. شرکت‌هایی که زودتر به سمت داده‌محوری و نوآوری حرکت می‌کنند، سریع‌تر رشد می‌کنند و مزیت رقابتی پایدارتری می‌سازند.",
-    imageSrc: "/blogs/4.png",
+    imageSrc: "/blogs/4.webp",
     avgReadTime: 6,
   },
 ];
