@@ -51,7 +51,7 @@ export default function TeamSectionMobile() {
 
         <div className="relative aspect-[3/2] w-full overflow-hidden">
           <Image
-            src="/teamSample1.jpg"
+            src="/teamSample1.webp"
             alt="Team"
             fill
             priority

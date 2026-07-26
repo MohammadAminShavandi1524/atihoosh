@@ -22,15 +22,7 @@ export async function createRequest(
       body: JSON.stringify(body),
     },
   );
-
   const result = await res.json();
-
-  console.log("========== REQUEST ==========");
-  console.log(
-    "URL:",
-    `${process.env.NEXT_PUBLIC_API_URL}/support/create_request/${lang}/`,
-  );
-  console.log("BODY:", body);
 
   if (!res.ok) {
     throw new Error(JSON.stringify(result));

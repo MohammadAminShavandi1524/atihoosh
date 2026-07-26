@@ -42,9 +42,9 @@ const HeroSection = ({}: HeroSectionProps) => {
       {/* background image */}
 
       {theme === "dark" ? (
-        <div className="absolute inset-0 scale-105 bg-[url('/herosection.png')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute inset-0 scale-105 bg-[url('/herosection.webp')] bg-cover bg-center bg-no-repeat" />
       ) : (
-        <div className="absolute inset-0 scale-105 bg-[url('/lighthero.png')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute inset-0 scale-105 bg-[url('/lighthero.webp')] bg-cover bg-center bg-no-repeat" />
       )}
 
       {/* dark overlay */}

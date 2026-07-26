@@ -26,6 +26,7 @@ const ApplyForm = ({}: ApplyFormProps) => {
     register,
     handleSubmit,
     reset,
+    watch,
     formState: { errors },
   } = useForm<ApplySchema>({
     resolver: zodResolver(applySchema(tValidation)),
@@ -37,8 +38,10 @@ const ApplyForm = ({}: ApplyFormProps) => {
   });
 
   const [file, setFile] = useState<File | null>(null);
+
   const [isUploading, setIsUploading] = useState(false);
   const [resumeUrl, setResumeUrl] = useState("");
+
   const [resumeError, setResumeError] = useState("");
 
   const MAX_FILE_SIZE = 5 * 1024 * 1024;
@@ -133,10 +136,10 @@ const ApplyForm = ({}: ApplyFormProps) => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="s:bg-secondary-bg s:border-foreground/8 s:p-6 w-full space-y-5 rounded-xl s:border p-0 sm:space-y-6 sm:p-8 lg:p-10 max-s:mt-6"
+          className="s:bg-secondary-bg s:border-foreground/8 s:p-6 s:border max-s:mt-6 w-full space-y-5 rounded-xl p-0 sm:space-y-6 sm:p-8 lg:p-10"
         >
           {" "}
-          <div className="grid grid-cols-1 gap-5 mlg:grid-cols-2 md:gap-6">
+          <div className="mlg:grid-cols-2 grid grid-cols-1 gap-5 md:gap-6">
             <FormField
               label={t("fullName")}
               placeholder={t("fullNamePlaceholder")}

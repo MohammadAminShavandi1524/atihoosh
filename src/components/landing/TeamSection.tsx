@@ -54,7 +54,7 @@ export default function TeamSection() {
             className="absolute aspect-[3/2] overflow-hidden will-change-transform"
           >
             <Image
-              src="/teamSample1.jpg"
+              src="/teamSample1.webp"
               alt="Team"
               fill
               priority

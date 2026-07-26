@@ -17,7 +17,7 @@ const LeadershipSection = ({}: LeadershipSectionProps) => {
             <div className="xss:h-[425px] xss:w-[340px] mlg:h-[470px] mlg:w-[376px] s:h-[450px] s:w-[360px] relative h-[400px] w-[320px] lg:h-[480px] lg:w-[400px]">
               <Image
                 alt="leadershipImage"
-                src="/founder.png"
+                src="/founder.webp"
                 fill
                 priority
                 sizes="(max-width:1024px) 80vw, 400px"

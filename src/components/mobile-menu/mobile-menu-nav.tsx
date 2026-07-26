@@ -3,9 +3,12 @@
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
+import { useMobileSidebar } from "@/components/ui/mobile-sidebar";
+
 const MobileMenuNav = () => {
   const locale = useLocale();
   const t = useTranslations("Footer");
+  const { setOpen } = useMobileSidebar();
 
   const links = [
     {
@@ -40,6 +43,7 @@ const MobileMenuNav = () => {
         <Link
           key={item.href}
           href={`/${locale}${item.href}`}
+          onClick={() => setOpen(false)}
           className="text-foreground hover:text-primary rounded-lg px-3 py-3 text-lg transition-colors"
         >
           {item.title}

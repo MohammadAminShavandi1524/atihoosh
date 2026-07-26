@@ -19,7 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import PSBody from "@/components/projectStart/PSBody";
 
 const Page = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
 
   const locale = useLocale();
 
@@ -48,7 +48,7 @@ const Page = () => {
         >
           <Image
             className={cn()}
-            src="/step11.png"
+            src="/step11.webp"
             alt="projectStartBackground"
             fill
           />
@@ -62,7 +62,7 @@ const Page = () => {
           )}
         >
           <Image
-            src="/step22.png"
+            src="/step22.webp"
             alt="projectStartBackground"
             fill
             className="object-cover"
@@ -77,7 +77,7 @@ const Page = () => {
           )}
         >
           <Image
-            src="/step33.png"
+            src="/step33.webp"
             alt="projectStartBackground"
             fill
             className="object-cover"
