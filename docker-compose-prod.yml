@@ -1,0 +1,15 @@
+services:
+
+  frontend:
+
+    container_name: atihoosh_frontend
+
+    image: atihoosh_frontend:latest
+
+    env_file:
+      - .env
+
+    ports:
+      - "3000:3000"
+
+
