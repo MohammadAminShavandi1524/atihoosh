@@ -9,46 +9,48 @@ interface LatestBlogsProps {}
 const LatestBlogs = ({}: LatestBlogsProps) => {
   const locale = useLocale();
   const t = useTranslations("Blogs.LatestBlogs");
+
   const activeBlogs =
     locale === "en" ? EN_latestBlogsSample : FA_latestBlogsSample;
 
   return (
-    <div className="px-50 w90">
+    <section className="w90 px-5 sm:px-6 lg:px-10 xl:px-16 2xl:px-24">
       {/* title */}
-      <div className="text-primary mb-4 text-lg">
+      <div className="text-primary mb-3 text-sm sm:text-base lg:mb-4 lg:text-lg">
         {t("titlePart1")} {t("titlePart2")}
       </div>
 
-      {/* main header */}
-      <div className="mb-13 flex items-center justify-between">
-        <div className="text-[38px]">{t("heading")}</div>
+      {/* header */}
+      <div className="mb-8 flex flex-col gap-5 sm:mb-10 md:flex-row md:items-center md:justify-between lg:mb-13">
+        <h2 className="max-w-3xl text-3xl leading-tight sm:text-4xl lg:text-[38px]">
+          {t("heading")}
+        </h2>
 
-        <div className="bg-tertiary text-primary border-primary rounded-full border px-6 py-3 text-base">
+        <div className="bg-tertiary text-primary border-primary w-fit rounded-full border px-4 py-2 text-sm sm:px-5 sm:text-[15px] lg:px-6 lg:py-3 lg:text-base">
           {t("badge")}
         </div>
       </div>
-      {/* latest blogs */}
-      <div className="grid grid-cols-2 gap-x-6 gap-y-8">
+
+      {/* blogs */}
+      <div className="grid grid-cols-1 gap-6 mlg:grid-cols-2 xl:gap-8">
         {activeBlogs.map(
           (
             { avgReadTime, description, imageSrc, indexNumber, tags, title },
             index,
-          ) => {
-            return (
-              <BlogSummary
-                key={index}
-                indexNumber={indexNumber}
-                title={title}
-                tags={tags}
-                description={description}
-                imageSrc={imageSrc}
-                avgReadTime={avgReadTime}
-              />
-            );
-          },
+          ) => (
+            <BlogSummary
+              key={index}
+              indexNumber={indexNumber}
+              title={title}
+              tags={tags}
+              description={description}
+              imageSrc={imageSrc}
+              avgReadTime={avgReadTime}
+            />
+          ),
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

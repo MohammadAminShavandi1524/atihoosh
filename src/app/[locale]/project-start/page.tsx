@@ -19,7 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import PSBody from "@/components/projectStart/PSBody";
 
 const Page = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
 
   const locale = useLocale();
 
@@ -27,10 +27,10 @@ const Page = () => {
     resolver: zodResolver(projectStartSchema),
 
     defaultValues: {
-      full_name: "mohammad",
+      full_name: "",
       email: "",
-      phone: "09124545865",
-      services: [1,7,2,8],
+      phone: "",
+      services: [],
       description: "",
     },
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { cn, englishToPersianNumber } from "@/lib/utils";
-import { div } from "framer-motion/client";
 import { ArrowRight, Clock } from "lucide-react";
 import { useLocale } from "next-intl";
 import Image from "next/image";
@@ -25,84 +24,89 @@ const BlogSummary = ({
   avgReadTime,
 }: BlogSummaryProps) => {
   const locale = useLocale();
+
   return (
-    <div className="bg-secondary relative min-h-[500px] w-full overflow-hidden rounded-2xl">
+    <article className="bg-secondary relative overflow-hidden rounded-2xl">
       {/* index */}
-      <div className="text-primary border-primary bg-tertiary absolute top-5 left-4.5 rounded-full border px-4 py-2 text-base">
+      <div className="text-primary border-primary bg-tertiary absolute top-3 left-3 z-10 rounded-full border px-3 py-1.5 text-xs sm:top-4 sm:left-4 sm:px-4 sm:py-2 sm:text-sm lg:top-5 lg:left-4.5 lg:text-base">
         {indexNumber}
       </div>
 
-      {/* top side */}
-      <div className="relative h-[330px] w-full overflow-hidden">
-        <Image src={imageSrc} alt="" fill className="object-cover" />
+      {/* image */}
+      <div className="relative aspect-[16/9] w-full overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          sizes="(max-width:768px) 100vw, (max-width:1280px) 50vw, 720px"
+          className="object-cover transition-transform duration-500 hover:scale-105"
+        />
       </div>
-      {/* content */}
-      <div className="bg-secondary-bg flex h-full flex-col px-6 pt-6 pb-7">
-        {/* tags */}
-        <div className="mb-6 flex items-center gap-x-2.5">
-          {tags.map((tag, index) => {
-            return (
-              <div
-                key={index}
-                className="bg-tertiary border-primary text-primary rounded-md border px-3 py-1.5 text-[13px]"
-              >
-                {tag}
-              </div>
-            );
-          })}
-        </div>
 
+      {/* content */}
+      <div className="bg-secondary-bg flex h-full flex-col p-5 sm:p-6">
+        {/* tags */}
+        <div className="mb-5 flex flex-wrap gap-2">
+          {tags.map((tag, index) => (
+            <div
+              key={index}
+              className="bg-tertiary border-primary text-primary rounded-md border px-2.5 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-[13px]"
+            >
+              {tag}
+            </div>
+          ))}
+        </div>
         {/* title */}
-        <div
+        <h3
           className={cn(
-            "mb-5 text-[22px]",
-            (indexNumber === "03" || indexNumber === "04") && "min-h-[66px]",
-            locale === "fa" && "min-h-[66px]",
+            "mb-4 text-xl leading-snug sm:text-2xl lg:text-[22px]",
+            locale === "fa" && "lg:min-h-[66px]",
+            (indexNumber === "03" || indexNumber === "04") && "lg:min-h-[66px]",
           )}
         >
           {title}
-        </div>
-
+        </h3>
         {/* description */}
-        <div className="text-muted-foreground min-h-24 text-sm/[24px]">
+        <p className="text-muted-foreground text-sm line-clamp-4 leading-7 sm:min-h-20 lg:min-h-24 text-justify">
           {description}
-        </div>
-
-        {/* avgReadtime and read article btn */}
-        <div className="border-t-primary-hover/80 ms-0 me-1 mt-10 flex items-center justify-between border-t pt-5">
-          {/* avg readtime */}
-          <div className="flex items-center gap-x-1.25">
+        </p>
+        {/* footer */}
+        <div className="border-t-primary-hover/80 mt-8 flex items-center justify-between border-t pt-4 sm:mt-10 sm:pt-5">
+          {/* read time */}
+          <div className="flex items-center gap-x-1.5 text-sm">
             <Clock className="text-primary size-4" />
+
             {locale === "en" ? (
               <>
-                <span className="text-muted-foreground pt-[0px]">
-                  {avgReadTime}
-                </span>
-                <span className="text-muted-foreground pt-[0px]">min read</span>
+                <span className="text-muted-foreground">{avgReadTime}</span>
+
+                <span className="text-muted-foreground">min read</span>
               </>
             ) : (
               <>
-                <span className="text-muted-foreground">مدت مطالعه: </span>
-                <span className="text-muted-foreground pt-[0px]">
+                <span className="text-muted-foreground">مدت مطالعه:</span>
+
+                <span className="text-muted-foreground">
                   {englishToPersianNumber(avgReadTime.toString())}
                 </span>
-                <span className="text-muted-foreground pt-[0px]"> دقیقه</span>
+
+                <span className="text-muted-foreground">دقیقه</span>
               </>
             )}
           </div>
-          {/* readmore article */}
+
+          {/* read more */}
           <Link
             href={`/${locale}/blogs/blog`}
-            className="text-primary flex cursor-pointer items-center gap-x-1"
+            className="text-primary flex items-center gap-x-1 text-sm transition-colors hover:opacity-80 sm:text-base"
           >
-            <span className="">
-              {locale === "en" ? " Read more" : "ادامه مطلب"}
-            </span>
-            <ArrowRight className="size-5 pt-px rtl:rotate-180" />
+            <span>{locale === "en" ? " Read more" : "ادامه مطلب"}</span>
+
+            <ArrowRight className="size-4.5 pt-px sm:size-5 rtl:rotate-180" />
           </Link>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
