@@ -94,7 +94,7 @@ export const FA_latestBlogsSample: {
 export const relatedArticles = [
   {
     id: 1,
-    image: "/blogs/1.png",
+    image: "/blogs/1.webp",
     title: "هوش مصنوعی در سال ۲۰۲۶؛ چه کسب‌وکارهایی عقب می‌مانند؟",
     category: "هوش مصنوعی",
     readingTime: "۷ دقیقه",
@@ -102,7 +102,7 @@ export const relatedArticles = [
   },
   {
     id: 2,
-    image: "/blogs/2.png",
+    image: "/blogs/2.webp",
     title: "اتوماسیون کسب‌وکار؛ از کجا شروع کنیم؟",
     category: "تحول دیجیتال",
     readingTime: "۵ دقیقه",
@@ -110,7 +110,7 @@ export const relatedArticles = [
   },
   {
     id: 3,
-    image: "/blogs/3.png",
+    image: "/blogs/3.webp",
     title: "چگونه CRM هوشمند فروش شما را افزایش می‌دهد؟",
     category: "CRM",
     readingTime: "۶ دقیقه",
@@ -118,7 +118,7 @@ export const relatedArticles = [
   },
   {
     id: 4,
-    image: "/blogs/4.png",
+    image: "/blogs/4.webp",
     title: "تصمیم‌گیری مبتنی بر داده؛ مزیت رقابتی شرکت‌های مدرن",
     category: "تحلیل داده",
     readingTime: "۸ دقیقه",

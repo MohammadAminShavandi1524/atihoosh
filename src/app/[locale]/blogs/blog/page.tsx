@@ -17,26 +17,29 @@ const page = ({}: pageProps) => {
   return (
     <div dir="rtl" className="font-IRANYekanX headerPadding w90 flex flex-col">
       {/* hero section */}
-      <div className="mt-30 mb-40 grid grid-cols-2">
-        <div className="mt-10 flex flex-col pe-20">
+      <div className="mt-20 mb-20 grid gap-y-10 max-lg:flex max-lg:flex-col-reverse md:mt-30 md:mb-30 lg:grid-cols-2 lg:gap-x-10 xl:mb-40">
+        <div className="flex flex-col lg:mt-10 lg:pe-10 xl:pe-20">
           {/* title */}
-          <div className="mb-10 text-5xl/[72px] font-medium">
+          <h1 className="mb-6 text-3xl/[48px] font-medium sm:text-4xl/[58px] lg:mb-10 lg:text-5xl/[72px]">
             هوش مصنوعی در سال ۲۰۲۶؛ کدام کسب‌وکارها از رقابت عقب می‌مانند؟
-          </div>
+          </h1>
+
           {/* description */}
-          <div className="text-muted-foreground mb-6 pe-20 text-justify text-xl">
+          <div className="text-muted-foreground mb-6 text-justify text-base leading-8 sm:text-lg lg:pe-10 lg:text-xl">
             هوش مصنوعی دیگر یک فناوری آینده‌نگرانه نیست؛ بلکه به بخشی از واقعیت
             کسب‌وکارها تبدیل شده است. شرکت‌هایی که همچنان به روش‌های سنتی متکی
             باشند، به‌تدریج سهم بازار خود را از دست می‌دهند و از رقابت عقب
             می‌مانند.
           </div>
+
           {/* Category */}
-          <div className="border-primary bg-tertiary text-primary mb-6 w-fit rounded-full border px-4 py-2 text-[15px] font-medium">
+          <div className="border-primary bg-tertiary text-primary mb-6 w-fit rounded-full border px-4 py-2 text-sm font-medium">
             هوش مصنوعی
           </div>
+
           {/* author date avg read time */}
-          <div className="text-muted-foreground flex flex-wrap items-center gap-4">
-            <div className="bg-tertiary text-primary border-primary flex hidden h-8 w-8 items-center justify-center rounded-full border font-semibold">
+          <div className="text-muted-foreground flex flex-wrap items-center gap-3 text-sm sm:gap-4">
+            <div className="bg-tertiary text-primary border-primary hidden h-8 w-8 items-center justify-center rounded-full border font-semibold">
               A
             </div>
 
@@ -54,20 +57,24 @@ const page = ({}: pageProps) => {
             <span>۷ دقیقه مطالعه</span>
           </div>
         </div>
-        <div className="relative h-125 w-full">
+
+        {/* image */}
+        <div className="relative h-64 w-full overflow-hidden rounded-3xl sm:h-96 lg:h-125">
           <Image
             alt="blog-image"
-            src="/blogs/3.png"
+            src="/blogs/3.webp"
             fill
-            className="rounded-3xl"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="rounded-3xl object-cover"
           />
         </div>
       </div>
 
       {/* content and other blogs */}
 
-      <div className="relative flex gap-x-15">
-        <div className="flex flex-1 flex-col border-e pe-15 dark:border-e-[#0b313b]">
+      <div className="relative flex flex-col gap-y-10 lg:flex-row lg:gap-x-15">
+        <div className="flex flex-1 flex-col lg:border-e lg:pe-10 xl:pe-15 dark:lg:border-e-[#0b313b]">
+          {" "}
           <BlogSection
             title="مقدمه"
             paragraphs={[
@@ -75,7 +82,6 @@ const page = ({}: pageProps) => {
               "امروزه سؤال اصلی این نیست که آیا باید از هوش مصنوعی استفاده کنیم یا خیر؛ بلکه این است که اگر از آن استفاده نکنیم، چه تأثیری بر آینده کسب‌وکارمان خواهد داشت. شرکت‌هایی که نتوانند خود را با این تغییرات هماهنگ کنند، به‌مرور از رقابت عقب خواهند ماند.",
             ]}
           />
-
           <BlogSection
             title="هوش مصنوعی دیگر یک مزیت نیست؛ یک ضرورت است"
             paragraphs={[
@@ -83,14 +89,12 @@ const page = ({}: pageProps) => {
               "کسب‌وکارهایی که همچنان به روش‌های سنتی متکی هستند، به‌تدریج سهم بازار خود را از دست می‌دهند. هوش مصنوعی می‌تواند با افزایش سرعت تصمیم‌گیری، کاهش هزینه‌ها و بهبود تجربه مشتری، نقش مهمی در حفظ رقابت‌پذیری سازمان‌ها ایفا کند.",
             ]}
           />
-
           <BlogSection
             title="چه کسب‌وکارهایی بیشترین خطر عقب ماندن را دارند؟"
             paragraphs={[
               "همه کسب‌وکارها به یک اندازه در معرض خطر نیستند. شرکت‌هایی که همچنان فرآیندهای سنتی دارند یا از داده‌های خود استفاده نمی‌کنند، بیش از سایرین با چالش رقابت روبه‌رو خواهند شد.",
             ]}
           />
-
           <BlogSection
             title="۱. شرکت‌هایی که هنوز همه کارها را به‌صورت دستی انجام می‌دهند"
             paragraphs={[
@@ -98,7 +102,6 @@ const page = ({}: pageProps) => {
               "هوش مصنوعی می‌تواند این وظایف را خودکار کرده و به کارکنان فرصت دهد روی فعالیت‌های مهم‌تری مانند توسعه کسب‌وکار، حل مسائل پیچیده و نوآوری تمرکز کنند.",
             ]}
           />
-
           <BlogSection
             title="۲. کسب‌وکارهایی که از داده‌های خود استفاده نمی‌کنند"
             paragraphs={[
@@ -106,35 +109,30 @@ const page = ({}: pageProps) => {
               "هوش مصنوعی می‌تواند الگوهای پنهان در داده‌ها را شناسایی کرده و به مدیران کمک کند رفتار مشتریان را بهتر درک کنند، روندهای آینده بازار را پیش‌بینی کنند و تصمیم‌های دقیق‌تری بگیرند.",
             ]}
           />
-
           <BlogSection
             title="هوش مصنوعی چگونه تجربه مشتری را متحول می‌کند؟"
             paragraphs={[
               "امروزه تجربه مشتری یکی از مهم‌ترین عوامل موفقیت هر کسب‌وکار است. هوش مصنوعی با ارائه خدمات سریع‌تر و شخصی‌سازی‌شده، می‌تواند رضایت مشتریان را به شکل چشمگیری افزایش دهد.",
             ]}
           />
-
           <BlogSection
             title="پشتیبانی هوشمند مشتریان"
             paragraphs={[
               "چت‌بات‌ها و دستیارهای هوشمند قادرند در تمام ساعات شبانه‌روز به سؤالات متداول پاسخ دهند، زمان انتظار مشتریان را کاهش دهند و بخشی از بار کاری تیم پشتیبانی را بر عهده بگیرند.",
             ]}
           />
-
           <BlogSection
             title="پیشنهادهای شخصی‌سازی‌شده"
             paragraphs={[
               "با تحلیل رفتار کاربران، هوش مصنوعی می‌تواند محصولات یا خدمات متناسب با نیاز هر مشتری را پیشنهاد دهد. این موضوع علاوه بر افزایش رضایت کاربران، نرخ تبدیل و فروش را نیز بهبود می‌بخشد.",
             ]}
           />
-
           <BlogSection
             title="تحلیل احساسات مشتریان"
             paragraphs={[
               "بررسی نظرات، پیام‌ها و بازخوردهای مشتریان به کمک الگوریتم‌های هوشمند، به کسب‌وکارها کمک می‌کند نقاط قوت و ضعف خود را سریع‌تر شناسایی کرده و خدمات بهتری ارائه دهند.",
             ]}
-          />
-
+          />{" "}
           <BlogSection
             title="آیا هوش مصنوعی جای انسان را می‌گیرد؟"
             paragraphs={[
@@ -142,7 +140,6 @@ const page = ({}: pageProps) => {
               "وظایف تکراری و زمان‌بر به سیستم‌های هوشمند سپرده می‌شوند و انسان‌ها می‌توانند بر فعالیت‌هایی مانند خلاقیت، تصمیم‌گیری، مذاکره و ایجاد روابط انسانی تمرکز کنند.",
             ]}
           />
-
           <BlogSection
             title="از کجا استفاده از هوش مصنوعی را شروع کنیم؟"
             paragraphs={[
@@ -150,7 +147,6 @@ const page = ({}: pageProps) => {
               "خودکارسازی پاسخ به مشتریان، تحلیل داده‌های فروش، تولید گزارش‌های مدیریتی، پیش‌بینی تقاضا و بهینه‌سازی کمپین‌های بازاریابی، از جمله اولین گام‌های مناسب برای ورود به این حوزه هستند.",
             ]}
           />
-
           <BlogSection
             title="بزرگ‌ترین اشتباه در مواجهه با هوش مصنوعی"
             paragraphs={[
@@ -158,7 +154,6 @@ const page = ({}: pageProps) => {
               "در حالی که بسیاری از رقبا در حال یادگیری، آزمایش و بهبود فرآیندهای خود هستند، تأخیر در ورود به این حوزه می‌تواند فاصله رقابتی را هر روز بیشتر کند.",
             ]}
           />
-
           <BlogSection
             title="آینده متعلق به کسب‌وکارهای سازگار است"
             paragraphs={[
@@ -166,7 +161,6 @@ const page = ({}: pageProps) => {
               "هوش مصنوعی نیز از همین قاعده پیروی می‌کند. شرکت‌هایی که از امروز برای استفاده هدفمند از این فناوری برنامه‌ریزی کنند، در آینده رشد سریع‌تر، مشتریان وفادارتر و انعطاف‌پذیری بیشتری خواهند داشت.",
             ]}
           />
-
           <BlogSection
             title="جمع‌بندی"
             paragraphs={[
@@ -176,20 +170,22 @@ const page = ({}: pageProps) => {
           />
         </div>
 
-        <div
-          className="sticky h-fit w-125 rounded-2xl border p-7 transition-[top] duration-300 ease-out dark:border-[#0b313b]"
-          style={{ top: "var(--header-offset)" }}
-        >
-          <div className="text-primary flex items-center justify-between pb-6">
+        {/* related articles sidebar */}
+        <aside className="s:rounded-2xl s:border max-s:border-y s:px-5 dark:border-[#0b313b] h-fit w-full py-5 lg:sticky lg:top-10 lg:w-125 lg:p-7">
+          <div className="text-primary flex items-center justify-between pb-2 s:pb-6">
             <div className="text-lg">مقالات دیگر</div>
-            <Link href={`/${locale}/blogs`} className="flex gap-x-1">
+
+            <Link
+              href={`/${locale}/blogs`}
+              className="flex items-center gap-x-1 text-sm"
+            >
               <span>مشاهده همه</span>
-              <span>
-                <ArrowLeft />
-              </span>
+
+              <ArrowLeft className="size-4" />
             </Link>
           </div>
-          {/*  */}
+
+          {/* related list */}
           <div>
             {relatedArticles.map((article, index) => {
               return (
@@ -198,20 +194,26 @@ const page = ({}: pageProps) => {
                   className="border-b-border flex gap-x-4 border-b py-5 last:border-none"
                   key={index}
                 >
-                  <section className="relative size-18 overflow-hidden">
+                  <section className="relative size-16 shrink-0 overflow-hidden sm:size-18">
                     <Image
                       alt=""
                       src={article.image}
                       fill
+                      sizes="72px"
                       className="rounded-md object-cover"
                     />
                   </section>
-                  <section className="flex flex-col gap-y-2 text-sm">
+
+                  <section className="flex min-w-0 flex-col gap-y-2 text-sm">
                     <div className="text-primary text-xs">
                       {article.category}
                     </div>
-                    <div className="">{article.title}</div>
-                    <div className="text-muted-foreground flex flex-wrap items-center gap-1.5">
+
+                    <div className="line-clamp-2 text-sm leading-6">
+                      {article.title}
+                    </div>
+
+                    <div className="text-muted-foreground flex flex-wrap items-center gap-1.5 text-xs">
                       <time dateTime="2026-06-30">۳۰ تیر ۱۴۰۵</time>
 
                       <span>،</span>
@@ -223,7 +225,7 @@ const page = ({}: pageProps) => {
               );
             })}
           </div>
-        </div>
+        </aside>
       </div>
 
       {/* share */}

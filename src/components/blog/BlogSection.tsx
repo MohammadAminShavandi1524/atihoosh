@@ -5,8 +5,8 @@ type BlogSectionProps = {
 
 export function BlogSection({ title, paragraphs }: BlogSectionProps) {
   return (
-    <section className=" mb-16">
-      <h2 className="text-foreground text-2xl font-bold tracking-tight md:text-3xl mb-6">
+    <section className="mb-10 md:mb-14 lg:mb-16">
+      <h2 className="text-foreground mb-5 text-xl leading-9 font-bold tracking-tight sm:text-2xl md:mb-6 md:text-3xl">
         {title}
       </h2>
 
@@ -14,7 +14,7 @@ export function BlogSection({ title, paragraphs }: BlogSectionProps) {
         {paragraphs.map((paragraph, index) => (
           <p
             key={index}
-            className="text-muted-foreground text-base leading-8 md:text-lg md:leading-9"
+            className="text-muted-foreground text-justify text-base leading-8 sm:text-lg md:leading-9"
           >
             {paragraph}
           </p>
