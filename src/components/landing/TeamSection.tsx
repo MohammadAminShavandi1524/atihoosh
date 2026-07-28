@@ -20,7 +20,7 @@ export default function TeamSection() {
     offset: ["start start", "end end"],
   });
 
-  // ❌ اینا دست نخوردن
+
   const imageWidth = useTransform(
     scrollYProgress,
     [0, 0.15, 0.55],
@@ -54,7 +54,7 @@ export default function TeamSection() {
             className="absolute aspect-[3/2] overflow-hidden will-change-transform"
           >
             <Image
-              src="/teamSample1.webp"
+              src="/team.webp"
               alt="Team"
               fill
               priority
