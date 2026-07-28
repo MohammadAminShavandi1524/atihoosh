@@ -19,7 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import PSBody from "@/components/projectStart/PSBody";
 
 const Page = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
 
   const locale = useLocale();
 
@@ -27,10 +27,10 @@ const Page = () => {
     resolver: zodResolver(projectStartSchema),
 
     defaultValues: {
-      full_name: "",
+      full_name: "mohammad",
       email: "",
-      phone: "",
-      services: [],
+      phone: "09124545865",
+      services: [1,7,2,8],
       description: "",
     },
 
@@ -38,7 +38,7 @@ const Page = () => {
   });
 
   return (
-    <div className="relative lg:h-screen w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden lg:h-screen">
       {/* background iamge */}
       {step === 1 && (
         <div
@@ -57,7 +57,7 @@ const Page = () => {
       {step === 2 && (
         <div
           className={cn(
-            "absolute max-lg:hidden top-1/2 z-1 aspect-1715/917 h-full w-full -translate-y-1/2 ltr:right-0 rtl:left-0",
+            "absolute top-1/2 z-1 aspect-1715/917 h-full w-full -translate-y-1/2 max-lg:hidden ltr:right-0 rtl:left-0",
             locale === "fa" && "-scale-x-100",
           )}
         >
@@ -72,7 +72,7 @@ const Page = () => {
       {step === 3 && (
         <div
           className={cn(
-            "absolute max-lg:hidden top-1/2 left-0 z-1 aspect-1738/905 h-full w-full -translate-y-[45%]",
+            "absolute top-1/2 left-0 z-1 aspect-1738/905 h-full w-full -translate-y-[45%] max-3xl:hidden",
             // locale === "fa" && "scale-x-[-1]",
           )}
         >
@@ -89,7 +89,7 @@ const Page = () => {
 
         <PSBody step={step} setStep={setStep} />
 
-        <Footer />
+        {/* <Footer /> */}
       </FormProvider>
     </div>
   );

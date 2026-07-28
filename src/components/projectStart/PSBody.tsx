@@ -79,7 +79,7 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
   return (
     <div className="w90 relative z-10 flex w-full flex-col">
       {/* steps dots */}
-      <div className="mt-10 hidden lg:flex items-center justify-center">
+      <div className="mt-10 hidden items-center justify-center lg:flex">
         <StepDots step={step} setStep={setStep} />
       </div>
 
@@ -140,101 +140,147 @@ const PSBody = ({ step, setStep }: PSBodyProps) => {
 
       {/* STEP 2 */}
       {step === 2 && (
-        <div className=" mt-10 flex justify-center gap-x-20">
-          <div className="mt-5 flex flex-col p-7.5">
-            <div className="text-primary mb-3.25 text-xl">
+        <div className="mt-8 flex flex-col gap-7.5 max-lg:mb-12 lg:mt-0 lg:flex-row lg:items-start lg:justify-center lg:gap-12 lg:px-8 xl:gap-16 2xl:mt-6 2xl:gap-10 2xl:gap-20">
+          {/* Left Content */}
+          <div className="flex flex-col px-2 sm:px-4 lg:max-w-[420px] lg:px-0 lg:pt-5 xl:max-w-[460px] xl:shrink-0 xl:pt-10">
+            <div className="text-primary mb-3 text-base sm:text-lg xl:mb-3.5 xl:text-xl">
               {t("step2.label")}
             </div>
 
-            <div className="mb-8.5 text-[45px]">
+            <div className="mb-5 text-[32px] leading-tight sm:text-[38px] md:text-[42px] xl:mb-8 xl:text-[45px]">
               <span>{t("step2.title.part1")} </span>
+
               <span className="text-primary">{t("step2.title.highlight")}</span>
             </div>
 
-            <div className="text-muted-foreground text-xl">
+            <div className="text-muted-foreground max-w-md text-base leading-7 sm:text-lg xl:text-xl">
               {t("step2.desc")}
             </div>
           </div>
 
-          <ServiceSelector step={step} setStep={setStep} />
+          {/* Right Content */}
+          <div className="w-full lg:max-w-[760px] xl:max-w-[820px]">
+            <ServiceSelector step={step} setStep={setStep} />
+          </div>
         </div>
       )}
 
       {/* STEP 3 */}
       {step === 3 && (
-        <div className="mt-[80px] flex justify-center gap-x-20 rtl:gap-x-16">
-          <div className="flex flex-col">
-            <div className="flex flex-col p-7.5">
-              <div className="text-primary mb-3.25 text-xl">
-                {t("step3.label")}
-              </div>
+        <div className="mt-12 flex flex-col gap-10 lg:mt-10 lg:flex-row lg:items-start lg:justify-center lg:gap-12 xl:mt-14 xl:gap-16 2xl:mt-30 2xl:gap-20 rtl:2xl:gap-16">
+          {/* Left Content */}
+          <div className="flex shrink-0 flex-col px-2 sm:px-4 lg:max-w-[420px] lg:px-0 lg:pt-2 xl:max-w-[460px]">
+            <div className="text-primary mb-3 text-base sm:text-lg xl:mb-3.5 xl:text-xl">
+              {t("step3.label")}
+            </div>
 
-              <div className="mb-8.5 text-[45px]">
-                <span>{t("step3.title.part1")}&nbsp;</span>
+            <div className="mb-5 text-[32px] leading-tight sm:text-[38px] md:text-[42px] xl:mb-8 xl:text-[45px]">
+              <span>{t("step3.title.part1")}&nbsp;</span>
 
-                <span className="text-primary">
-                  {t("step3.title.highlight")}
-                </span>
-              </div>
+              <span className="text-primary">{t("step3.title.highlight")}</span>
+            </div>
 
-              <div className="text-muted-foreground mb-16 flex max-w-79 flex-col text-xl">
-                {t("step3.desc")}
-              </div>
+            <div className="text-muted-foreground max-w-md text-base leading-7 sm:text-lg xl:max-w-[320px] xl:text-xl">
+              {t("step3.desc")}
             </div>
           </div>
 
-          <div className="border-border bg-secondary-bg mt-10 flex h-fit max-w-120 min-w-100 flex-col gap-y-6.5 rounded-lg border px-6 py-6">
-            <ResultRow
-              Logo={User}
-              title={t("result.name")}
-              description={fullName || "-"}
-            />
-
-            <ResultRow
-              Logo={Phone}
-              title={t("result.phone")}
-              description={phone || "-"}
-            />
-            {/* selected products */}
-            <div
-              className={cn(
-                "flex gap-x-3",
-                services.length < 2 && "items-center",
-              )}
-            >
-              <Package
-                className={cn(
-                  "text-primary size-5.75",
-                  services.length > 1 && "mt-0.75",
-                )}
+          {/* Result Card */}
+          <div className="border-border bg-secondary-bg mt-2 w-full rounded-xl border p-5 sm:p-6 lg:mt-0 lg:max-w-[470px] lg:min-w-[440px] xl:max-w-[440px] xl:min-w-[430px]">
+            <div className="flex flex-col gap-y-6">
+              <ResultRow
+                Logo={User}
+                title={t("result.name")}
+                description={fullName || "-"}
               />
 
-              <div
-                className={cn(
-                  "flex w-full gap-y-2",
-                  services.length < 2 ? "flex-row items-center" : "flex-col",
-                )}
-              >
-                <span
+              <ResultRow
+                Logo={Phone}
+                title={t("result.phone")}
+                description={phone || "-"}
+              />
+
+              {/* Selected Products */}
+
+              <>
+                {/* Selected Products for upper s: */}
+                <div
                   className={cn(
-                    "text-lg font-medium",
-                    services.length < 2 && "w-[220px]",
+                    "max-s:hidden flex gap-y-2",
+                    services.length < 2
+                      ? "flex-row items-center bg-red-600"
+                      : "flex-col items-start",
                   )}
                 >
-                  {t("result.product")}
-                </span>
+                  <div className="flex items-center gap-3">
+                    <Package
+                      className={cn(
+                        "text-primary mt-0.5 size-5 shrink-0",
+                        services.length < 2 && "mt-0",
+                      )}
+                    />
+                    <span
+                      className={cn(
+                        "text-base font-medium sm:text-lg",
+                        services.length < 2 && "sm:min-w-[180px]",
+                      )}
+                    >
+                      {t("result.product")}
+                    </span>
+                  </div>
 
-                <ServiceTags services={selectedServiceTitles} />
-              </div>
+                  <div
+                    className={cn(
+                      "flex flex-1 gap-y-2",
+                      services.length < 2
+                        ? "flex-col sm:flex-row sm:items-center"
+                        : "flex-col",
+                    )}
+                  >
+                    <ServiceTags services={selectedServiceTitles} />
+                  </div>
+                </div>
+                {/* Selected Products for lower s: */}
+                <div
+                  className={cn(
+                    "s:hidden flex gap-y-2",
+                    services.length < 2
+                      ? "max-xss:flex-col"
+                      : "flex-col items-start",
+                  )}
+                >
+                  <div className="flex items-center gap-3">
+                    <Package
+                      className={cn(
+                        "text-primary mt-0.5 size-5 shrink-0",
+                        services.length < 2 && "mt-0",
+                      )}
+                    />
+
+                    <span
+                      className={cn(
+                        "w-50 text-base font-medium sm:text-lg",
+                        services.length < 2 && "sm:min-w-[180px]",
+                      )}
+                    >
+                      {t("result.product")}
+                    </span>
+                  </div>
+
+                  <div className={cn("flex flex-1 gap-y-2")}>
+                    <ServiceTags services={selectedServiceTitles} />
+                  </div>
+                </div>
+              </>
+
+              <div className="bg-border h-px w-full" />
+
+              <ResultRow
+                Logo={ClockFading}
+                title={t("result.contactTime")}
+                description={t("result.contactDesc")}
+              />
             </div>
-
-            <div className="bg-muted-foreground my-1 h-px w-full" />
-
-            <ResultRow
-              Logo={ClockFading}
-              title={t("result.contactTime")}
-              description={t("result.contactDesc")}
-            />
           </div>
         </div>
       )}

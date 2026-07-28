@@ -11,7 +11,17 @@ const ServiceTags = ({ services }: ServiceTagsProps) => {
 
   if (services.length === 1) {
     return (
-      <span className="text-muted-foreground text-sm font-medium">{services[0]}</span>
+      <>
+        {/* s: */}
+        <span className="max-s:hidden text-muted-foreground text-sm font-medium">
+          {services[0]}
+        </span>
+
+        {/* max-s: */}
+          <span className="s:hidden text-muted-foreground xss:text-end xss:w-full text-sm font-medium">
+          {services[0]}
+        </span>
+      </>
     );
   }
 
