@@ -24,7 +24,8 @@ const HowWeWork = ({}: HowWeWorkProps) => {
 
         {/* desktop */}
         <div className="mlg:flex relative hidden flex-row items-center justify-between gap-x-10">
-          <div className="bg-primary absolute top-6 left-1/2 h-px w-[77.5%] -translate-x-1/2 ltr:translate-x-[-50%] rtl:translate-x-[-52%]" />
+          
+          <div className="bg-primary absolute top-6 left-1/2 h-px w-[78%] 3xl:w-[80%] -translate-x-1/2 ltr:translate-x-[-50%] rtl:translate-x-[-52%]" />
 
           <HWWStep
             title={t("steps.discovery.title")}

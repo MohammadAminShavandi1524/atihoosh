@@ -34,7 +34,7 @@ const HWWStep = ({ title, description, index }: HWWStepProps) => {
       <div className="text-foreground text-base md:text-[17px]">{title}</div>
 
       {/* description */}
-      <div className="text-muted text-center text-sm leading-[1.8] max-xl:min-h-[68px] md:text-[15px] md:leading-normal">
+      <div className="text-muted text-center text-sm leading-[1.8] max-xl:min-h-[68px] 2xl:min-h-[45px] md:text-[15px] md:leading-normal">
         {description}
       </div>
     </div>
