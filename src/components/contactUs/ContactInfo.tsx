@@ -28,7 +28,7 @@ const socials = [
   },
   {
     icon: Linkedin,
-    href: "#",
+    href: "https://www.linkedin.com/in/ati-hooshbonyan?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     icon: X,
@@ -122,6 +122,7 @@ const ContactInfo = ({}: ContactInfoProps) => {
               <Link
                 key={index}
                 href={href}
+                target="_blank"
                 className="border-muted-foreground hover:border-primary hover:text-primary text-primary-hover flex size-10 items-center justify-center rounded-xl border transition-colors sm:size-11 xl:size-12"
               >
                 <Icon className="size-4 sm:size-5" />

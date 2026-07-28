@@ -42,7 +42,7 @@ const OurCustomers = ({}: OurCustomersProps) => {
                 : "وب‌سایت آتی صنعت گستر پویا"
             }
           >
-            <Link href="/your-page" target="_blank">
+            <Link href="https://atisanatco.com/" target="_blank">
               <motion.div
                 initial={false}
                 whileHover="hover"

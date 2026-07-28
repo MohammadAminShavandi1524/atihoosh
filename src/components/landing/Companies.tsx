@@ -11,7 +11,7 @@ const Companies = ({}: CompaniesProps) => {
   const locale = useLocale();
 
   return (
-    <Link href="/your-page" target="_blank">
+    <Link href="https://atiabzarpishro.com/" target="_blank">
       <motion.div
         initial={false}
         whileHover="hover"

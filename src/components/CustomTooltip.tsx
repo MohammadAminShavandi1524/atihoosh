@@ -42,7 +42,7 @@ export default function CustomTooltip({
               duration: 0.45,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="bg-primary text-white absolute top-full left-1/2 z-50 mt-3 -translate-x-1/2 rounded-lg px-4 py-2 text-sm whitespace-nowrap text-white shadow-lg"
+            className="bg-primary hidden text-white absolute top-full left-1/2 z-50 mt-3 -translate-x-1/2 rounded-lg px-4 py-2 text-sm whitespace-nowrap text-white shadow-lg"
           >
             {content}
           </motion.div>
