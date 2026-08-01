@@ -139,7 +139,7 @@
       }
     },
     "howWeWork": {
-       "sectionTitle": "رویکرد ما",
+      "sectionTitle": "رویکرد ما",
       "sectionHeading": "فرآیند کاری ما",
       "steps": {
         "discovery": {
@@ -303,7 +303,22 @@
       "titlePart1": "آخرین",
       "titlePart2": "مطالب",
       "heading": "از مجله",
-      "badge": "۴ مقاله"
+      "badge": "مقاله"
+    },
+    "Article": {
+      "intro": "مقدمه",
+      "moreArticles": "مقالات دیگر",
+      "viewAll": "مشاهده همه",
+      "writtenBy": "نوشته شده توسط",
+      "author": "آتی هوش",
+      "readTime": "دقیقه مطالعه",
+      "introDescription": "این مقاله به بررسی کامل این موضوع و تأثیر آن بر آینده کسب‌وکارها می‌پردازد."
+    },
+    "ArticleFooter": {
+      "tagsTitle": "برچسب‌های مقاله",
+      "tagsDescription": "موضوعات مرتبط با این مقاله را دنبال کنید.",
+      "shareTitle": "اشتراک‌گذاری مقاله",
+      "shareDescription": "اگر این مقاله برایتان مفید بود، آن را با دوستان و همکاران خود به اشتراک بگذارید."
     },
     "GetNewArticle": {
       "title": "سوالی درباره مطالب ما دارید؟",

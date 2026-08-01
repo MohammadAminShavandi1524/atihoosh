@@ -10,8 +10,6 @@ export async function createRequest(
     description: data.description?.trim() || null,
   };
 
-  console.log("Sending:", JSON.stringify(body, null, 2));
-
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/support/create_request/${lang}/`,
     {

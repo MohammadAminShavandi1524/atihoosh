@@ -302,7 +302,22 @@
       "titlePart1": "Latest",
       "titlePart2": "Posts",
       "heading": "From the journal",
-      "badge": "4 articles"
+      "badge": "articles"
+    },
+    "Article": {
+      "intro": "Introduction",
+      "moreArticles": "Related Articles",
+      "viewAll": "View all",
+      "writtenBy": "Written by",
+      "author": "ATI Hoosh",
+      "readTime": "min read",
+      "introDescription": "This article explores this topic and its impact on the future of businesses."
+    },
+    "ArticleFooter": {
+      "tagsTitle": "Article Tags",
+      "tagsDescription": "Follow the topics related to this article.",
+      "shareTitle": "Share Article",
+      "shareDescription": "If you found this article useful, share it with your friends and colleagues."
     },
     "GetNewArticle": {
       "title": "Have Questions About Our Articles?",
